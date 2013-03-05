@@ -5,6 +5,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set noeb vb t_vb=
+set encoding=utf-8
 
 " === general GUI settings
 colorscheme torte
@@ -62,6 +63,11 @@ filetype plugin on
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" === wiki
+let g:vimwiki_use_mouse = 1
+let g:vimwiki_list = [{'path':'$HOME/datum/wiki/vimwiki', 
+                      \'path_html':'$HOME/datum/wiki/html',}]
 
 " === key map 
 nmap <C-N> :NERDTreeToggle <CR>
