@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab
 set noeb vb t_vb=
 set encoding=utf-8
+set autochdir
 
 " === general GUI settings
 colorscheme torte
