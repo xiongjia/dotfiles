@@ -61,6 +61,11 @@ set foldmethod=indent
 set foldlevel=99
 let g:snippets_dir='$HOME/.vim/snippets'
 filetype plugin on
+set tags=tags;
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Show_Menu = 1
+let Tlist_One_File = 1
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
