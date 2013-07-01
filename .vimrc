@@ -67,8 +67,9 @@ let Tlist_Use_Right_Window = 1
 let Tlist_Show_Menu = 1
 let Tlist_One_File = 1
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" 80+ overlength
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
 " === wiki
 let g:vimwiki_use_mouse = 1
