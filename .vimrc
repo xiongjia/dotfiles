@@ -7,6 +7,7 @@ set expandtab
 set noeb vb t_vb=
 set encoding=utf-8
 set autochdir
+set hlsearch
 
 " === general GUI settings
 colorscheme torte
