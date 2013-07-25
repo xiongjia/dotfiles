@@ -17,9 +17,10 @@ set guioptions-=T
 set guioptions-=m
 set clipboard=unnamed
 if has("gui_running")
-	" Maximize gvim window.
-	set lines=9999 columns=9999
+    " Maximize gvim window.
+    set lines=9999 columns=9999
 endif
+
 " Status bar
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ 
@@ -40,7 +41,7 @@ if (has("win32"))
         command -nargs=0 NoTopMost call libcallnr("vimtweak.dll",
             \"EnableTopMost", 0)
     endif
-	au GUIEnter * simalt ~x "x on an English Windows version. n on a French one
+    au GUIEnter * simalt ~x "x on an English Windows version. n on a French one
     nmap <F4> :SetAlpha 200 <CR>
     nmap <C-F4> :SetAlpha 250 <CR>
     nmap <F5> :TopMost <CR>
@@ -87,10 +88,10 @@ inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
 
 map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
-		\set guioptions-=T <Bar>
-		\set guioptions-=m <Bar>
-	\else <Bar>
-		\set guioptions+=T <Bar>
-		\set guioptions+=m <Bar>
-	\endif<CR>
+        \set guioptions-=T <Bar>
+        \set guioptions-=m <Bar>
+    \else <Bar>
+        \set guioptions+=T <Bar>
+        \set guioptions+=m <Bar>
+    \endif<CR>
 
