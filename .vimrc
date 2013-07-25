@@ -66,7 +66,6 @@ filetype plugin on
 set tags=tags;
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
-let Tlist_Show_Menu = 1
 let Tlist_One_File = 1
 
 " 80+ overlength
