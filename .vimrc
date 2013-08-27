@@ -76,7 +76,9 @@ let Tlist_One_File = 1
 " === wiki
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_list = [{'path':'$HOME/datum/wiki/vimwiki', 
-                      \'path_html':'$HOME/datum/wiki/html',}]
+                      \'path_html':'$HOME/datum/wiki/html',
+                      \'syntax' : 'markdown',
+                      \'auto_export':0}]
 
 " === key map 
 nmap <C-N> :NERDTreeToggle <CR>
