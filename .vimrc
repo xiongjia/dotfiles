@@ -27,9 +27,10 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ 
                 \[HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
-
 " NERDTree 
 let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
+nnoremap <leader>n :NERDTreeToggle .<CR>
 
 " === For MS Windows
 if (has("win32"))
@@ -77,18 +78,10 @@ let Tlist_One_File = 1
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_list = [{'path':'$HOME/datum/wiki/vimwiki', 
                       \'path_html':'$HOME/datum/wiki/html',
-                      \'syntax' : 'markdown',
+                      \'syntax':'markdown',
                       \'auto_export':0}]
 
 " === key map 
-nmap <C-N> :NERDTreeToggle <CR>
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
-
 map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions-=T <Bar>
         \set guioptions-=m <Bar>
