@@ -9,6 +9,7 @@ set encoding=utf-8
 set autochdir
 set hlsearch
 set gcr=a:block-blinkon0
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " === general GUI settings
 colorscheme torte
