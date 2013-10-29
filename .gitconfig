@@ -8,3 +8,6 @@
 [alias]
 	lol = log --graph --pretty=oneline --abbrev-commit --decorate
 
+[push]
+    default = current
+
