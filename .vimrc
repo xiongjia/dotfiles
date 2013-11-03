@@ -31,6 +31,7 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\
 " NERDTree 
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
+let NERDTreeDirArrows=0
 nnoremap <leader>n :NERDTreeToggle .<CR>
 
 " === For MS Windows
