@@ -1,13 +1,11 @@
 [user]
-	name = xiongjia
-	email = lexiongjia@gmail.com
+    name = xiongjia
+    email = lexiongjia@gmail.com
 [http]
 [core]
-	excludesfile = ~/.gitignore_global
-
+    excludesfile = ~/.gitignore_global
 [alias]
-	lol = log --graph --pretty=oneline --abbrev-commit --decorate
-
+    lol = log --graph --pretty=oneline --abbrev-commit --decorate
 [push]
     default = current
 

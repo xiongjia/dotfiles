@@ -14,7 +14,7 @@ Desktop.ini
 $RECYLE.BIN/
 
 # IDE or Editor generated files
-*.swap
+*.swp
 tags
 .tern-port
  
