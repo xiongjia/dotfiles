@@ -11,6 +11,9 @@ set hlsearch
 set gcr=a:block-blinkon0
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
+" === font
+set guifont=CosmicSansNeueMono:h12
+
 " === general GUI settings
 colorscheme torte
 set shortmess+=I
