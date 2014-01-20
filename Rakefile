@@ -51,6 +51,10 @@ task :link do
   puts "Updating git config files" 
   Ctx::linkCfg('.gitconfig', './git/gitconfig')
   Ctx::linkCfg('.gitignore_global', './git/gitignore_global')
+
+  puts "Update tmux config files"
+  Ctx::linkCfg('.tmux.conf', './tmux/tmux.conf')
+  Ctx::linkCfg('.tmuxinator', './tmux/tmuxinator')
 end
 
 desc "clean"
@@ -59,4 +63,7 @@ task :clean do
   Ctx::cleanLink('.gitconfig')
   Ctx::cleanLink('.gitignore_global')
 
+  puts "Remove tmux links"
+  Ctx::cleanLink('.tmux.conf')
+  Ctx::cleanLink('.tmuxinator')
 end
