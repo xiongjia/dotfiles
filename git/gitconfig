@@ -8,6 +8,7 @@
     ll = log --graph --pretty=oneline --abbrev-commit --decorate
     f = fetch
     c = checkout
+    s = status
 [push]
     default = current
 
