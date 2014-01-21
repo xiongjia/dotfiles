@@ -1,5 +1,7 @@
+# general temp files 
 .DS_Store
 .netrwhist
 Powerline*.cache
 *.pyc
+*.swp
 
