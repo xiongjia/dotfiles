@@ -59,6 +59,10 @@ task :link do
   DF::LOGGER.info("Update tmux config files")
   DF::linkCfg('.tmux.conf', './tmux/tmux.conf')
   DF::linkCfg('.tmuxinator', './tmux/tmuxinator')
+
+  DF::LOGGER.info("Update vim")
+  DF::linkCfg('.vimrc', './vim/vimrc')
+  DF::linkCfg('.vim', './vim/vim')
 end
 
 desc "clean"
@@ -70,4 +74,8 @@ task :clean do
   DF::LOGGER.info("Remove tmux links")
   DF::cleanLink('.tmux.conf')
   DF::cleanLink('.tmuxinator')
+
+  DF::LOGGER.info("Remove vim links")
+  DF::cleanLink('.vimrc')
+  DF::cleanLink('.vim')
 end
