@@ -1,10 +1,14 @@
 # dot files for vim, git, npm, gem, tmux & zsh
 
-require 'os'
+require 'logger'
 
 task :default => [:usage]
 
-module Ctx
+module DF
+  LOGGER = Logger.new(STDOUT)
+  LOGGER.level = Logger::DEBUG
+  LOGGER.datetime_format = "%H:%M:%S"
+
   WRK_PATH = File.expand_path(File.dirname(__FILE__))
   HOME_PATH = File.expand_path('~')
 
@@ -21,10 +25,10 @@ module Ctx
     src = File.expand_path(src, WRK_PATH)
     target = File.expand_path(target, HOME_PATH)
     if (File.exists?(target) || !File.exists?(src))
-      puts "Cannot update %s to %s" %  [src, target]
+      LOGGER.warn("Cannot update %s to %s" %  [src, target])
       return false
     end
-    puts "Updateing src = %s, target = %s" % [src, target]
+    LOGGER.info("Updateing src = %s, target = %s" % [src, target])
     File.symlink(src, target)
     return true
   end
@@ -34,7 +38,7 @@ module Ctx
     if (!File.exists?(target) || !File.symlink?(target))
       return false
     end
-    puts "remove link file %s" % target
+    LOGGER.info("remove link file %s" % target)
     File.unlink(target)
     return true
   end
@@ -43,27 +47,27 @@ end
 
 desc "All Options&Usage"
 task :usage do
-  Ctx::printOpts()
+  DF::printOpts()
 end
 
 desc "link"
 task :link do
-  puts "Updating git config files" 
-  Ctx::linkCfg('.gitconfig', './git/gitconfig')
-  Ctx::linkCfg('.gitignore_global', './git/gitignore_global')
+  DF::LOGGER.info("Updating git config files")
+  DF::linkCfg('.gitconfig', './git/gitconfig')
+  DF::linkCfg('.gitignore_global', './git/gitignore_global')
 
-  puts "Update tmux config files"
-  Ctx::linkCfg('.tmux.conf', './tmux/tmux.conf')
-  Ctx::linkCfg('.tmuxinator', './tmux/tmuxinator')
+  DF::LOGGER.info("Update tmux config files")
+  DF::linkCfg('.tmux.conf', './tmux/tmux.conf')
+  DF::linkCfg('.tmuxinator', './tmux/tmuxinator')
 end
 
 desc "clean"
 task :clean do
-  puts "Remove git links"
-  Ctx::cleanLink('.gitconfig')
-  Ctx::cleanLink('.gitignore_global')
+  DF::LOGGER.info("Remove git links")
+  DF::cleanLink('.gitconfig')
+  DF::cleanLink('.gitignore_global')
 
-  puts "Remove tmux links"
-  Ctx::cleanLink('.tmux.conf')
-  Ctx::cleanLink('.tmuxinator')
+  DF::LOGGER.info("Remove tmux links")
+  DF::cleanLink('.tmux.conf')
+  DF::cleanLink('.tmuxinator')
 end
