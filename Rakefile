@@ -70,6 +70,9 @@ task :link do
   DF::log.info("Update vim")
   DF::linkCfg('.vimrc', './vim/vimrc')
   DF::linkCfg('.vim', './vim/vim')
+
+  DF::log.info("Update node")
+  DF::linkCfg('.npmrc', './node/npmrc')
 end
 
 desc "clean"
@@ -85,4 +88,7 @@ task :clean do
   DF::log.info("Remove vim links")
   DF::cleanLink('.vimrc')
   DF::cleanLink('.vim')
+
+  DF::log.info("Update node")
+  DF::cleanLink('.npmrc')
 end
