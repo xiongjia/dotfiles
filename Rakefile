@@ -2,8 +2,6 @@
 
 require 'logger'
 
-task :default => [:usage]
-
 module DF
   LOGGER = Logger.new(STDOUT)
   LOGGER.level = Logger::DEBUG
@@ -14,21 +12,36 @@ module DF
 
   WRK_PATH = File.expand_path(File.dirname(__FILE__))
   HOME_PATH = File.expand_path('~')
+  ALL_TYPES = ["git", "tmux", "vim", "node"]
+  DFILES = {
+    "git" => [
+      { "src" => "./git/gitconfig", "target" => ".gitconfig"},
+      { "src" => "./git/gitignore_global", "target" => ".gitignore_global"}],
+    "tmux" => [
+      { "src" => "./tmux/tmux.conf", "target" => ".tmux.conf"},
+      { "src" => "./tmux/tmuxinator", "target" => ".tmuxinator"}],
+    "vim" => [
+      { "src" => "./vim/vim", "target" => ".vim"},
+      { "src" => "./vim/vimrc", "target" => ".vimrc"}],
+    "node" => [
+      { "src" => "./node/npmrc", "target" => ".npmrc"}]
+  }
 
   def self.log
     return LOGGER 
   end
 
   def self.printOpts
-    puts "Settings:"
-    puts "  Working path: %s" % WRK_PATH
-    puts "  Home path: %s" % HOME_PATH
+    puts "DotFiles - HOME= #{HOME_PATH}, WrkPath= #{WRK_PATH}"
     puts "Options:"
-    puts "  link - create the symbol links for all dot files"
-    puts "  clean - remove all links"
+    puts "  linkAll - Update all dotFiles (#{ALL_TYPES})"
+    puts "  cleanAll - remove all dotFiles (#{ALL_TYPES})"
+    puts "  link[type] - link one type dot files"
+    puts "  clean[type] - clean one type dot files"
   end
 
-  def self.linkCfg(target, src)
+  def self.linkCfg(src, target)
+    log.info("update src = #{src}, target = #{target}")
     src = File.expand_path(src, WRK_PATH)
     target = File.expand_path(target, HOME_PATH)
     if (File.exists?(target) || !File.exists?(src))
@@ -49,46 +62,54 @@ module DF
     File.unlink(target)
     return true
   end
+
+  def self.link(type)
+    log.info("link dot-files, type= #{type}")
+    DFILES[type].each do |item|
+        self.linkCfg(item["src"], item["target"])
+    end
+  end
+
+  def self.clean(type)
+    log.info("clean dot-files link, type = #{type}")
+    DFILES[type].each do |item|
+      self.cleanLink(item["target"])
+    end
+  end
 end
 
+task :default => [:usage]
 
-desc "All Options&Usage"
+desc "print usage"
 task :usage do
   DF::printOpts()
 end
 
-desc "link"
-task :link do
-  DF::log.info("Updating git config files")
-  DF::linkCfg('.gitconfig', './git/gitconfig')
-  DF::linkCfg('.gitignore_global', './git/gitignore_global')
-
-  DF::log.info("Update tmux config files")
-  DF::linkCfg('.tmux.conf', './tmux/tmux.conf')
-  DF::linkCfg('.tmuxinator', './tmux/tmuxinator')
-
-  DF::log.info("Update vim")
-  DF::linkCfg('.vimrc', './vim/vimrc')
-  DF::linkCfg('.vim', './vim/vim')
-
-  DF::log.info("Update node")
-  DF::linkCfg('.npmrc', './node/npmrc')
+desc "link <type>"
+task :link, :type do |t, args|
+    DF::log.info("update dot-files, type= #{args.type}")
+    DF::link(args.type)
 end
 
-desc "clean"
-task :clean do
-  DF::log.info("Remove git links")
-  DF::cleanLink('.gitconfig')
-  DF::cleanLink('.gitignore_global')
-
-  DF::log.info("Remove tmux links")
-  DF::cleanLink('.tmux.conf')
-  DF::cleanLink('.tmuxinator')
-
-  DF::log.info("Remove vim links")
-  DF::cleanLink('.vimrc')
-  DF::cleanLink('.vim')
-
-  DF::log.info("Update node")
-  DF::cleanLink('.npmrc')
+desc "clean <type>"
+task :clean, :type do |t, args|
+  DF::log.info("clean dot-files, type= #{args.type}")
+  DF::clean(args.type)
 end
+
+desc "update all dot-files"
+task :linkAll do
+  DF::log.info("update all dot-files")
+  DF::ALL_TYPES.each do |type|
+    DF::link(type)
+  end
+end
+
+desc "clean all dot-files"
+task :cleanAll do
+  DF::log.info("clean all dot-files")
+  DF::ALL_TYPES.each do |type|
+    DF::clean(type)
+  end
+end
+
