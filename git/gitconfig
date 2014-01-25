@@ -4,11 +4,15 @@
 [http]
 [core]
     excludesfile = ~/.gitignore_global
+
 [alias]
     ll = log --graph --pretty=oneline --abbrev-commit --decorate
     f = fetch
     c = checkout
     s = status
+
 [push]
     default = current
 
+[credential]
+	helper = cache
