@@ -12,7 +12,7 @@ module DF
 
   WRK_PATH = File.expand_path(File.dirname(__FILE__))
   HOME_PATH = File.expand_path('~')
-  ALL_TYPES = ["git", "tmux", "vim", "node"]
+  ALL_TYPES = ["git", "tmux", "vim", "node", "ruby"]
   DFILES = {
     "git" => [
       { "src" => "./git/gitconfig", "target" => ".gitconfig"},
@@ -24,7 +24,9 @@ module DF
       { "src" => "./vim/vim", "target" => ".vim"},
       { "src" => "./vim/vimrc", "target" => ".vimrc"}],
     "node" => [
-      { "src" => "./node/npmrc", "target" => ".npmrc"}]
+      { "src" => "./node/npmrc", "target" => ".npmrc"}],
+    "ruby" => [
+      { "src" => "./ruby/gemrc", "target" => ".gemrc"}]  
   }
 
   def self.log
