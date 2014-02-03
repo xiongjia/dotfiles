@@ -40,15 +40,11 @@ nnoremap <leader>n :NERDTreeToggle .<CR>
 
 " === For MS Windows
 if (has("win32"))
-    " VimTweak
-    if (has("gui_running"))
-        command -nargs=1 SetAlpha call libcallnr("vimtweak.dll",
-            \"SetAlpha", <args>)
-        command -nargs=0 TopMost call libcallnr("vimtweak.dll",
-            \"EnableTopMost", 1)
-        command -nargs=0 NoTopMost call libcallnr("vimtweak.dll",
-            \"EnableTopMost", 0)
-    endif
+    " VimTweak for windows
+    command -nargs=1 SetAlpha call libcallnr("vimtweak.dll", "SetAlpha", <args>)
+    command -nargs=0 TopMost call libcallnr("vimtweak.dll", "EnableTopMost", 1)
+    command -nargs=0 NoTopMost call libcallnr("vimtweak.dll","EnableTopMost", 0)
+
     au GUIEnter * simalt ~x "x on an English Windows version. n on a French one
     nmap <F4> :SetAlpha 200 <CR>
     nmap <C-F4> :SetAlpha 250 <CR>
@@ -82,9 +78,25 @@ let Tlist_One_File = 1
 
 " === wiki
 let g:vimwiki_use_mouse = 1
-let g:vimwiki_list = [{'path':'$HOME/.datum/vimwiki', 
-                      \'path_html':'$HOME/.datum/wiki/',
-                      \'auto_export':0}]
+let g:vimwiki_list = [{'path':'$HOME/datum/github/recycle.bin/_content',
+                    \  'path_html':'$HOME/datum/github/recycle.bin/output',
+                    \  'template_path': '$HOME/datum/github/recycle.bin/_config/',
+                    \  'template_default': 'vimwiki',
+                    \  'template_ext': '.tpl',
+                    \  'auto_export':0},
+                    \ {'path':'$HOME/.datum/wiki/note',
+                    \  'path_html':'$HOME/.datum/wiki/_dist_note',
+                    \  'template_path': '$HOME/.datum/wiki/_template',
+                    \  'template_default': 'vimwiki',
+                    \  'template_ext': '.tpl',
+                    \  'auto_export':0},
+                    \ {'path':'$HOME/.datum/wiki/wrk',
+                    \  'path_html':'$HOME/.datum/wiki/_dist_wrk',
+                    \  'template_path': '$HOME/.datum/wiki/_template',
+                    \  'template_default': 'vimwiki',
+                    \  'template_ext': '.tpl',
+                    \  'auto_export':0}]
+
 
 " === key map 
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
