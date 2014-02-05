@@ -1,6 +1,7 @@
 [user]
     name = xiongjia
     email = lexiongjia@gmail.com
+
 [http]
 [core]
     excludesfile = ~/.gitignore_global
@@ -10,6 +11,7 @@
     f = fetch
     c = checkout
     s = status
+    d = diff
 
 [push]
     default = current
