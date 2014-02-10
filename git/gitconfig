@@ -8,13 +8,26 @@
 
 [alias]
     ll = log --graph --pretty=oneline --abbrev-commit --decorate
-    f = fetch
-    c = checkout
-    s = status
-    d = diff
+    f  = fetch
+    c  = checkout
+    s  = status
+    d  = diff
+    dt = difftool
 
 [push]
     default = current
 
 [credential]
 	helper = cache
+
+[diff]
+	tool = vim -d
+[difftool]
+	prompt = false
+
+[merge]
+	tool = vim -d
+	conflictstyle = diff3
+[mergetool]
+	prompt = true
+
