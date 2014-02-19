@@ -97,6 +97,10 @@ let g:vimwiki_list = [{'path':'$HOME/datum/github/recycle.bin/_content',
                     \  'template_ext': '.tpl',
                     \  'auto_export':0}]
 
+" === twitvim
+let twitvim_proxy = $TWVIM_PROXY
+let twitvim_count = 50
+let twitvim_force_ssl = 1
 
 " === key map 
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
