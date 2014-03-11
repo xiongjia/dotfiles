@@ -16,7 +16,8 @@ set directory=$HOME/.vim/swap-files//
 set guifont=CosmicSansNeueMono:h12
 
 " === general GUI settings
-colorscheme torte
+" colorscheme torte
+colorscheme Tomorrow-Night-Bright
 set shortmess+=I
 " set cursorline
 set guioptions-=T
