@@ -79,15 +79,16 @@ let Tlist_One_File = 1
 
 " === wiki
 let g:vimwiki_use_mouse = 1
-let g:vimwiki_list = [{'path':'$HOME/datum/github/recycle.bin/_content',
-                    \  'path_html':'$HOME/datum/github/recycle.bin/output',
-                    \  'template_path': '$HOME/datum/github/recycle.bin/_config/',
-                    \  'template_default': 'vimwiki',
-                    \  'template_ext': '.tpl',
-                    \  'auto_export':0},
+let g:vimwiki_list = [
                     \ {'path':'$HOME/.datum/wiki/note',
                     \  'path_html':'$HOME/.datum/wiki/_dist_note',
                     \  'template_path': '$HOME/.datum/wiki/_template',
+                    \  'template_default': 'vimwiki',
+                    \  'template_ext': '.tpl',
+                    \  'auto_export':0},
+                    \ {'path':'$HOME/datum/github/recycle.bin/_content',
+                    \  'path_html':'$HOME/datum/github/recycle.bin/output',
+                    \  'template_path': '$HOME/datum/github/recycle.bin/_config/',
                     \  'template_default': 'vimwiki',
                     \  'template_ext': '.tpl',
                     \  'auto_export':0},
@@ -96,7 +97,8 @@ let g:vimwiki_list = [{'path':'$HOME/datum/github/recycle.bin/_content',
                     \  'template_path': '$HOME/.datum/wiki/_template',
                     \  'template_default': 'vimwiki',
                     \  'template_ext': '.tpl',
-                    \  'auto_export':0}]
+                    \  'auto_export':0}
+                    \ ]
 
 " === twitvim
 let twitvim_proxy = $TWVIM_PROXY
