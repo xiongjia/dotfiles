@@ -1,7 +1,11 @@
 [MESSAGES CONTROL]
 # C0111: Missing docstring
 # R0904: Too many public methods
-disable=C0111,R0904
+# W0221: Arguments number differs from %s method
+# W0223: Method %r is abstract in class %r but is not overridden
+# C0326: a wrong number of spaces is used around an operator, 
+#        bracket, or comma, or before a block opener colon.
+disable=C0111,R0904,W0221,W0223,C0326
 
 [FORMAT]
 indent-string='    '
