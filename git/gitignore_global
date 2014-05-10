@@ -17,4 +17,7 @@ $RECYLE.BIN/
 *.swp
 tags
 .tern-port
+
+# Python
+*.pyc
  
