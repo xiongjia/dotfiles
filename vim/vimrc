@@ -80,6 +80,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 " === wiki
 let g:vimwiki_use_mouse = 1
+let g:vimwiki_table_auto_fmt = 0
 let g:vimwiki_list = [
                     \ {'path':'$HOME/.datum/wiki/note',
                     \  'path_html':'$HOME/.datum/wiki/_dist_note',
