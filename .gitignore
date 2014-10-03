@@ -4,6 +4,14 @@
 Powerline*.cache
 *.pyc
 *.swp
+
+# vim ignore
 vim/vim/sessions
 vim/vim/swap-files
+
+# Java ignore
+java/m2/repository
+java/gradle/caches
+java/gradle/native
+java/gradle/wrapper
 
