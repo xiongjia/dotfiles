@@ -1,2 +1,4 @@
-prefix = ~/.node/.npm 
+prefix = ~/.node/.npm
 cache = ~/.node/.npm-cache
+registry = https://registry.npmjs.org
+

@@ -8,8 +8,8 @@ The general dot files and scripts.
 rake [options]
 
 options:
-	linkAll - Update all dotFiles (git, node, tmux, vim, ruby, python)
-	cleanAll - remove all dotFiles (git, node, tmux, vim, ruby, python)
+	linkAll - Update all dotFiles (git, node, tmux, vim, ruby, python, java)
+	cleanAll - remove all dotFiles (git, node, tmux, vim, ruby, python, java)
 	link[type] - link one type dot files
 	clean[type] - clean one type dot files
 ```
