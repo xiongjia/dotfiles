@@ -18,18 +18,19 @@
     default = current
 
 [credential]
-	helper = cache
+    helper = cache
 
 [diff]
-	tool = vim -d
+    tool = vim -d
 [difftool]
-	prompt = false
+    prompt = false
 
 [merge]
-	tool = vim -d
-	conflictstyle = diff3
+    tool = vim -d
+    conflictstyle = diff3
 [mergetool]
-	prompt = true
+    prompt = true
 
 [github]
-	user = xiongjia
+    user = xiongjia
+
