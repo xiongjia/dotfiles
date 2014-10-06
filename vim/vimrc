@@ -63,6 +63,7 @@ if (has("unix"))
 endif
 
 " === DEV
+execute pathogen#infect()
 set foldmethod=indent
 set foldlevel=99
 let g:snippets_dir='$HOME/.vim/snippets'
