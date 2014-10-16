@@ -1,5 +1,5 @@
-prefix = /Users/lexiongjia/.node/.npm
-cache = /Users/lexiongjia/.node/.npm-cache
+prefix = ~/.node/.npm
+cache = ~/.node/.npm-cache
 registry = https://registry.npmjs.org/
 init.author.name = Xiong-Jia.Le
 init.author.email = lexiongjia@gmail.com
