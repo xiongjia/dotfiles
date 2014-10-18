@@ -19,6 +19,7 @@ let g:loaded_syntastic_plugin = 1
 runtime! plugin/syntastic/*.vim
 
 let s:running_windows = has("win16") || has("win32")
+let s:running_mac = has("mac") || has("macunix") || has("gui_mac")
 
 if !exists("g:syntastic_always_populate_loc_list")
     let g:syntastic_always_populate_loc_list = 0
@@ -251,11 +252,11 @@ endfunction
 "the script changes &shellredir and &shell to stop the screen flicking when
 "shelling out to syntax checkers. Not all OSs support the hacks though
 function! s:OSSupportsShellredirHack()
-    return !s:running_windows && executable('/bin/bash') && (s:uname() !~ "FreeBSD") && (s:uname() !~ "OpenBSD")
+    return !s:running_windows && !s:running_mac && executable('/bin/bash') && (s:uname() !~ "FreeBSD") && (s:uname() !~ "OpenBSD")
 endfunction
 
 function! s:IsRedrawRequiredAfterMake()
-    return !s:running_windows && (s:uname() =~ "FreeBSD" || s:uname() =~ "OpenBSD")
+    return !s:running_windows && !s:running_mac && (s:uname() =~ "FreeBSD" || s:uname() =~ "OpenBSD")
 endfunction
 
 "Redraw in a way that doesnt make the screen flicker or leave anomalies behind.
