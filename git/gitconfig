@@ -10,7 +10,7 @@
     ll = log --graph --pretty=oneline --abbrev-commit --decorate
     f  = fetch
     c  = checkout
-    s  = status
+    s  = status --short
     d  = diff
     dt = difftool
 
