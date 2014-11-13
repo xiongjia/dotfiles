@@ -157,6 +157,12 @@ under the License.
       <url>http://my.repository.com/repo/path</url>
     </mirror>
      -->
+    <mirror>
+      <id>maven.net.cn</id>
+      <name>one of the central mirrors in china</name>
+      <url>http://maven.oschina.net/content/groups/public/</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
   </mirrors>
   
   <!-- profiles
