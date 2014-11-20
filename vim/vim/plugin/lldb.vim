@@ -1,3 +1,7 @@
+" only load this plugin on mac
+if !has("mac")
+    finish
+endif
 
 " Vim script glue code for LLDB integration
 
