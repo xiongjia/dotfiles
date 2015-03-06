@@ -1,0 +1,11 @@
+# search settings
+--color
+--pager
+less -R
+
+# file type sets
+--type-add
+md:ext:md
+--type-add
+wiki:ext:wiki
+
