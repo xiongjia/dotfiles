@@ -9,7 +9,9 @@
 [alias]
     ll = log --graph --pretty=oneline --abbrev-commit --decorate
     f  = fetch
-    c  = checkout
+    co = checkout
+    c  = clone
+    c1 = clone --depth=1
     s  = status --short
     d  = diff
     dt = difftool
