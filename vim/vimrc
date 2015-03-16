@@ -66,7 +66,6 @@ endif
 execute pathogen#infect()
 set foldmethod=manual
 set foldlevel=99
-let g:snippets_dir='$HOME/.vim/snippets'
 filetype plugin on
 set tags=tags;
 let Tlist_Exit_OnlyWindow = 1
