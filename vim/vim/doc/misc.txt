@@ -60,21 +60,27 @@ Contents ~
    6. The |xolox#misc#path#relative()| function
    7. The |xolox#misc#path#merge()| function
    8. The |xolox#misc#path#commonprefix()| function
-   9. The |xolox#misc#path#encode()| function
-   10. The |xolox#misc#path#decode()| function
-   11. The |xolox#misc#path#is_relative()| function
-   12. The |xolox#misc#path#tempdir()| function
-  13. Persist/recall Vim values from/to files |misc-persist-recall-vim-values-from-to-files|
+   9. The |xolox#misc#path#starts_with()| function
+   10. The |xolox#misc#path#encode()| function
+   11. The |xolox#misc#path#decode()| function
+   12. The |xolox#misc#path#is_relative()| function
+   13. The |xolox#misc#path#tempdir()| function
+  13. Manipulation of UNIX file permissions |misc-manipulation-of-unix-file-permissions|
+   1. The |xolox#misc#perm#update()| function
+   2. The |xolox#misc#perm#get()| function
+   3. The |xolox#misc#perm#set()| function
+  14. Persist/recall Vim values from/to files |misc-persist-recall-vim-values-from-to-files|
    1. The |xolox#misc#persist#load()| function
    2. The |xolox#misc#persist#save()| function
-  14. String handling                                    |misc-string-handling|
+  15. String handling                                    |misc-string-handling|
    1. The |xolox#misc#str#slug()| function
    2. The |xolox#misc#str#ucfirst()| function
-   3. The |xolox#misc#str#compact()| function
-   4. The |xolox#misc#str#trim()| function
-   5. The |xolox#misc#str#indent()| function
-   6. The |xolox#misc#str#dedent()| function
-  15. Test runner & infrastructure for Vim plug-ins |misc-test-runner-infrastructure-for-vim-plug-ins|
+   3. The |xolox#misc#str#unescape()| function
+   4. The |xolox#misc#str#compact()| function
+   5. The |xolox#misc#str#trim()| function
+   6. The |xolox#misc#str#indent()| function
+   7. The |xolox#misc#str#dedent()| function
+  16. Test runner & infrastructure for Vim plug-ins |misc-test-runner-infrastructure-for-vim-plug-ins|
    1. The |xolox#misc#test#reset()| function
    2. The |xolox#misc#test#summarize()| function
    3. The |xolox#misc#test#wrap()| function
@@ -83,7 +89,7 @@ Contents ~
    6. The |xolox#misc#test#assert_true()| function
    7. The |xolox#misc#test#assert_equals()| function
    8. The |xolox#misc#test#assert_same_type()| function
-  16. Tests for the miscellaneous Vim scripts |tests-for-miscellaneous-vim-scripts|
+  17. Tests for the miscellaneous Vim scripts |tests-for-miscellaneous-vim-scripts|
    1. The |xolox#misc#tests#run()| function
    2. The |xolox#misc#tests#pattern_escaping()| function
    3. The |xolox#misc#tests#substitute_escaping()| function
@@ -107,12 +113,13 @@ function
    19. The |xolox#misc#tests#multiline_string_dedent()| function
    20. The |xolox#misc#tests#version_string_parsing()| function
    21. The |xolox#misc#tests#version_string_comparison()| function
-  17. Timing of long during operations  |misc-timing-of-long-during-operations|
-   1. The |xolox#misc#timer#start()| function
-   2. The |xolox#misc#timer#stop()| function
-   3. The |xolox#misc#timer#force()| function
-   4. The |xolox#misc#timer#convert()| function
-  18. Version string handling                    |misc-version-string-handling|
+  18. Timing of long during operations  |misc-timing-of-long-during-operations|
+   1. The |xolox#misc#timer#resumable()| function
+   2. The |xolox#misc#timer#start()| function
+   3. The |xolox#misc#timer#stop()| function
+   4. The |xolox#misc#timer#force()| function
+   5. The |xolox#misc#timer#convert()| function
+  19. Version string handling                    |misc-version-string-handling|
    1. The |xolox#misc#version#parse()| function
    2. The |xolox#misc#version#at_least()| function
  4. Contact                                                      |misc-contact|
@@ -162,8 +169,8 @@ For those who are curious: The function descriptions given below were extracted
 from the source code of the miscellaneous scripts using the Python module
 'vimdoctool.py' included in vim-tools [5].
 
-The documentation of the 89 functions below was extracted from 18 Vim scripts
-on June 22, 2014 at 02:54.
+The documentation of the 95 functions below was extracted from 19 Vim scripts
+on March 15, 2015 at 11:10.
 
 -------------------------------------------------------------------------------
                                       *misc-asynchronous-vim-script-evaluation*
@@ -492,6 +499,13 @@ coerced to strings using Vim's |string()| function.
 In the case of |xolox#misc#msg#info()|, automatic string coercion simply makes
 the function a bit easier to use.
 
+The messages emitted by this function have no highlighting. Previously these
+messages were highlighted using the Title group (see |hl-Title|), but it was
+pointed out in pull request 16 [12] that this group shouldn't be used for
+informational messages because it is meant for titles and because of this some
+color schemes use colors that stand out quite a bit, causing the informational
+messages to look like errors.
+
 -------------------------------------------------------------------------------
 The *xolox#misc#msg#warn()* function
 
@@ -637,7 +651,7 @@ value of |v:progname|, but if you have a preference you can pass the string
 The *xolox#misc#os#exec()* function
 
 Execute an external command (hiding the console on Microsoft Windows when my
-vim-shell plug-in [12] is installed).
+vim-shell plug-in [13] is installed).
 
 Expects a dictionary with the following key/value pairs as the first argument:
 
@@ -750,6 +764,14 @@ The *xolox#misc#path#commonprefix()* function
 Find the common prefix of path components in a list of pathnames.
 
 -------------------------------------------------------------------------------
+The *xolox#misc#path#starts_with()* function
+
+Check whether the first pathname starts with the second pathname (expected to
+be a directory). This does not perform a regular string comparison; first it
+normalizes both pathnames, then it splits them into their pathname segments and
+then it compares the segments.
+
+-------------------------------------------------------------------------------
 The *xolox#misc#path#encode()* function
 
 Encode a pathname so it can be used as a filename. This uses URL encoding to
@@ -770,6 +792,57 @@ false (0) otherwise.
 The *xolox#misc#path#tempdir()* function
 
 Create a temporary directory and return the pathname of the directory.
+
+-------------------------------------------------------------------------------
+                                   *misc-manipulation-of-unix-file-permissions*
+Manipulation of UNIX file permissions ~
+
+Vim's |writefile()| function cannot set file permissions for newly created
+files and although Vim script has a function to get file permissions (see
+|getfperm()|) there is no equivalent for changing a file's permissions.
+
+This omission breaks the otherwise very useful idiom of updating a file by
+writing its new contents to a temporary file and then renaming the temporary
+file into place (which is as close as you're going to get to atomically
+updating a file's contents on UNIX) because the file's permissions will not be
+preserved!
+
+**Here's a practical example:** My vim-easytags [6] plug-in writes tags file
+updates to a temporary file and renames the temporary file into place. When I
+use 'sudo -s' on Ubuntu Linux it preserves my environment variables so my
+'~/.vimrc' and the vim-easytags [6] plug-in are still loaded. Now when a tags
+file is written the file becomes owned by root (my effective user id in the
+'sudo' session). Once I leave the 'sudo' session I can no longer update my tags
+file because it's now owned by root … ಠ_ಠ
+
+-------------------------------------------------------------------------------
+The *xolox#misc#perm#update()* function
+
+Atomically update a file's contents while preserving the owner, group and mode.
+The first argument is the pathname of the file to update (a string). The second
+argument is the list of lines to be written to the file. Writes the new
+contents to a temporary file and renames the temporary file into place, thereby
+preventing readers from reading a partially written file. Returns 1 if the file
+is successfully updated, 0 otherwise.
+
+Note that if |xolox#misc#perm#get()| and |xolox#misc#perm#set()| cannot be used
+to preserve the file owner/group/mode the file is still updated using a rename
+(for compatibility with non-UNIX systems and incompatible '/usr/bin/stat'
+implementations) so in that case you can still lose the file's
+owner/group/mode.
+
+-------------------------------------------------------------------------------
+The *xolox#misc#perm#get()* function
+
+Get the owner, group and permissions of the pathname given as the first
+argument. Returns an opaque value which you can later pass to
+|xolox#misc#perm#set()|.
+
+-------------------------------------------------------------------------------
+The *xolox#misc#perm#set()* function
+
+Set the permissions (the second argument) of the pathname given as the first
+argument. Expects a permissions value created by |xolox#misc#perm#get()|.
 
 -------------------------------------------------------------------------------
                                  *misc-persist-recall-vim-values-from-to-files*
@@ -818,6 +891,11 @@ and URLs without worrying about quoting/escaping of special characters.
 The *xolox#misc#str#ucfirst()* function
 
 Uppercase the first character in a string (the first argument).
+
+-------------------------------------------------------------------------------
+The *xolox#misc#str#unescape()* function
+
+Remove back slash escapes from a string (the first argument).
 
 -------------------------------------------------------------------------------
 The *xolox#misc#str#compact()* function
@@ -1024,6 +1102,28 @@ Test comparison of version strings with |xolox#misc#version#at_least()|.
 Timing of long during operations ~
 
 -------------------------------------------------------------------------------
+The *xolox#misc#timer#resumable()* function
+
+Create a resumable timer object. This returns an object (a dictionary with
+functions) with the following "methods":
+
+- 'start()' instructs the timer object to start counting elapsed time (when a
+  timer object is created it is not automatically started).
+
+- 'stop()' instructs the timer object to stop counting elapsed time. This
+  adds the time elapsed since 'start()' was last called to the total elapsed
+  time. This method will raise an error if called out of sequence.
+
+- 'format()' takes the total elapsed time and reports it as a string
+  containing a formatted floating point number.
+
+Timer objects are meant to accurately time short running operations so they're
+dependent on Vim's |reltime()| and |reltimestr()| functions. In order to make
+it possible to use timer objects in my Vim plug-ins unconditionally there's a
+fall back to |localtime()| when |reltime()| is not available. In this mode the
+timer objects are not very useful but at least they shouldn't raise errors.
+
+-------------------------------------------------------------------------------
 The *xolox#misc#timer#start()* function
 
 Start a timer. This returns a list which can later be passed to
@@ -1076,15 +1176,15 @@ version string. Returns 1 (true) when it is, 0 (false) otherwise.
 Contact ~
 
 If you have questions, bug reports, suggestions, etc. please open an issue or
-pull request on GitHub [13]. Download links and documentation can be found on
-the plug-in's homepage [14]. If you like the script please vote for it on Vim
-Online [15].
+pull request on GitHub [14]. Download links and documentation can be found on
+the plug-in's homepage [15]. If you like the script please vote for it on Vim
+Online [16].
 
 ===============================================================================
                                                                  *misc-license*
 License ~
 
-This software is licensed under the MIT license [16]. ÂŠ 2014 Peter Odding
+This software is licensed under the MIT license [17]. © 2015 Peter Odding
 <peter@peterodding.com>.
 
 ===============================================================================
@@ -1102,10 +1202,11 @@ References ~
 [9] http://peterodding.com/code/vim/notes/#recentnotes_command
 [10] http://peterodding.com/code/vim/notes/#showtaggednotes_command
 [11] http://peterodding.com/code/vim/session/
-[12] http://peterodding.com/code/vim/shell/
-[13] http://github.com/xolox/vim-misc
-[14] http://peterodding.com/code/vim/misc
-[15] http://www.vim.org/scripts/script.php?script_id=4597
-[16] http://en.wikipedia.org/wiki/MIT_License
+[12] https://github.com/xolox/vim-misc/pull/16
+[13] http://peterodding.com/code/vim/shell/
+[14] http://github.com/xolox/vim-misc
+[15] http://peterodding.com/code/vim/misc
+[16] http://www.vim.org/scripts/script.php?script_id=4597
+[17] http://en.wikipedia.org/wiki/MIT_License
 
 vim: ft=help

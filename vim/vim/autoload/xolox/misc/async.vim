@@ -1,7 +1,7 @@
 " Asynchronous Vim script evaluation.
 "
 " Author: Peter Odding <peter@peterodding.com>
-" Last Change: June 22, 2014
+" Last Change: September 17, 2014
 " URL: http://peterodding.com/code/vim/misc/
 "
 " The `xolox#misc#async#call()` function builds on top of `xolox#misc#os#exec()`
@@ -144,6 +144,7 @@ function! xolox#misc#async#call(options) " {{{1
   let g:xolox#misc#async#counter += 1
   let request = {'function': a:options['function']}
   let request['arguments'] = get(a:options, 'arguments', [])
+  let request['starttime'] = xolox#misc#timer#start()
   let request['number'] = unique_number
   let callback = get(a:options, 'callback')
   if !empty(callback)
@@ -160,7 +161,7 @@ function! xolox#misc#async#call(options) " {{{1
   let quoted_program = xolox#misc#escape#shell(xolox#misc#os#find_vim('vim'))
   let quoted_command = xolox#misc#escape#shell(vim_command)
   let shell_command = printf('%s -u NONE -U NONE --noplugin -n -N -i NONE --cmd %s', quoted_program, quoted_command)
-  call xolox#misc#msg#debug("vim-misc %s: Generated asynchronous shell command #%i: %s", g:xolox#easytags#version, unique_number, shell_command)
+  call xolox#misc#msg#debug("vim-misc %s: Generated asynchronous shell command #%i: %s", g:xolox#misc#version, unique_number, shell_command)
   call xolox#misc#os#exec({'command': shell_command, 'async': 1})
   let g:xolox#misc#async#requests[unique_number] = request
 endfunction
@@ -211,8 +212,8 @@ function! xolox#misc#async#callback_to_parent(response) " {{{1
   " enables more or less instant callbacks after running an asynchronous
   " function.
   let unique_number = a:response['number']
-  call xolox#misc#msg#debug("vim-misc %s: Processing asynchronous callback #%i ..", g:xolox#easytags#version, unique_number)
   let request = g:xolox#misc#async#requests[unique_number]
+  call xolox#misc#timer#stop("vim-misc %s: Processing asynchronous callback #%i after %s ..", g:xolox#misc#version, unique_number, request['starttime'])
   call remove(g:xolox#misc#async#requests, unique_number)
   let callback = get(request, 'callback')
   if !empty(callback)
@@ -229,22 +230,24 @@ function! xolox#misc#async#periodic_callback() " {{{1
   " process the response.
   "
   " [CursorHold]: http://vimdoc.sourceforge.net/htmldoc/autocmd.html#CursorHold
-  let num_processed = 0
-  call xolox#misc#msg#debug("vim-misc %s: Checking for asynchronous responses (%i responses not yet received) ..", g:xolox#misc#version, len(g:xolox#misc#async#requests))
-  for unique_number in sort(keys(g:xolox#misc#async#requests))
-    let request = g:xolox#misc#async#requests[unique_number]
-    let temporary_file = get(request, 'temporary_file', '')
-    if !empty(temporary_file) && getfsize(temporary_file) > 0
-      try
-        call xolox#misc#msg#debug("vim-misc %s: Found asynchronous response by %s in %s ..", g:xolox#misc#version, request['function'], temporary_file)
-        call xolox#misc#async#callback_to_parent(xolox#misc#persist#load(temporary_file))
-        let num_processed += 1
-      finally
-        call delete(temporary_file)
-      endtry
-    endif
-  endfor
-  call xolox#misc#msg#debug("vim-misc %s: Processed %i asynchronous responses (%i responses not yet received).", g:xolox#misc#version, num_processed, len(g:xolox#misc#async#requests))
+  if !empty(g:xolox#misc#async#requests)
+    let num_processed = 0
+    call xolox#misc#msg#debug("vim-misc %s: Checking for asynchronous responses (%i responses not yet received) ..", g:xolox#misc#version, len(g:xolox#misc#async#requests))
+    for unique_number in sort(keys(g:xolox#misc#async#requests))
+      let request = g:xolox#misc#async#requests[unique_number]
+      let temporary_file = get(request, 'temporary_file', '')
+      if !empty(temporary_file) && getfsize(temporary_file) > 0
+        try
+          call xolox#misc#msg#debug("vim-misc %s: Found asynchronous response by %s in %s ..", g:xolox#misc#version, request['function'], temporary_file)
+          call xolox#misc#async#callback_to_parent(xolox#misc#persist#load(temporary_file))
+          let num_processed += 1
+        finally
+          call delete(temporary_file)
+        endtry
+      endif
+    endfor
+    call xolox#misc#msg#debug("vim-misc %s: Processed %i asynchronous responses (%i responses not yet received).", g:xolox#misc#version, num_processed, len(g:xolox#misc#async#requests))
+  endif
 endfunction
 
 " }}}1
