@@ -9,6 +9,7 @@ Powerline*.cache
 vim/vim/sessions
 vim/vim/swap-files
 vim/vim/doc/tags
+vim/vim/notes-dat
 
 # Java ignore
 java/m2/repository
