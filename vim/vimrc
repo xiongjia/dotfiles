@@ -74,6 +74,7 @@ let Tlist_One_File = 1
 let g:syntastic_mode_map = { 'mode': 'active',
                     \ 'passive_filetypes': [ 'python' ] }
 let g:syntastic_auto_loc_list = 1
+let g:notes_directories = [ "$HOME/.vim/notes-dat"]
 
 " 80+ overlength
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
