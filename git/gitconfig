@@ -23,12 +23,12 @@
     helper = cache
 
 [diff]
-    tool = vim -d
+    tool = vimdiff
 [difftool]
     prompt = false
 
 [merge]
-    tool = vim -d
+    tool = vimdiff
     conflictstyle = diff3
 [mergetool]
     prompt = true

@@ -126,3 +126,11 @@ map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 
+" === misc
+function! s:UpdateHelpTag()
+    " call pathogen#runtime_append_all_bundles()
+    call pathogen#helptags()
+endfunction
+command -nargs=0 UpdateHelpTag call s:UpdateHelpTag()
+
+
