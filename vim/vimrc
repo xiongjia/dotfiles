@@ -27,6 +27,12 @@ if has("gui_running")
     set lines=9999 columns=9999
 endif
 
+if has("gui_running")
+    colorscheme Tomorrow-Night-Bright
+else
+    colorscheme twilight
+endif
+
 " Status bar
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ 
@@ -79,6 +85,9 @@ let g:notes_directories = [ "$HOME/.vim/notes-dat"]
 " 80+ overlength
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " match OverLength /\%81v.\+/
+
+" file types
+au BufRead,BufNewFile *.json set filetype=json
 
 " === wiki
 let g:vimwiki_use_mouse = 1
