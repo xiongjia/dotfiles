@@ -30,7 +30,7 @@ endif
 if has("gui_running")
     colorscheme Tomorrow-Night-Bright
 else
-    colorscheme twilight
+    colorscheme twilight256
 endif
 
 " Status bar
