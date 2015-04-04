@@ -11,7 +11,7 @@
     f  = fetch
     co = checkout
     c  = clone
-    c1 = clone --depth=1
+    c1 = clone --depth=1 --single-branch
     s  = status --short
     d  = diff
     dt = difftool
