@@ -1,4 +1,4 @@
-" === General 
+" General settings
 syntax on
 set smartindent
 set tabstop=4
@@ -11,29 +11,21 @@ set hlsearch
 set gcr=a:block-blinkon0
 set directory=$HOME/.vim/swap-files//
 
-" === font
-set guifont=CosmicSansNeueMono:h12
-
-" === general GUI settings
-" colorscheme torte
+" GUI settings
 colorscheme Tomorrow-Night-Bright
 set shortmess+=I
-" set cursorline
+set guifont=CosmicSansNeueMono:h12
 set guioptions-=T
 set guioptions-=m
 set clipboard=unnamed
 if has("gui_running")
-    " Maximize gvim window.
-    set lines=9999 columns=9999
-endif
-
-if has("gui_running")
+    set lines=9999 columns=9999 " Maximize gvim window
     colorscheme Tomorrow-Night-Bright
 else
     colorscheme twilight256
 endif
 
-" Status bar
+" status bar
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ 
                 \[HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
@@ -44,7 +36,7 @@ let NERDTreeChDirMode=2
 let NERDTreeDirArrows=0
 nnoremap <leader>n :NERDTreeToggle .<CR>
 
-" === For MS Windows
+" MS Windows
 if (has("win32"))
     " VimTweak for windows
     command -nargs=1 SetAlpha call libcallnr("vimtweak.dll", "SetAlpha", <args>)
@@ -58,7 +50,7 @@ if (has("win32"))
     nmap <C-F5> :NoTopMost <CR>
 endif
 
-" === For Unix
+" Unix
 if (has("unix"))
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
@@ -68,7 +60,7 @@ if (has("unix"))
     endif 
 endif
 
-" === DEV
+" DEV settings
 execute pathogen#infect()
 set foldmethod=manual
 set foldlevel=99
@@ -84,14 +76,30 @@ let g:notes_directories = [ "$HOME/.vim/notes-dat"]
 let g:indentLine_noConcealCursor = 1
 let g:indentLine_enabled = 0
 
+if (has("win32"))
+    set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+else
+    set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+endif
+
+" Ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
 " 80+ overlength
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " match OverLength /\%81v.\+/
 
-" file types
+" dev-file types
 au BufRead,BufNewFile *.json set filetype=json
 
-" === wiki
+" vim wiki
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_table_auto_fmt = 0
 let g:vimwiki_valid_html_tags = 
@@ -118,30 +126,22 @@ let g:vimwiki_list = [
         \  'auto_export':0}
         \ ]
 
-" === twitvim
+" twitter
 let twitvim_proxy = $TWVIM_PROXY
 let twitvim_count = 50
 let twitvim_force_ssl = 1
 
-" === key map 
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
-        \set guioptions-=T <Bar>
-        \set guioptions-=m <Bar>
-    \else <Bar>
-        \set guioptions+=T <Bar>
-        \set guioptions+=m <Bar>
-    \endif<CR>
-
-" === session manager
+" session manager
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 
-" === misc
+" misc
 function! s:UpdateHelpTag()
     " call pathogen#runtime_append_all_bundles()
     call pathogen#helptags()
 endfunction
-command -nargs=0 UpdateHelpTag call s:UpdateHelpTag()
 
+if !exists(":UpdateHelpTag")
+    command -nargs=0 UpdateHelpTag call s:UpdateHelpTag()
+endif
 
