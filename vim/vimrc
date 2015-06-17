@@ -62,10 +62,12 @@ endif
 
 " DEV settings
 execute pathogen#infect()
+
 set foldmethod=manual
 set foldlevel=99
 filetype plugin on
 set tags=tags;
+
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_One_File = 1
@@ -77,9 +79,9 @@ let g:indentLine_noConcealCursor = 1
 let g:indentLine_enabled = 0
 
 if (has("win32"))
-    set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+    set wildignore+=*.so,*.a,*.swp,*.zip,*.dll,*.lib
 else
-    set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+    set wildignore+=*.so,*.a,*.swp,*.zip
 endif
 
 " Ctrlp
