@@ -3,6 +3,10 @@
 --pager
 less -R
 
+# ignore folders
+--ignore-directory
+is:bower_components
+
 # file type sets
 --type-add
 md:ext:md
