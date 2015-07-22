@@ -62,6 +62,7 @@ endif
 
 " DEV settings
 execute pathogen#infect()
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 set foldmethod=manual
 set foldlevel=99
