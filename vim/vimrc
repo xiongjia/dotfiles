@@ -79,10 +79,9 @@ let g:notes_directories = [ "$HOME/.vim/notes-dat"]
 let g:indentLine_noConcealCursor = 1
 let g:indentLine_enabled = 0
 
+set wildignore+=*.so,*.a,*.swp,*.zip,*.pyc,*.class
 if (has("win32"))
-    set wildignore+=*.so,*.a,*.swp,*.zip,*.dll,*.lib
-else
-    set wildignore+=*.so,*.a,*.swp,*.zip
+    set wildignore+=*.dll,*.lib
 endif
 
 " Ctrlp
