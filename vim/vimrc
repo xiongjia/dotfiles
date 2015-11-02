@@ -11,6 +11,9 @@ set hlsearch
 set gcr=a:block-blinkon0
 set directory=$HOME/.vim/swap-files//
 
+nnoremap <Leader>mt "=strftime("%c")<CR>P
+nnoremap <Leader>md "=strftime("%a %d %b %Y")<CR>P
+
 " GUI settings
 colorscheme Tomorrow-Night-Bright
 set shortmess+=I
