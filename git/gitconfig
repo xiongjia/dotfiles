@@ -5,6 +5,7 @@
 [http]
 [core]
     excludesfile = ~/.gitignore_global
+    editor = vim
 
 [alias]
     ll = log --graph --pretty=oneline --abbrev-commit --decorate
