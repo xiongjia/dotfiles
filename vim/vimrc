@@ -18,6 +18,7 @@ nnoremap <Leader>mt "=strftime("%c")<CR>P
 nnoremap <Leader>md "=strftime("%a %d %b %Y")<CR>P
 nnoremap <C-\> :noh<Return>
 nnoremap <C-S> :update<CR>
+nnoremap <Leader>ii :IndentLinesToggle<CR>
 
 " GUI settings
 colorscheme Tomorrow-Night-Bright
