@@ -12,6 +12,7 @@ set noerrorbells
 set novisualbell
 set gcr=a:block-blinkon0
 set directory=$HOME/.vim/swap-files//
+set rnu
 
 execute pathogen#infect()
 nnoremap <Leader>mt "=strftime("%c")<CR>P
