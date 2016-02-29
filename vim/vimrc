@@ -13,6 +13,7 @@ set novisualbell
 set gcr=a:block-blinkon0
 set directory=$HOME/.vim/swap-files//
 set rnu
+set nu
 
 execute pathogen#infect()
 nnoremap <Leader>mt "=strftime("%c")<CR>P
@@ -20,6 +21,7 @@ nnoremap <Leader>md "=strftime("%a %d %b %Y")<CR>P
 nnoremap <C-\> :noh<Return>
 nnoremap <C-S> :update<CR>
 nnoremap <Leader>ii :IndentLinesToggle<CR>
+nnoremap <Leader>ut :UndotreeToggle<CR>
 
 " GUI settings
 colorscheme Tomorrow-Night-Bright
