@@ -1,11 +1,10 @@
 @echo off
 
-:: dev tools
-set _git_home=D:\usr\misc\git\git-2.8.1
+call %~dp0\.\settings.cmd
 set _dev_path=
 
-
-:: Git
+:: utils (git; gun win32)
+set _dev_path=%_gnu_w32%\bin;%_dev_path%
 set _dev_path=%_git_home%\cmd;%_dev_path%
 
 :: Java / Scala
@@ -19,4 +18,15 @@ if defined _java_proxy_opts (
   set SCALA_OPTS=%SCALA_OPTS% %_java_proxy_opts%
   set ANT_OPTS=%ANT_OPTS% %_java_proxy_opts%
 )
+
+:: golang
+set GOROOT=%_go_root%
+set GOPATH=%_go_path%
+set _dev_path=%GOROOT%\bin;%GOPATH%\bin;%_dev_path%
+
+:: perl
+set _dev_path=%_perl_home%\bin;%_dev_path%
+
+:: node.js
+set _dev_path=%_npm_prefix%;%_node%;%_npm%;%_dev_path%
 

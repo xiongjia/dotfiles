@@ -1,7 +1,6 @@
 @echo off
 
-set _proxy_host=localhost
-set _proxy_port=8082
+call %~dp0\.\settings.cmd
 
 :: all proxies
 if defined _proxy_host (

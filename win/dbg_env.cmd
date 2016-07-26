@@ -1,5 +1,8 @@
 @echo off
-@echo "DEV env"
+@echo "debug DEV env"
+
+setlocal
+set _dbg=true
 
 :: import libraries
 set _dev_env_libs=%~dp0\.\lib
@@ -8,4 +11,4 @@ call %_dev_env_libs%\dev_tools.cmd
 
 set path=%_dev_path%;%path%
 call %_dev_env_libs%\dbg_info.cmd
-
+endlocal
