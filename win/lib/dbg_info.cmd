@@ -18,9 +18,10 @@ if "%_dbg%" == "true" (
   @echo Ant opts   : %ANT_OPTS%
 
   @echo ===========================================
-  @echo Dev path: 
+  @echo Dev env: 
   @echo ===========================================
-  @echo %_dev_path%
+  @echo Path: %_dev_path%
+  @echo Git ssh: %GIT_SSH%
 
   @echo ===========================================
   @echo Dev tools: 
