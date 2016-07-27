@@ -7,8 +7,8 @@ set _proxy_host=localhost
 set _proxy_port=8082
 
 :: dev tools
-set _git_home=D:\usr\misc\git\git-2.8.1
-set _gnu_w32=D:\usr\misc\gnu_w32
+set _git_home=C:\wrk\tools\git\Git-2.8.0
+set _gnu_w32=C:\wrk\tools\gnu_w32
 
 :: golang
 set _go_root=D:\usr\misc\go\go1.6.2
@@ -21,13 +21,4 @@ set _perl_home=C:\strawberry\perl
 set _node=D:\usr\misc\node\node-v6.2.0
 set _npm=D:\usr\misc\node\npm-1.4.9
 set _npm_prefix=D:\usr\misc\node\npm-packages
-
-:: emacs
-set _emacs_wrk_dir=E:\dev
-set _emacs_root=D:\usr\misc\emacs\emacs-25.0.91
-set _emacs_bin=%_emacs_root%\bin\runemacs.exe
-set _emacs_home=D:\usr\misc\emacs\emacs-home
-
-:: putty
-set _putty_root=C:\wrk\tools\putty\putty-0.62
 
