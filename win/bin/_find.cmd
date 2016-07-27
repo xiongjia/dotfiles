@@ -2,7 +2,7 @@
 
 :: gnu win32 find
 setlocal
-set _dev_env_libs=%~dp0\..\lib
+set _dev_env_libs=%~dp0.\..\lib
 call %_dev_env_libs%\settings.cmd
 
 set find_args=%*

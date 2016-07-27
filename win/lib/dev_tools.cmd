@@ -1,7 +1,7 @@
 @echo off
 
-call %~dp0\.\settings.cmd
-set _dev_bin==%~dp0\..\bin
+call %~dp0.\settings.cmd
+set _dev_bin=%~dp0.\..\bin
 set _dev_path=%_dev_bin%
 
 :: utils (git; gun win32)

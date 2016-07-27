@@ -4,7 +4,7 @@
 :: In git 2.x +, '-p' is port number but putty option is '-P'.
 
 setlocal
-set _dev_env_libs=%~dp0\..\lib
+set _dev_env_libs=%~dp0.\..\lib
 call %_dev_env_libs%\settings.cmd
 
 :: Update the SSH args (replease '-p ' to '-P ')

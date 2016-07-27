@@ -1,6 +1,6 @@
 @echo off
 
-call %~dp0\.\settings.cmd
+call %~dp0.\settings.cmd
 
 :: all proxies
 if defined _proxy_host (
