@@ -2,7 +2,7 @@
 @echo "DEV env"
 
 :: import libraries
-set _dev_env_libs=%~dp0\.\lib
+set _dev_env_libs=%~dp0\..\lib
 call %_dev_env_libs%\local_proxy.cmd
 call %_dev_env_libs%\dev_tools.cmd
 
