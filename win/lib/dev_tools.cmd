@@ -4,8 +4,13 @@ call %~dp0.\settings.cmd
 set _dev_bin=%~dp0.\..\bin
 set _dev_path=%_dev_bin%
 
-:: utils (git; gun win32)
+:: utils
 set _dev_path=%_gnu_w32%\bin;%_dev_path%
+set _dev_path=%_choco_root%\bin;%_dev_path%
+set _dev_path=%_sys_internal%;%_dev_path%
+set _dev_path=%_platinum_searcher%;%_dev_path%
+set _dev_path=%_gvim_root%;%_dev_path%
+set _dev_path=%_emacs_root%\bin;%_dev_path%
 
 :: Java / Scala
 if defined _proxy_host (

@@ -29,6 +29,7 @@ if "%_dbg%" == "true" (
   where python go perl ruby java gradle mvn node npm
   where jshint grunt bower node-inspector
   where curl wget tee tar gzip
-  where git pt ag ack
+  where git gitk pt ag ack
+  where dbgview tcpview procexp procmon
 )
 

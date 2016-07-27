@@ -22,12 +22,19 @@ set _node=D:\usr\misc\node\node-v6.2.0
 set _npm=D:\usr\misc\node\npm-1.4.9
 set _npm_prefix=D:\usr\misc\node\npm-packages
 
+:: vim
+set _gvim_root=D:\usr\misc\vim\vim74
+set _gvim_home=C:\Users\lexj
+
 :: emacs
 set _emacs_wrk_dir=E:\dev
 set _emacs_root=D:\usr\misc\emacs\emacs-25.0.91
 set _emacs_bin=%_emacs_root%\bin\runemacs.exe
 set _emacs_home=D:\usr\misc\emacs\emacs-home
 
-:: putty
+:: tools
 set _putty_root=C:\wrk\tools\putty\putty-0.62
+set _choco_root=C:\ProgramData\chocolatey
+set _sys_internal=D:\usr\misc\SysinternalsSuite
+set _platinum_searcher=D:\usr\misc\pt
 
