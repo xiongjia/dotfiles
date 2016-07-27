@@ -1,5 +1,4 @@
 @echo off
-@echo "DEV env"
 
 :: import libraries
 set _dev_env_libs=%~dp0\..\lib
