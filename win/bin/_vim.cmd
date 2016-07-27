@@ -9,15 +9,15 @@ call %_dev_env_libs%\dev_tools.cmd
 set path=%_dev_path%;%path%
 call %_dev_env_libs%\dbg_info.cmd
 
-set HOME=%_emacs_home%
-set _emacs_args=%*
+set HOME=%_gvim_home%
+set _vim_args=%*
 
-if "%_emacs_args%" == "" (
-  pushd %_emacs_wrk_dir%
-  start %_emacs_bin% --insecure
+if "%_vim_args%" == "" (
+  pushd %_gvim_wrk_dir%
+  start %_gvim_root%\gvim.exe
   popd
 ) else (
-  start %_emacs_bin% --insecure %_emacs_args%
+  start %_gvim_root%\gvim.exe --remote-tab-silent %_vim_args%
 )
 endlocal
 

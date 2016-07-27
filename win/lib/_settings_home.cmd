@@ -25,6 +25,7 @@ set _npm_prefix=D:\usr\misc\node\npm-packages
 :: vim
 set _gvim_root=D:\usr\misc\vim\vim74
 set _gvim_home=C:\Users\lexj
+set _gvim_wrk_dir=E:\dev
 
 :: emacs
 set _emacs_wrk_dir=E:\dev
