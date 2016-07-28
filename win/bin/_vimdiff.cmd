@@ -8,6 +8,6 @@ call %_dev_env_libs%\settings.cmd
 set HOME=%_gvim_home%
 set diff_args=%*
 echo %diff_args%
-%_gvim_root%\gvim.exe -d %diff_args%
+start %_gvim_root%\gvim.exe -d %diff_args%
 endlocal
 

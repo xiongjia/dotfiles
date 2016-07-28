@@ -1,6 +1,6 @@
 @echo off
 
-:: All settings (home)
+:: All settings (wrk)
 
 :: Proxy
 set _proxy_host=localhost
@@ -21,4 +21,21 @@ set _perl_home=C:\strawberry\perl
 set _node=C:\wrk\tools\node\node-v4.4.5-64
 set _npm=C:\wrk\tools\node\npm-1.4.12
 set _npm_prefix=C:\wrk\tools\node\npm-prefix
+
+:: vim
+set _gvim_root=C:\wrk\tools\vim\vim74
+set _gvim_home=C:\Users\lexi
+set _gvim_wrk_dir=C:\wrk\src
+
+:: emacs
+set _emacs_wrk_dir=C:\wrk\src
+set _emacs_root=C:\wrk\tools\emacs\emacs-25.0.92
+set _emacs_bin=%_emacs_root%\bin\runemacs.exe
+set _emacs_home=C:\wrk\tools\emacs\emacs_home
+
+:: tools
+set _putty_root=C:\wrk\tools\putty\putty-0.62
+set _choco_root=C:\ProgramData\chocolatey
+set _sys_internal=C:\wrk\tools\sysinternals
+set _platinum_searcher=C:\wrk\tools\pt
 
