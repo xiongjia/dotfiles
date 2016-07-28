@@ -22,6 +22,28 @@ set _node=D:\usr\misc\node\node-v6.2.0
 set _npm=D:\usr\misc\node\npm-1.4.9
 set _npm_prefix=D:\usr\misc\node\npm-packages
 
+:: c/c++
+set _boost_root=E:\dev\third_party\boost\boost_1_61_0
+set _cmake_root=D:\usr\misc\cmake\cmake-3.5.0-rc1-win32-x86
+set _ms_sym_cache=E:\dev\sym.cache\ms
+set _ms_win_dbg_32=D:\usr\misc\windbg\windbg_x86
+set _ms_win_dbg_64=D:\usr\misc\windbg\windbg_x64
+set _ms_depends_32=D:\usr\misc\depends22\depends22_x86
+set _ms_depends_64=D:\usr\misc\depends22\depends22_x64
+
+:: java
+set _jdk_home=D:\usr\app\Java\jdk1.8.0_60
+set _scala_home=E:\dev\java_env\scala\scala-2.12.0
+set _m2_home=E:\dev\apache\apache-maven-3.0.5
+set _gradle_home=D:\usr\misc\gradle\gradle-2.8
+set _gradle_usr_home=E:\dev\gradle_usr_home
+set _sbt_home=E:\dev\java_env\scala\sbt-0.13.9\sbt
+set _ant_home=D:\usr\misc\ap\ant\apache-ant-1.9.3
+
+:: ruby
+set _ruby_home=D:\usr\misc\ruby\Ruby200-x64
+set _ruby_devkit=D:\usr\misc\ruby\DevKit-mingw64-64-4.7.2-20130224-1432-sfx
+
 :: vim
 set _gvim_root=D:\usr\misc\vim\vim74
 set _gvim_home=C:\Users\lexj
@@ -34,8 +56,9 @@ set _emacs_bin=%_emacs_root%\bin\runemacs.exe
 set _emacs_home=D:\usr\misc\emacs\emacs-home
 
 :: tools
-set _putty_root=C:\wrk\tools\putty\putty-0.62
+set _putty_root=D:\usr\misc\putty-0.62
 set _choco_root=C:\ProgramData\chocolatey
 set _sys_internal=D:\usr\misc\SysinternalsSuite
 set _platinum_searcher=D:\usr\misc\pt
+set _gnu_global=D:\usr\misc\gnu-global\glo653wb
 

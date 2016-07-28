@@ -21,15 +21,20 @@ if "%_dbg%" == "true" (
   @echo Dev env: 
   @echo ===========================================
   @echo Path: %_dev_path%
+  @echo Boost: %BOOSTROOT%
   @echo Git ssh: %GIT_SSH%
+  @echo NT Symbol: %_NT_SYMBOL_PATH%
 
   @echo ===========================================
   @echo Dev tools: 
   @echo ===========================================
-  where python go perl ruby java gradle mvn node npm
+  where python go perl ruby node npm
+  where java scala gradle mvn ant sbt
+  where windbg adplus depends cmake cmake-gui
   where jshint grunt bower node-inspector
   where curl wget tee tar gzip
-  where git gitk pt ag ack
+  where pscp putty plink pageant
+  where git gitk pt ag ack global
   where dbgview tcpview procexp procmon
 )
 
