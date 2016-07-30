@@ -68,4 +68,5 @@ set _choco_root=C:\ProgramData\chocolatey
 set _sys_internal=D:\usr\misc\SysinternalsSuite
 set _platinum_searcher=D:\usr\misc\pt
 set _gnu_global=D:\usr\misc\gnu-global\glo653wb
+set _aspell=D:\usr\app\aspell
 

@@ -24,17 +24,19 @@ if "%_dbg%" == "true" (
   @echo Boost: %BOOSTROOT%
   @echo Git ssh: %GIT_SSH%
   @echo NT Symbol: %_NT_SYMBOL_PATH%
+  @echo Temp/Tmp: %temp%;%tmp%
 
   @echo ===========================================
   @echo Dev tools: 
   @echo ===========================================
-  where python pip ipython go perl ruby node npm
+  where python pip ipython perl ruby node npm
   where java scala gradle mvn ant sbt
+  where go gocode godef gorename oracle
   where windbg adplus depends cmake cmake-gui
   where jshint grunt bower node-inspector
   where curl wget tee tar gzip
   where pscp putty plink pageant
-  where git gitk pt ag ack global
+  where git gitk pt ag ack global aspell
   where dbgview tcpview procexp procmon
 )
 
