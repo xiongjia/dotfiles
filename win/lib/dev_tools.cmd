@@ -54,8 +54,13 @@ set _dev_path=%_ruby_home%\bin;%_ruby_devkit%;%_dev_path%
 set _dev_path=%_git_home%\cmd;%_dev_path%
 set GIT_SSH=%_dev_bin%\_plink_git.cmd
 
+:: python
+set _dev_path=%_py2_home%;%_dev_path%
+set _dev_path=%_py2_home%\Scripts;%_dev_path%
+
 :: c/c++
 set BOOSTROOT=%_boost_root%
 set _dev_path=%_ms_win_dbg_64%;%_ms_depends_64%;%_dev_path%
 set _dev_path=%_cmake_root%\bin;%_dev_path%
 set _NT_SYMBOL_PATH=SRV*%_ms_sym_cache%*http://msdl.microsoft.com/download/symbols
+

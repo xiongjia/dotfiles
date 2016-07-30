@@ -28,7 +28,7 @@ if "%_dbg%" == "true" (
   @echo ===========================================
   @echo Dev tools: 
   @echo ===========================================
-  where python go perl ruby node npm
+  where python pip ipython go perl ruby node npm
   where java scala gradle mvn ant sbt
   where windbg adplus depends cmake cmake-gui
   where jshint grunt bower node-inspector

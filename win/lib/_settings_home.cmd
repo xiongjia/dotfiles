@@ -2,6 +2,9 @@
 
 :: All settings (home)
 
+:: misc
+set _tmp_root=F:\dev_tmp
+
 :: Proxy
 set _proxy_host=localhost
 set _proxy_port=8082
@@ -30,6 +33,10 @@ set _ms_win_dbg_32=D:\usr\misc\windbg\windbg_x86
 set _ms_win_dbg_64=D:\usr\misc\windbg\windbg_x64
 set _ms_depends_32=D:\usr\misc\depends22\depends22_x86
 set _ms_depends_64=D:\usr\misc\depends22\depends22_x64
+
+:: python
+set _py2_home=D:\usr\misc\py\Python27
+set _py2_venv=D:\usr\misc\py\venv\py2-dev
 
 :: java
 set _jdk_home=D:\usr\app\Java\jdk1.8.0_60
