@@ -13,3 +13,4 @@ set path=%_dev_path%;%path%
 
 call %_dev_env_libs%\dbg_info.cmd
 endlocal
+
