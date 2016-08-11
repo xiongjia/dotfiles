@@ -36,7 +36,7 @@ module DF
     "misc" => [
       { "src" => "./misc/ackrc", "target" => ".ackrc" }],
     "spacemacs" => [
-      { "src" => "./spacemacs", "target" => ".spacemacs" }]
+      { "src" => "./spacemacs", "target" => ".spacemacs.d" }]
   }
 
   def self.log

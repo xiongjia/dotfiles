@@ -1,11 +1,14 @@
 ;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 
+;; updating proxy server
+(message "Emacs proxy %s" (getenv "EMACS_HTTPS_PROXY"))
 (setq url-proxy-services
   '(
-    ("http" . "localhost:8082")
-    ("https" . "localhost:8082")
+    ("https" . (getenv "EMACS_HTTPS_PROXY"))
+    ("http"  . (getenv "EMACS_HTTP_PROXY"))
   ))
+
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -20,7 +23,7 @@
       emacs-lisp
       (auto-completion :variables auto-completion-enable-sort-by-usage t
                        :disabled-for org markdown)
-      spell-checking
+      (spell-checking :variables spell-checking-enable-by-default nil)
       syntax-checking
       git
       version-control
@@ -28,6 +31,7 @@
       markdown
       yaml
       org
+      ;; xj-org
       c-c++
       javascript
       java
@@ -36,9 +40,7 @@
       (go :variables go-tab-width 2)
       common-lisp
       chinese
-      (shell :variables
-               shell-default-height 30
-               shell-default-position 'bottom)
+      (shell :variables shell-default-height 30 shell-default-position 'bottom)
       (colors :variables colors-enable-nyan-cat-progress-bar t)
     )
     dotspacemacs-additional-packages '()

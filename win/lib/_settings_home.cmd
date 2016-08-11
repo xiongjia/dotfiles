@@ -4,6 +4,8 @@
 
 :: misc
 set _tmp_root=F:\dev_tmp
+set _dropbox_root=E:\var\datum\Dropbox
+set _github_root=E:\dev\github
 
 :: Proxy
 set _proxy_host=localhost
