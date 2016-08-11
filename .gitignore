@@ -17,3 +17,6 @@ java/gradle/caches
 java/gradle/native
 java/gradle/wrapper
 
+# emacs ignore
+emacs/custom.el
+

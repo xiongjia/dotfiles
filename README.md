@@ -1,6 +1,6 @@
 # dotfiles 
 The general dot-files/scripts for below tools:   
- - (git, node, tmux, vim, ruby, python, java, ack)
+ - (git, node, tmux, vim, emacs, ruby, python, java, ack)
 
 ## Usage
 

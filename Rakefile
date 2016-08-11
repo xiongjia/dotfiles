@@ -12,7 +12,8 @@ module DF
 
   WRK_PATH = File.expand_path(File.dirname(__FILE__))
   HOME_PATH = File.expand_path('~')
-  ALL_TYPES = ["git", "tmux", "vim", "ruby", "python", "java", "misc"]
+  ALL_TYPES = [
+    "git", "tmux", "vim", "ruby", "python", "java", "misc", "spacemacs"]
   DFILES = {
     "git" => [
       { "src" => "./git/gitconfig", "target" => ".gitconfig"},
@@ -33,7 +34,9 @@ module DF
       { "src" => "./java/m2", "target" => ".m2" },
       { "src" => "./java/gradle", "target" => ".gradle" }],
     "misc" => [
-      { "src" => "./misc/ackrc", "target" => ".ackrc" }]
+      { "src" => "./misc/ackrc", "target" => ".ackrc" }],
+    "spacemacs" => [
+      { "src" => "./spacemacs", "target" => ".spacemacs" }]
   }
 
   def self.log
