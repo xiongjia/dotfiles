@@ -33,7 +33,6 @@
       markdown
       yaml
       org
-      xj-org
       c-c++
       javascript
       java
@@ -41,9 +40,11 @@
       python
       (go :variables go-tab-width 2)
       common-lisp
-      chinese
+      (chinese :variables chinese-default-input-method 'pinyin)
       (shell :variables shell-default-height 30 shell-default-position 'bottom)
       (colors :variables colors-enable-nyan-cat-progress-bar t)
+      xj-org
+      xj-dev
     )
     dotspacemacs-additional-packages '()
     dotspacemacs-excluded-packages '()
@@ -109,11 +110,7 @@
 
 (defun dotspacemacs/user-init ())
 
-(defun dotspacemacs/user-config ()
-  (message "updating JS config")
-  (setq-default js2-basic-offset 2)
-  (setq-default js-indent-level 2)
-)
+(defun dotspacemacs/user-config ())
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)

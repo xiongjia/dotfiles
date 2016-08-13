@@ -35,8 +35,29 @@
   (setq gnuplot-program-version 4.2)
   (setq gnuplot-echo-command-line-flag nil)
 
-  ;; projects - abathur
-  (message "updating abathur: root=%s" xj-org_abathur-root)
+  ;; project - default
+  (message "updating org project (default): %s" xj-org_root)
+  (setq xj-org_notes (expand-file-name "notes.org" xj-org_root))
+  (setq xj-org_tasks (expand-file-name "tasks.org" xj-org_root))
+
+  (setq org-directory xj-org_root)
+  (setq org-default-notes-file xj-org_notes)
+  (setq org-agenda-files (list xj-org_tasks))
+  (setq org-tag-alist 
+    '(
+      ("@dev" . ?d) ("@misc" . ?m) ("@work" . ?w) ("@enu" . ?e) 
+      ("@game" . ?g) ("@home" . ?h) ("@office" . ?o)))
+  (setq org-capture-templates
+    '(
+      ("t" "TODO" entry (file+headline xj-org_tasks "Tasks")
+       "* TODO %?\n %i\n %a")
+      ("a" "Archive" entry (file+headline xj-org_notes "Archive")
+       "* Entered on %U\n %?\n %i\n %a")
+      ("n" "Notes" entry (file+headline xj-org_notes "Index")
+       "* Entered on %U\n %?\n %i\n %a")))
+
+  ;; project - abathur
+  (message "updating org project abathur: root=%s" xj-org_abathur-root)
   (setq abathur-content (concat xj-org_abathur-root "/content"))
   (setq abathur-output  (concat xj-org_abathur-root "/output")) 
   (setq abathur-postamble 

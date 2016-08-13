@@ -54,6 +54,7 @@ set _dev_path=%_perl_home%\bin;%_dev_path%
 
 :: node.js
 set _dev_path=%_npm_prefix%;%_node%;%_npm%;%_dev_path%
+set _node_tern_cli=%_npm_prefix%\node_modules\tern\bin\tern
 
 :: ruby
 set RUBYOPT=-Ku
