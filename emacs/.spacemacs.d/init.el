@@ -2,7 +2,9 @@
 ;; This file is loaded by Spacemacs at startup.
 
 ;; updating proxy server
-(message "Emacs proxy %s" (getenv "EMACS_HTTPS_PROXY"))
+(message "Emacs https_proxy=%s;http_proxy=%s"
+  (getenv "EMACS_HTTPS_PROXY")
+  (getenv "EMACS_HTTP_PROXY"))
 (setq url-proxy-services
   '(
     ("https" . (getenv "EMACS_HTTPS_PROXY"))
@@ -31,7 +33,7 @@
       markdown
       yaml
       org
-      ;; xj-org
+      xj-org
       c-c++
       javascript
       java
@@ -107,7 +109,11 @@
 
 (defun dotspacemacs/user-init ())
 
-(defun dotspacemacs/user-config ())
+(defun dotspacemacs/user-config ()
+  (message "updating JS config")
+  (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
+)
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)

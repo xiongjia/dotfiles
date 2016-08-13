@@ -62,7 +62,7 @@ set _gvim_wrk_dir=E:\dev
 set _emacs_wrk_dir=E:\dev
 set _emacs_root=D:\usr\misc\emacs\emacs-25.0.91
 set _emacs_bin=%_emacs_root%\bin\runemacs.exe
-set _emacs_home=D:\usr\misc\emacs\emacs-home
+set _emacs_home=E:\dev\github\dotFiles\emacs
 
 :: tools
 set _putty_root=D:\usr\misc\putty-0.62
@@ -71,4 +71,7 @@ set _sys_internal=D:\usr\misc\SysinternalsSuite
 set _platinum_searcher=D:\usr\misc\pt
 set _gnu_global=D:\usr\misc\gnu-global\glo653wb
 set _aspell=D:\usr\app\aspell
+set _gnuplot=D:\usr\misc\gnuplot\gp426win32\gnuplot
+set _ditaa_jar=E:\var\datum\Dropbox\tools\emacs-tools\ditaa\ditaa0_9.jar
+set _plantuml_jar=E:\var\datum\Dropbox\tools\emacs-tools\plantuml\plantuml.jar
 

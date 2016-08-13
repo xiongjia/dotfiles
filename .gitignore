@@ -18,5 +18,8 @@ java/gradle/native
 java/gradle/wrapper
 
 # emacs ignore
-emacs/custom.el
+emacs
+!emacs/.spacemacs.d
+emacs/.spacemacs.d/custom.el
+
 
