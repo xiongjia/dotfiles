@@ -110,7 +110,12 @@
 
 (defun dotspacemacs/user-init ())
 
-(defun dotspacemacs/user-config ())
+(defun dotspacemacs/user-config ()
+  (global-company-mode t)
+  (setq create-lockfiles nil)
+  (add-hook 'prog-mode-hook 'linum-mode)
+  (with-eval-after-load 'linum (linum-relative-toggle))
+)
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)

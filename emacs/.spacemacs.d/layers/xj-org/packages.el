@@ -10,6 +10,16 @@
   ))
 
 (defun xj-org/post-init-org ()
+  ;; org settings
+  (add-hook 'org-mode-hook 
+    (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
+  (setq org-src-fontify-natively t)
+  (setq org-ditaa-jar-path xj-org_tool_ditaa)
+  (setq org-plantuml-jar-path xj-org_tool_plantuml)
+  (setq gnuplot-program xj-org_tool_gnuplot)
+  (setq gnuplot-program-version 4.2)
+  (setq gnuplot-echo-command-line-flag nil)
+
   ;; org babel
   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
   (setq org-confirm-babel-evaluate nil)
@@ -26,14 +36,6 @@
       (shell . t)
       (org . t)
       (latex . t)))
-
-  ;; util org settings
-  (setq org-src-fontify-natively t)
-  (setq org-ditaa-jar-path xj-org_tool_ditaa)
-  (setq org-plantuml-jar-path xj-org_tool_plantuml)
-  (setq gnuplot-program xj-org_tool_gnuplot)
-  (setq gnuplot-program-version 4.2)
-  (setq gnuplot-echo-command-line-flag nil)
 
   ;; project - default
   (message "updating org project (default): %s" xj-org_root)
