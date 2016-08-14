@@ -7,10 +7,9 @@
   (getenv "EMACS_HTTP_PROXY"))
 (setq url-proxy-services
   '(
-    ("https" . (getenv "EMACS_HTTPS_PROXY"))
-    ("http"  . (getenv "EMACS_HTTP_PROXY"))
+    (append ("https") (getenv "EMACS_HTTPS_PROXY"))
+    (append ("http")  (getenv "EMACS_HTTP_PROXY"))
   ))
-
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -43,6 +42,7 @@
       (chinese :variables chinese-default-input-method 'pinyin)
       (shell :variables shell-default-height 30 shell-default-position 'bottom)
       (colors :variables colors-enable-nyan-cat-progress-bar t)
+      speed-reading
       xj-org
       xj-dev
     )
