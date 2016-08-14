@@ -2,14 +2,16 @@
 ;; This file is loaded by Spacemacs at startup.
 
 ;; updating proxy server
-(message "Emacs https_proxy=%s;http_proxy=%s"
-  (getenv "EMACS_HTTPS_PROXY")
-  (getenv "EMACS_HTTP_PROXY"))
-(setq url-proxy-services
-  '(
-    (append ("https") (getenv "EMACS_HTTPS_PROXY"))
-    (append ("http")  (getenv "EMACS_HTTP_PROXY"))
-  ))
+(when (not (string= (getenv "EMACS_HTTPS_PROXY") nil)) 
+  (message "Emacs https_proxy=%s;http_proxy=%s"
+    (getenv "EMACS_HTTPS_PROXY")
+    (getenv "EMACS_HTTP_PROXY"))
+  (setq url-proxy-services
+    '(
+      (append ("https") (getenv "EMACS_HTTPS_PROXY"))
+      (append ("http")  (getenv "EMACS_HTTP_PROXY"))
+    ))
+)
 
 (defun dotspacemacs/layers ()
   (setq-default

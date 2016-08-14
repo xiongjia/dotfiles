@@ -12,6 +12,7 @@ set _dev_path=%_platinum_searcher%;%_dev_path%
 set _dev_path=%_gvim_root%;%_dev_path%
 set _dev_path=%_gnu_global%\bin;%_dev_path%
 set _dev_path=%_putty_root%;%_dev_path%
+set _dev_path=%_chrome_root%;%_dev_path%
 set _dev_path=%_gnuplot%\bin;%_dev_path%
 set _gnuplot_cli=%_gnuplot%\bin\pgnuplot.exe
 
