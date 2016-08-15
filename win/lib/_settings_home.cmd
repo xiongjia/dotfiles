@@ -7,6 +7,7 @@ set _tmp_root=F:\dev_tmp
 set _dropbox_root=E:\var\datum\Dropbox
 set _github_root=E:\dev\github
 set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
+set _curl_root=D:\usr\misc\curl
 
 :: Proxy
 set _proxy_host=localhost
