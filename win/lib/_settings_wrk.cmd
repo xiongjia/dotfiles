@@ -65,6 +65,8 @@ set _emacs_wrk_dir=C:\wrk\src
 set _emacs_root=C:\wrk\tools\emacs\emacs-25.0.91
 set _emacs_bin=%_emacs_root%\bin\runemacs.exe
 set _emacs_home=C:\wrk\src\github\dotfiles\emacs
+set _emacs_https_proxy=localhost:8119
+set _emacs_http_proxy=localhost:8119
 
 :: tools
 set _putty_root=C:\wrk\tools\putty\putty-0.62

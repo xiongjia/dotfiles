@@ -2,14 +2,14 @@
 ;; This file is loaded by Spacemacs at startup.
 
 ;; updating proxy server
-(when (not (string= (getenv "EMACS_HTTPS_PROXY") nil)) 
+(when (not (string= (getenv "_emacs_https_proxy") nil)) 
   (message "Emacs https_proxy=%s;http_proxy=%s"
-    (getenv "EMACS_HTTPS_PROXY")
-    (getenv "EMACS_HTTP_PROXY"))
+    (getenv "_emacs_https_proxy")
+    (getenv "_emacs_http_proxy"))
   (setq url-proxy-services
     '(
-      (append ("https") (getenv "EMACS_HTTPS_PROXY"))
-      (append ("http")  (getenv "EMACS_HTTP_PROXY"))
+      (append ("https") (getenv "_emacs_https_proxy"))
+      (append ("http")  (getenv "_emacs_http_proxy"))
     ))
 )
 
@@ -110,7 +110,14 @@
     dotspacemacs-whitespace-cleanup nil
   ))
 
-(defun dotspacemacs/user-init ())
+(defun dotspacemacs/user-init ()
+  (setq configuration-layer--elpa-archives
+    '(
+      ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+    ))
+)
 
 (defun dotspacemacs/user-config ()
   (global-company-mode t)

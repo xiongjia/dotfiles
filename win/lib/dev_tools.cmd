@@ -19,10 +19,6 @@ set _gnuplot_cli=%_gnuplot%\bin\pgnuplot.exe
 
 :: emacs
 set _dev_path=%_emacs_root%\bin;%_dev_path%
-if defined _proxy_host (
-  set EMACS_HTTPS_PROXY=%_proxy_host%:%_proxy_port%
-  set EMACS_HTTP_PROXY=%_proxy_host%:%_proxy_port%
-)
 
 :: Java / Scala
 set JAVA_HOME=%_jdk_home%
