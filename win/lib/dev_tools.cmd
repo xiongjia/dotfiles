@@ -30,6 +30,7 @@ set _dev_path=%_jdk_home%\bin;%_scala_home%\bin;%_dev_path%
 set _dev_path=%_ant_home%\bin;%_m2_home%\bin;%_gradle_home%\bin;%_dev_path%
 set _dev_path=%_sbt_home%\bin;%_dev_path%
 set _dev_path=%_aspell%\bin;%_dev_path%
+set _dev_path=%_rsync_root%;%_dev_path%
 
 if defined _proxy_host (
   set _java_proxy_opts=-Dhttp.proxyHost=%_proxy_host% ^
