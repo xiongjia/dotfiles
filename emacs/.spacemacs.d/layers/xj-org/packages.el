@@ -9,6 +9,7 @@
     deft
   ))
 
+
 (defun xj-org/post-init-org ()
   ;; org settings
   (add-hook 'org-mode-hook 
