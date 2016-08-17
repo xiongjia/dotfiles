@@ -47,6 +47,7 @@
       speed-reading
       xj-org
       xj-dev
+      xj-misc
     )
     dotspacemacs-additional-packages '()
     dotspacemacs-excluded-packages '()

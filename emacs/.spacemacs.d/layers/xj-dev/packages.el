@@ -10,10 +10,10 @@
   ;; updating tern command to 
   ;; `node ${npm_prefix}/node_modules/tern/bin/tern`
   ;; The ${npm_prefix}/bin/tern cannot be launched on some OS (e.g windows)
-  (setq _node_tern (getenv "_node_tern_cli"))
-  (message "updating js tern cmd: %s" _node_tern)
-  (setq javascript-disable-tern-port-files nil)
-  (setq tern-command (list "node" _node_tern))
+  (let ((_node_tern (getenv "_node_tern_cli")))
+    (message "updating js tern cmd: %s" _node_tern)
+    (setq javascript-disable-tern-port-files nil)
+    (setq tern-command (list "node" _node_tern)))
 
   (message "updating JS2 mode")
   (with-eval-after-load 'js2-mode
