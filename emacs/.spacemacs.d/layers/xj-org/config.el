@@ -1,4 +1,5 @@
-;;; config.el - My private Org config
+;; -*- mode: emacs-lisp -*-
+;; config.el - My private Org config
 
 ;; org projects - default project 
 ;; (The default project is saved in Dropbox)

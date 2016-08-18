@@ -1,4 +1,5 @@
-;;; packages.el - My misc config
+;; -*- mode: emacs-lisp -*-
+;; packages.el - My misc config
 
 (message "xj-misc packages")
 

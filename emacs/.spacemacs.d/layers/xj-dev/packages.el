@@ -1,4 +1,5 @@
-;;; packages.el - My dev config
+;; -*- mode: emacs-lisp -*-
+;; packages.el - My dev config
 
 (message "xj-dev packages")
 (defconst xj-dev-packages

@@ -1,4 +1,5 @@
-;;; packages.el - My private Org config
+;; -*- mode: emacs-lisp -*-
+;; packages.el - My private Org config
 
 (message "xj-org packages")
 (defconst xj-org-packages
