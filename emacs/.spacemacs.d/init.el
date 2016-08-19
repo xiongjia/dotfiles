@@ -24,8 +24,11 @@
       auto-completion
       better-defaults
       emacs-lisp
-      (auto-completion :variables auto-completion-enable-sort-by-usage t
-                       :disabled-for org markdown)
+      (auto-completion
+        :variables
+          auto-completion-enable-sort-by-usage t
+          auto-completion-enable-snippets-in-popup t
+        :disabled-for org markdown)
       (spell-checking :variables spell-checking-enable-by-default nil)
       syntax-checking
       git
