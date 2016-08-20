@@ -1,5 +1,5 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: use_strict
-# key: u
+# name: default_obj
+# key: do
 # --
-'use strict';
+${1:obj} = $1 || {};
