@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: node_require_inline
+# key: nri
+# --
+${1:module} = require('$1')$0

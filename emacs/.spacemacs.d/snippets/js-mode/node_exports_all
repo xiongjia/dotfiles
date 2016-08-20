@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: node_exports_all
+# key: nea
+# --
+module.exports = exports = () => {
+  $0
+};
