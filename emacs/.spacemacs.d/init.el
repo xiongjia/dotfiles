@@ -27,11 +27,11 @@
       (auto-completion
         :variables
           auto-completion-enable-sort-by-usage t
-          auto-completion-enable-snippets-in-popup t
         :disabled-for org markdown)
       (spell-checking :variables spell-checking-enable-by-default nil)
       syntax-checking
       git
+      github
       version-control
       gtags
       markdown
@@ -48,6 +48,7 @@
       (shell :variables shell-default-height 30 shell-default-position 'bottom)
       (colors :variables colors-enable-nyan-cat-progress-bar t)
       speed-reading
+      (ibuffer :variables ibuffer-group-buffers-by 'projects)
       xj-org
       xj-dev
       xj-misc
@@ -128,6 +129,12 @@
   (setq create-lockfiles nil)
   (add-hook 'prog-mode-hook 'linum-mode)
   (with-eval-after-load 'linum (linum-relative-toggle))
+
+  (when (not (string= (getenv "_emacs_browser") nil)) 
+    (let ((_emacs_browser (getenv "_emacs_browser")))
+      (message "updating default browser: %s" _emacs_browser)
+      (setq browse-url-browser-function 'browse-url-generic
+            browse-url-generic-program _emacs_browser)))
 )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))

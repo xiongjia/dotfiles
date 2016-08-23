@@ -19,6 +19,7 @@ set _gnuplot_cli=%_gnuplot%\bin\pgnuplot.exe
 
 :: emacs
 set _dev_path=%_emacs_root%\bin;%_dev_path%
+set _emacs_browser=%_dev_bin%\_chrome.cmd
 
 :: Java / Scala
 set JAVA_HOME=%_jdk_home%

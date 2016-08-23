@@ -25,7 +25,7 @@ if "%_dbg%" == "true" (
   @echo Git ssh: %GIT_SSH%
   @echo NT Symbol: %_NT_SYMBOL_PATH%
   @echo Temp/Tmp: %temp%;%tmp%
-  @echo Emacs Proxy: %EMACS_HTTPS_PROXY%; %EMACS_HTTP_PROXY%
+  @echo Emacs Proxy: %_emacs_http_proxy%; %_emacs_https_proxy%
 
   @echo ===========================================
   @echo Dev tools: 
