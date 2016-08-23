@@ -5,6 +5,7 @@
 (defconst xj-dev-packages
   '(
     js2-mode
+    avy
   ))
 
 (defun xj-dev/post-init-js2-mode ()
@@ -23,4 +24,9 @@
       (setq-default js2-basic-offset 2)
     ))
 )
+
+(defun xj-dev/post-init-avy ()
+  (progn
+    (global-set-key (kbd "C-s-]") 'avy-goto-char-2)
+    (global-set-key (kbd "M-]") 'avy-goto-char-2)))
 
