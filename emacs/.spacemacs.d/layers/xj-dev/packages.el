@@ -5,8 +5,7 @@
 (defconst xj-dev-packages
   '(
     js2-mode
-    avy
-  ))
+    avy))
 
 (defun xj-dev/post-init-js2-mode ()
   ;; updating tern command to 

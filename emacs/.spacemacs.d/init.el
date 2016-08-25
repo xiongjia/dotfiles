@@ -30,6 +30,7 @@
         :disabled-for org markdown)
       (spell-checking :variables spell-checking-enable-by-default nil)
       syntax-checking
+      spacemacs-layout
       git
       github
       version-control
@@ -37,6 +38,8 @@
       markdown
       yaml
       org
+      deft
+      finance
       c-c++
       javascript
       java

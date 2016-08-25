@@ -2,8 +2,29 @@
 ;; packages.el - My misc config
 
 (message "xj-misc packages")
+(defconst xj-misc-packages
+  '(
+    chinese-pyim
+    deft))
 
-(defun chinese/post-init-chinese-pyim ()
+
+(defun xj-misc/post-init-deft ()
+  (message "Updating deft")
+  (let ((_default_deft_root
+         (expand-file-name "deft"
+          (getenv "_dropbox_root"))))
+    (message "Default deft root: %s" _default_deft_root)
+    (setq deft-directory _default_deft_root
+          deft-current-sort-method 'mtime
+          deft-use-filename-as-title nil
+          deft-use-filter-string-for-filename t
+          deft-org-mode-title-prefix t
+          deft-new-file-format "%Y-%m-%d_%H.%M"
+          deft-file-naming-rules '((noslash . "-")
+                                   (nospace . "-")
+                                   (case-fn . downcase)))))
+
+(defun xj-misc/post-init-chinese-pyim ()
   (message "Updating Chinese pyim dictionary")
   (setq default-input-method "chinese-pyim")
   (let ((_default_pyim_dict 
