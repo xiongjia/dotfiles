@@ -113,7 +113,7 @@
     dotspacemacs-smart-closing-parenthesis nil
     dotspacemacs-highlight-delimiters 'all
     dotspacemacs-persistent-server nil
-    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
+    dotspacemacs-search-tools '("pt" "ack" "ag" "grep")
     dotspacemacs-default-package-repository nil
     dotspacemacs-whitespace-cleanup nil
   ))

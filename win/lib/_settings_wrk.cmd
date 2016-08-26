@@ -4,8 +4,10 @@
 
 :: misc
 set _tmp_root=C:\wrk\env\dev_tmp
+set _storage_root=C:\wrk\env\dev_tmp
 set _dropbox_root=C:\Users\lexi\Dropbox
 set _github_root=C:\wrk\src\github
+set _3rd_src_root=C:\wrk\src
 set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
 set _curl_root=C:\wrk\tools\curl\curl-7.33.0-win64-ssl-sspi
 set _rsync_root=

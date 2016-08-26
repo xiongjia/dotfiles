@@ -4,8 +4,10 @@
 
 :: misc
 set _tmp_root=F:\dev_tmp
+set _storage_root=F:\arc
 set _dropbox_root=E:\var\datum\Dropbox
 set _github_root=E:\dev\github
+set _3rd_src_root=E:\dev\stuff
 set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
 set _curl_root=D:\usr\misc\curl
 set _rsync_root=D:\usr\misc\DeltaCopyRaw
