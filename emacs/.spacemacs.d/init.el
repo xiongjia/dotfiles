@@ -45,6 +45,8 @@
       java
       scala
       python
+      windows-scripts
+      shell-scripts
       (go :variables go-tab-width 2)
       common-lisp
       (chinese :variables chinese-default-input-method 'pinyin)
