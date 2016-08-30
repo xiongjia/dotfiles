@@ -16,6 +16,7 @@ set _dev_path=%_chrome_root%;%_dev_path%
 set _dev_path=%_curl_root%;%_dev_path%
 set _dev_path=%_gnuplot%\bin;%_dev_path%
 set _gnuplot_cli=%_gnuplot%\bin\pgnuplot.exe
+set _dev_path=%_ffmpeg%\bin;%_dev_path%
 
 :: emacs
 set _dev_path=%_emacs_root%\bin;%_dev_path%
