@@ -11,6 +11,7 @@ set _src_root=%1
 set _concat_files=%2
 set _target_file=%3
 echo Usage: %%1 = src root; %%2 src files; %%3 = target file
+if /I "%_src_root%" equ "" goto _Exit
 if /I "%_concat_files%" equ "" goto _Exit
 if /I "%_target_file%" equ "" goto _Exit
 
@@ -27,7 +28,7 @@ set _tmp_src_list=%_tmp_root%\_ffmpeg_concat_%time::=.%.list
 cat %_tmp_src_list%
 @echo ================
 set /P _are_you_sure=Are you sure (y/[n])?
-if /I "%_are_you_sure%" NEQ "y" goto _End
+if /I "%_are_you_sure%" neq "y" goto _End
 
 @echo starting ffmpeg concat
 @echo off
