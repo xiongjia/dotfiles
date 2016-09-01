@@ -82,3 +82,4 @@ set _gnuplot=C:\wrk\tools\gnuplot
 set _ditaa_jar=C:\Users\lexi\Dropbox\tools\emacs-tools\ditaa\ditaa0_9.jar
 set _plantuml_jar=C:\Users\lexi\Dropbox\tools\emacs-tools\plantuml\plantuml.jar
 set _ffmpeg=
+set _gpg_root=D:\usr\misc\gpg-win

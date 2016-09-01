@@ -17,6 +17,7 @@ set _dev_path=%_curl_root%;%_dev_path%
 set _dev_path=%_gnuplot%\bin;%_dev_path%
 set _gnuplot_cli=%_gnuplot%\bin\pgnuplot.exe
 set _dev_path=%_ffmpeg%\bin;%_dev_path%
+set _dev_path=%_gpg_root%;%_dev_path%
 
 :: emacs
 set _dev_path=%_emacs_root%\bin;%_dev_path%
@@ -74,4 +75,3 @@ set BOOSTROOT=%_boost_root%
 set _dev_path=%_ms_win_dbg_64%;%_ms_depends_64%;%_dev_path%
 set _dev_path=%_cmake_root%\bin;%_dev_path%
 set _NT_SYMBOL_PATH=SRV*%_ms_sym_cache%*http://msdl.microsoft.com/download/symbols
-

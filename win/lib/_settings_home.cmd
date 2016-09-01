@@ -82,3 +82,4 @@ set _gnuplot=D:\usr\misc\gnuplot\gp426win32\gnuplot
 set _ditaa_jar=E:\var\datum\Dropbox\tools\emacs-tools\ditaa\ditaa0_9.jar
 set _plantuml_jar=E:\var\datum\Dropbox\tools\emacs-tools\plantuml\plantuml.jar
 set _ffmpeg=D:\usr\misc\ffmpeg\ffmpeg-20160828-a37e6dd-win64-static
+set _gpg_root=D:\usr\misc\gpg-win
