@@ -140,6 +140,14 @@
       (message "updating default browser: %s" _emacs_browser)
       (setq browse-url-browser-function 'browse-url-generic
             browse-url-generic-program _emacs_browser)))
+
+  (let ((_gpg_program (getenv "_gpg_program"))
+        (_gpg_home (getenv "_gpg_home")))
+    (message "Updating gpg settings: %s [%s]" _gpg_program _gpg_home)
+    (setq epg-gpg-program _gpg_program)
+    (setq epg-gpg-home-directory _gpg_home)
+    (setq epa-file-encrypt-to nil)
+    (setq epa-file-cache-passphrase-for-symmetric-encryption t))
 )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))

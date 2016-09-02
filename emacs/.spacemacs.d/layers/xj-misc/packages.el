@@ -36,6 +36,5 @@
         (:name "default"
           :file ,_default_pyim_dict
           :coding utf-8-unix
-          :dict-type pinyin-dict))))
-)
+          :dict-type pinyin-dict)))))
 

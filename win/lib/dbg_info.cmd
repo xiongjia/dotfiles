@@ -36,7 +36,7 @@ if "%_dbg%" == "true" (
   where windbg adplus depends cmake cmake-gui
   where jshint grunt bower node-inspector
   where curl wget tee tar gzip
-  where pscp putty plink pageant
+  where pscp putty plink pageant gpg2
   where git gitk pt ag ack global aspell
   where dbgview tcpview procexp procmon
 )
