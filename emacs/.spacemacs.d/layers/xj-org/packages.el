@@ -41,7 +41,7 @@
 
   ;; project - default
   (message "updating org project (default): %s" xj-org_root)
-  (setq xj-org_notes (expand-file-name "notes.org" xj-org_root))
+  (setq xj-org_notes (expand-file-name "notes.org.gpg" xj-org_root))
   (setq xj-org_tasks (expand-file-name "tasks.org" xj-org_root))
 
   (setq org-directory xj-org_root)

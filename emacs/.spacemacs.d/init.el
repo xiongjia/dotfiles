@@ -144,10 +144,10 @@
   (let ((_gpg_program (getenv "_gpg_program"))
         (_gpg_home (getenv "_gpg_home")))
     (message "Updating gpg settings: %s [%s]" _gpg_program _gpg_home)
-    (setq epg-gpg-program _gpg_program)
-    (setq epg-gpg-home-directory _gpg_home)
-    (setq epa-file-encrypt-to nil)
-    (setq epa-file-cache-passphrase-for-symmetric-encryption t))
+    (setq epg-gpg-program _gpg_program
+          epg-gpg-home-directory _gpg_home
+          epa-file-encrypt-to nil
+          epa-file-cache-passphrase-for-symmetric-encryption t))
 )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))

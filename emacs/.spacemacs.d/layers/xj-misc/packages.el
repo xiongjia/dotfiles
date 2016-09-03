@@ -20,6 +20,7 @@
           deft-use-filter-string-for-filename t
           deft-org-mode-title-prefix t
           deft-new-file-format "%Y-%m-%d_%H.%M"
+          deft-extensions '("org" "org.gpg" "md" "md.gpg" "txt" "txt.gpg")
           deft-file-naming-rules '((noslash . "-")
                                    (nospace . "-")
                                    (case-fn . downcase)))))
