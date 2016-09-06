@@ -11,6 +11,7 @@ set _3rd_src_root=C:\wrk\src
 set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
 set _curl_root=C:\wrk\tools\curl\curl-7.33.0-win64-ssl-sspi
 set _rsync_root=
+set _mc_root=
 
 :: Proxy
 set _proxy_host=localhost

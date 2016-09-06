@@ -11,6 +11,7 @@ set _3rd_src_root=E:\dev\stuff
 set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
 set _curl_root=D:\usr\misc\curl
 set _rsync_root=D:\usr\misc\DeltaCopyRaw
+set _mc_root=F:\game\mc
 
 :: Proxy
 set _proxy_host=localhost
