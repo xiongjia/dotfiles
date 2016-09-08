@@ -41,6 +41,7 @@ set _ms_win_dbg_32=C:\wrk\tools\windbg\windbg_x86
 set _ms_win_dbg_64=C:\wrk\tools\windbg\windbg_x64
 set _ms_depends_32=C:\wrk\tools\depends\depends22_x86
 set _ms_depends_64=C:\wrk\tools\depends\depends22_x64
+set _llvm_root=
 
 :: python
 set _py2_home=C:\wrk\tools\py\py27

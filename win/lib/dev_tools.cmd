@@ -80,6 +80,7 @@ set BOOSTROOT=%_boost_root%
 set _dev_path=%_ms_win_dbg_64%;%_ms_depends_64%;%_dev_path%
 set _dev_path=%_cmake_root%\bin;%_dev_path%
 set _NT_SYMBOL_PATH=SRV*%_ms_sym_cache%*http://msdl.microsoft.com/download/symbols
+set _dev_path=%_llvm_root%\bin;%_dev_path%
 
 :: Minecraft
 set _dev_path=%_mc_root%\client;%_dev_path%
