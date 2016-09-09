@@ -41,7 +41,7 @@ set _ms_win_dbg_32=C:\wrk\tools\windbg\windbg_x86
 set _ms_win_dbg_64=C:\wrk\tools\windbg\windbg_x64
 set _ms_depends_32=C:\wrk\tools\depends\depends22_x86
 set _ms_depends_64=C:\wrk\tools\depends\depends22_x64
-set _llvm_root=
+set _llvm_root=C:\wrk\tools\LLVM
 
 :: python
 set _py2_home=C:\wrk\tools\py\py27
@@ -84,5 +84,5 @@ set _gnuplot=C:\wrk\tools\gnuplot
 set _ditaa_jar=C:\Users\lexi\Dropbox\tools\emacs-tools\ditaa\ditaa0_9.jar
 set _plantuml_jar=C:\Users\lexi\Dropbox\tools\emacs-tools\plantuml\plantuml.jar
 set _ffmpeg=
-set _gpg_root=
+set _gpg_root=C:\wrk\tools\gpg-win
 set _ledger_root=
