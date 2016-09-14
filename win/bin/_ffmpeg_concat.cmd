@@ -22,10 +22,10 @@ set _target_full_filename=%_storage_root%\ffmpeg_out\%_target_file%
 
 :: Create the src files list
 set _tmp_src_list=%_tmp_root%\_ffmpeg_concat_%time::=.%.list
-(for %%i in (%_concat_files%) do @echo file '%_src_root%\%%i') > %_tmp_src_list%
+(for %%i in (%_concat_files%) do @echo file '%_src_root%\%%i') > "%_tmp_src_list%"
 @echo src file list: %_tmp_src_list%
 @echo off
-cat %_tmp_src_list%
+cat "%_tmp_src_list%"
 @echo ================
 set /P _are_you_sure=Are you sure (y/[n])?
 if /I "%_are_you_sure%" neq "y" goto _End
