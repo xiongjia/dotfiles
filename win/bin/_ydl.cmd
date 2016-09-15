@@ -16,7 +16,7 @@ set YDL_DAT=%_storage_root%\youtube-dl
 set YDL_EXT_ARGS=%*
 set PYTHONPATH=%YDL_HOME%;%PYTHONPATH%
 if not defined YDL_MAX_RETRY (
-  set YDL_MAX_RETRY=200
+  set YDL_MAX_RETRY=2000
 )
 if defined YDL_PROXY (
   set YDL_EXT_ARGS=--proxy %YDL_PROXY% %YDL_EXT_ARGS%
@@ -36,6 +36,7 @@ set YDL_EXIT=%errorlevel%
 echo YDL Exit: %YDL_EXIT%; tries: %_tries%
 if %YDL_EXIT%==0 goto YDL_END
 set /a _tries+=1
+sleep 5
 if %_tries% LEQ %YDL_MAX_RETRY% ( goto YDL_RETRY ) else ( goto YDL_END )
 
 :YDL_END

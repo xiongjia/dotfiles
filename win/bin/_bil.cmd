@@ -23,8 +23,6 @@ set _biligrab_root=%_3rd_src_root%\Biligrab
 :: Download the danmo to the .xml file
 set _tmp_bil_xml=%_tmp_root%\_biligrab_xml_%time::=.%_tmp
 @echo download the res to %_tmp_bil_xml%
-pause
-
 python %_biligrab_root%\biligrablite-re.py %_av_code% %_part_num% "%_tmp_bil_xml%"
 
 :: Create the .ass file from the xml
@@ -32,7 +30,7 @@ python %_biligrab_root%\biligrablite-re.py %_av_code% %_part_num% "%_tmp_bil_xml
 set _tmp_bil_xml_src=%_tmp_bil_xml%.xml
 python %_biligrab_root%\danmaku2ass2.py ^
        -o "%_storage_root%\youtube-dl\%_target_file%.ass" ^
-       -s 1024x768 "%_tmp_bil_xml_src%"
+       -dm 15 -s 1024x768 "%_tmp_bil_xml_src%"
 
 del "%_tmp_bil_xml_src%"
 :_Exit
