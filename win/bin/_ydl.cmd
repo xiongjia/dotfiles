@@ -36,7 +36,7 @@ set YDL_EXIT=%errorlevel%
 echo YDL Exit: %YDL_EXIT%; tries: %_tries%
 if %YDL_EXIT%==0 goto YDL_END
 set /a _tries+=1
-sleep 5
+sleep 10
 if %_tries% LEQ %YDL_MAX_RETRY% ( goto YDL_RETRY ) else ( goto YDL_END )
 
 :YDL_END

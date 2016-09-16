@@ -17,7 +17,6 @@ set _dev_path=%_curl_root%;%_dev_path%
 set _dev_path=%_gnuplot%\bin;%_dev_path%
 set _gnuplot_cli=%_gnuplot%\bin\pgnuplot.exe
 set _dev_path=%_ffmpeg%\bin;%_dev_path%
-set _dev_path=%_ledger_root%;%_dev_path%
 
 :: gpg
 set _dev_path=%_gpg_root%;%_dev_path%
