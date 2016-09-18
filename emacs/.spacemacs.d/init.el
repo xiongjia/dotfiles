@@ -51,7 +51,7 @@
       common-lisp
       (chinese :variables chinese-default-input-method 'pinyin)
       (shell :variables shell-default-height 30 shell-default-position 'bottom)
-      (colors :variables colors-enable-nyan-cat-progress-bar t)
+      (colors :variables colors-enable-nyan-cat-progress-bar nil)
       speed-reading
       (ibuffer :variables ibuffer-group-buffers-by 'projects)
       xj-org
