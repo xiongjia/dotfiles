@@ -76,7 +76,7 @@
     dotspacemacs-themes '(base16-google-dark)
     dotspacemacs-colorize-cursor-according-to-state t
     dotspacemacs-default-font '("Source Code Pro"
-                                :size 13
+                                :size 15
                                 :weight normal
                                 :width normal
                                 :powerline-scale 1.1)
