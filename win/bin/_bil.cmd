@@ -23,6 +23,11 @@ set _biligrab_root=%_3rd_src_root%\Biligrab
 :: Download the danmo to the .xml file
 set _tmp_bil_xml=%_tmp_root%\_biligrab_xml_%time::=.%_tmp
 @echo download the res to %_tmp_bil_xml%
+
+:: disable proxy
+set http_proxy=
+set https_proxy=
+set no_proxy=*
 python %_biligrab_root%\biligrablite-re.py %_av_code% %_part_num% "%_tmp_bil_xml%"
 
 :: Create the .ass file from the xml

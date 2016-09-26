@@ -84,3 +84,6 @@ set _dev_path=%_llvm_root%\bin;%_dev_path%
 :: Minecraft
 set _dev_path=%_mc_root%\client;%_dev_path%
 
+:: Aria2
+set _aria2_root=%_dropbox_root%\tools\aria2\aria2-1.27.1
+set _aria2_conf=%_dropbox_root%\tools\aria2\aria2_home.conf
