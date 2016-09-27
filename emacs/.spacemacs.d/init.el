@@ -130,6 +130,9 @@
 )
 
 (defun dotspacemacs/user-config ()
+  (remove-hook 'prog-mode-hook #'smartparens-mode)
+  (spacemacs/toggle-smartparens-globally-off)
+
   (global-company-mode t)
   (setq create-lockfiles nil)
   (add-hook 'prog-mode-hook 'linum-mode)
