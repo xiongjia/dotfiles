@@ -16,6 +16,8 @@ set /a _tries=0
 :YGET_RETRY
 %_yget_bin% --no-proxy --output-dir %_data_dir% %_ext_args%
 set _yget_exit=%errorlevel%
+echo YGET Exit: %_yget_exit%; tries: %_tries%
+if %_yget_exit%==0 goto YGET_END
 set /a _tries+=1
 node -pe "`YGET retry: ${(new Date()).toString()}`"
 sleep 10
