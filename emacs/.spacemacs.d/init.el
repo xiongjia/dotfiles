@@ -20,7 +20,6 @@
     dotspacemacs-configuration-layer-path '()
     dotspacemacs-configuration-layers
     '(
-      spacemacs-helm
       auto-completion
       better-defaults
       emacs-lisp
@@ -30,7 +29,6 @@
         :disabled-for org markdown)
       (spell-checking :variables spell-checking-enable-by-default nil)
       syntax-checking
-      spacemacs-layout
       git
       github
       version-control
@@ -121,12 +119,13 @@
   ))
 
 (defun dotspacemacs/user-init ()
-  (setq configuration-layer--elpa-archives
-    '(
-      ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-    ))
+  ;; China mirror
+  ;; (setq configuration-layer--elpa-archives
+  ;;   '(
+  ;;     ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+  ;;     ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+  ;;     ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+  ;;   ))
 )
 
 (defun dotspacemacs/user-config ()
