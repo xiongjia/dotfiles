@@ -1,0 +1,20 @@
+# local settings
+export _3rd_src_root=${HOME}/datum/stuff
+export _dropbox_root=${HOME}/Dropbox
+export _github_root=${HOME}/datum/github
+export _emacs_https_proxy=192.168.1.32:8082
+export _emacs_http_proxy=192.168.1.32:8082
+
+# zshell configuration 
+export ZSH=${_3rd_src_root}/oh-my-zsh
+ZSH_THEME="candy"
+DISABLE_AUTO_UPDATE="true"
+
+# zshell plugins
+plugins=(git nvm tmux osx)
+ZSH_TMUX_AUTOSTART=true
+
+source $ZSH/oh-my-zsh.sh
+
+# user configuration
+
