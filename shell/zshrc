@@ -12,7 +12,7 @@ ZSH_THEME="candy"
 DISABLE_AUTO_UPDATE="true"
 
 # zshell plugins
-plugins=(git nvm tmux osx)
+plugins=(git nvm tmux osx golang node bower grunt rvm rake)
 ZSH_TMUX_AUTOSTART=true
 NVM_DIR=${_3rd_src_root}/nvm
 
@@ -21,4 +21,6 @@ source $ZSH/oh-my-zsh.sh
 # user configuration
 PROMPT=$'%{$fg[green]%}%D{[%X]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} $(git_prompt_info)\
 %{$fg[white]%}->%{$fg_bold[white]%} %#%{$reset_color%} '
+
+alias vi="vim"
 
