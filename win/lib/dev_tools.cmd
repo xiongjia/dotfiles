@@ -4,6 +4,9 @@ call %~dp0.\settings.cmd
 set _dev_bin=%~dp0.\..\bin
 set _dev_path=%_dev_bin%
 
+:: update utf8
+@chcp 65001
+
 :: utils
 set _dev_path=%_gnu_w32%\bin;%_dev_path%
 set _dev_path=%_choco_root%\bin;%_dev_path%
@@ -87,3 +90,7 @@ set _dev_path=%_mc_root%\client;%_dev_path%
 :: Aria2
 set _aria2_root=%_dropbox_root%\tools\aria2\aria2-1.27.1
 set _aria2_conf=%_dropbox_root%\tools\aria2\aria2_home.conf
+
+:: Database
+set _dev_path=%_dev_path%;%_pg_root%\bin;%_pg_admin_root%\bin
+
