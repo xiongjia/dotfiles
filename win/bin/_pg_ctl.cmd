@@ -20,6 +20,10 @@ set _dest_db_log=%_dest_db_store%\%_dest_db_name%.log
 set /P _are_you_sure=Are you sure (y/[n])?
 if /I "%_are_you_sure%" neq "y" goto _Exit
 
+if "%_ctl_cmd%" == "init" (
+  pg_ctl init -D "%_dest_db_store%" -o "-U root -E utf8 -W -A trust "
+)
+
 if "%_ctl_cmd%" == "start" (
   pg_ctl start -D "%_dest_db_store%" -l "%_dest_db_log%" -w
 )
