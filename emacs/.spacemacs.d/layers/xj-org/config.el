@@ -19,6 +19,3 @@
 (defvar xj-org_tool_ditaa (getenv "_ditaa_jar")
   "The default ditaa.jar file is ${_ditaa_jar}")
 
-(defvar xj-org_tool_gnuplot (getenv "_gnuplot_cli")
-  "The default gnuplot cli is ${_gnuplot_cli}")
-

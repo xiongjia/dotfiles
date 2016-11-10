@@ -15,9 +15,13 @@
   (setq org-src-fontify-natively t)
   (setq org-ditaa-jar-path xj-org_tool_ditaa)
   (setq org-plantuml-jar-path xj-org_tool_plantuml)
-  (setq gnuplot-program xj-org_tool_gnuplot)
-  (setq gnuplot-program-version 4.2)
-  (setq gnuplot-echo-command-line-flag nil)
+
+  (when (not (string= (getenv "_gnuplot_cli") nil))
+    (let ((_gnuplot_cli (getenv "_gnuplot_cli")))
+      (message "update gnuplot cli for org: %s" _gnuplot_cli)
+      (setq gnuplot-program xj-org_tool_gnuplot)
+      (setq gnuplot-program-version 4.2)
+      (setq gnuplot-echo-command-line-flag nil)))
 
   ;; org babel
   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
