@@ -1,0 +1,31 @@
+_sys=`uname -s`
+
+# working folders
+export _3rd_src_root=${HOME}/datum/stuff
+export _dropbox_root=${HOME}/Dropbox
+export _github_root=${HOME}/datum/github
+export _data_root=${HOME}/datum
+
+# gpg
+export _gpg_home=${_data_root}/gpg
+export _gpg_program=gpg2
+
+# emacs proxy
+# export _emacs_https_proxy=192.168.1.32:8082
+# export _emacs_http_proxy=192.168.1.32:8082
+
+# emacs tools
+export _emacs_tools=${_dropbox_root}/tools/emacs
+export _gnuplot_cli=gnuplot
+export _node_bin=${_3rd_src_root}/nvm/versions/node/v7.0.0/bin
+
+if [[ $_sys == "Darwin" && -z "${TMUX}" ]]; then 
+  launchctl setenv _dropbox_root  ${_dropbox_root}
+  launchctl setenv _emacs_tools   ${_emacs_tools}
+  launchctl setenv _gpg_home      ${_gpg_home}
+  launchctl setenv _gpg_program   ${_gpg_program}
+  launchctl setenv _github_root   ${_github_root}
+  launchctl setenv _3rd_src_root  ${_3rd_src_root}
+  launchctl setenv _gnuplot_cli   ${_gnuplot_cli}
+fi
+

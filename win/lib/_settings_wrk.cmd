@@ -72,6 +72,7 @@ set _emacs_bin=%_emacs_root%\bin\runemacs.exe
 set _emacs_home=C:\wrk\src\github\dotfiles\emacs
 set _emacs_https_proxy=localhost:8119
 set _emacs_http_proxy=localhost:8119
+set _emacs_tools=C:\Users\lexi\Dropbox\tools\emacs
 
 :: tools
 set _putty_root=C:\wrk\tools\putty\putty-0.62
@@ -81,8 +82,6 @@ set _platinum_searcher=C:\wrk\tools\pt
 set _gnu_global=C:\wrk\tools\global\glo653wb
 set _aspell=C:\wrk\tools\aspell
 set _gnuplot=C:\wrk\tools\gnuplot
-set _ditaa_jar=C:\Users\lexi\Dropbox\tools\emacs-tools\ditaa\ditaa0_9.jar
-set _plantuml_jar=C:\Users\lexi\Dropbox\tools\emacs-tools\plantuml\plantuml.jar
 set _ffmpeg=
 set _gpg_root=C:\wrk\tools\gpg-win
 set _ledger_root=

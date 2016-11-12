@@ -13,9 +13,11 @@
   "The default abathur-root is ${_github_root}/abathur")
 
 ;; org tools
-(defvar xj-org_tool_plantuml (getenv "_plantuml_jar")
-  "The default plantuml.jar file is ${_plantuml_jar}")
+(defvar xj-org_tool_plantuml 
+  (expand-file-name "plantuml/plantuml.jar" (getenv "_emacs_tools"))
+  "The default plantuml.jar file")
 
-(defvar xj-org_tool_ditaa (getenv "_ditaa_jar")
-  "The default ditaa.jar file is ${_ditaa_jar}")
+(defvar xj-org_tool_ditaa 
+  (expand-file-name "ditaa/ditaa.jar" (getenv "_emacs_tools"))
+  "The default ditaa.jar file")
 

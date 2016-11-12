@@ -10,8 +10,7 @@
     '(
       (append ("https") (getenv "_emacs_https_proxy"))
       (append ("http")  (getenv "_emacs_http_proxy"))
-    ))
-)
+    )))
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -45,6 +44,7 @@
       python
       windows-scripts
       shell-scripts
+      osx
       (go :variables go-tab-width 2)
       common-lisp
       (chinese :variables chinese-default-input-method 'pinyin)
@@ -119,13 +119,14 @@
   ))
 
 (defun dotspacemacs/user-init ()
+  (if (eq system-type 'darwin)
+    (setq exec-path-from-shell-check-startup-files nil))
+
   ;; China mirror
-  ;; (setq configuration-layer--elpa-archives
-  ;;   '(
-  ;;     ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-  ;;     ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-  ;;     ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-  ;;   ))
+  (setq configuration-layer--elpa-archives
+    '(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
+      ("org-cn"   . "http://elpa.zilongshanren.com/org/")
+      ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
 )
 
 (defun dotspacemacs/user-config ()

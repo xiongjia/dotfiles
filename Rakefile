@@ -38,7 +38,8 @@ module DF
     "spacemacs" => [
       { "src" => "./emacs/.spacemacs.d", "target" => ".spacemacs.d" }],
     "shell" => [
-      { "src" => "./shell/zshrc", "target" => ".zshrc" }]
+      { "src" => "./shell/zshrc", "target" => ".zshrc" },
+      { "src" => "./shell/zshenv", "target" => ".zshenv" }]
   }
 
   def self.log

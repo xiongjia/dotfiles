@@ -13,14 +13,16 @@
   (add-hook 'org-mode-hook 
     (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
   (setq org-src-fontify-natively t)
+
+  (message "org ditaa: %s" xj-org_tool_ditaa)
   (setq org-ditaa-jar-path xj-org_tool_ditaa)
+  (message "org plant uml: %s" xj-org_tool_plantuml)
   (setq org-plantuml-jar-path xj-org_tool_plantuml)
 
   (when (not (string= (getenv "_gnuplot_cli") nil))
     (let ((_gnuplot_cli (getenv "_gnuplot_cli")))
       (message "update gnuplot cli for org: %s" _gnuplot_cli)
       (setq gnuplot-program xj-org_tool_gnuplot)
-      (setq gnuplot-program-version 4.2)
       (setq gnuplot-echo-command-line-flag nil)))
 
   ;; org babel
