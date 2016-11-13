@@ -8,8 +8,6 @@
     avy))
 
 (defun xj-dev/post-init-js2-mode ()
-  (message "update exec-path dbg1: %s" (getenv "PATH"))
-
   ;; updating tern command to 
   ;; `node ${npm_prefix}/node_modules/tern/bin/tern`
   ;; The ${npm_prefix}/bin/tern cannot be launched on Windows

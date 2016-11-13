@@ -17,7 +17,6 @@ export _gpg_program=gpg2
 # emacs tools
 export _emacs_tools=${_dropbox_root}/tools/emacs
 export _gnuplot_cli=gnuplot
-export _node_bin=${_3rd_src_root}/nvm/versions/node/v7.0.0/bin
 
 if [[ $_sys == "Darwin" && -z "${TMUX}" ]]; then 
   launchctl setenv _dropbox_root  ${_dropbox_root}

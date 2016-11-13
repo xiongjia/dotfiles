@@ -9,11 +9,15 @@ DISABLE_AUTO_UPDATE="true"
 # zshell plugins
 plugins=(git nvm tmux osx golang node bower grunt rvm rake)
 NVM_DIR=${_3rd_src_root}/nvm
-
 source $ZSH/oh-my-zsh.sh
+
+# golang
+export GOPATH=${_data_root}/gopath
+export PATH=${PATH}:${GOPATH}/bin
 
 if [[ $_sys == "Darwin" && -z "${TMUX}" ]]; then 
   launchctl setenv PATH ${PATH}
+  launchctl setenv GOPATH ${GOPATH}
   launchctl setenv _node_tern_cli $(where tern)
 fi
 

@@ -121,6 +121,7 @@
 (defun dotspacemacs/user-init ()
   (if (eq system-type 'darwin)
     (setq exec-path-from-shell-check-startup-files nil))
+  (message "os exec path: %s" (getenv "PATH"))
 
   ;; China mirror
   (setq configuration-layer--elpa-archives
