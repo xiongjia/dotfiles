@@ -15,6 +15,10 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=${_data_root}/gopath
 export PATH=${PATH}:${GOPATH}/bin
 
+# ruby
+export PATH=${PATH}:${HOME}/.rvm/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 if [[ $_sys == "Darwin" && -z "${TMUX}" ]]; then 
   launchctl setenv PATH ${PATH}
   launchctl setenv GOPATH ${GOPATH}
@@ -26,4 +30,5 @@ PROMPT=$'%{$fg[green]%}%D{[%X]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color
 %{$fg[white]%}->%{$fg_bold[white]%} %#%{$reset_color%} '
 
 alias vi="vim"
+
 

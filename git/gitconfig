@@ -1,39 +1,50 @@
 [user]
-    name = xiongjia
-    email = lexiongjia@gmail.com
+  name = xiongjia
+  email = lexiongjia@gmail.com
 
 [http]
 [core]
-    excludesfile = ~/.gitignore_global
-    editor = vim
-
-[alias]
-    ll = log --graph --pretty=oneline --abbrev-commit --decorate
-    f  = fetch
-    co = checkout
-    c  = clone
-    c1 = clone --depth=1 --single-branch
-    s  = status --short
-    d  = diff
-    dt = difftool
+  excludesfile = ~/.gitignore_global
+  editor = vim
 
 [push]
-    default = current
+  default = current
 
 [credential]
-    helper = cache
+  helper = cache
 
 [diff]
-    tool = vimdiff
+  tool = vimdiff
 [difftool]
-    prompt = false
+  prompt = false
 
 [merge]
-    tool = vimdiff
-    conflictstyle = diff3
+  tool = vimdiff
+  conflictstyle = diff3
+
 [mergetool]
-    prompt = true
+  prompt = true
 
 [github]
-    user = xiongjia
+  user = xiongjia
+
+[alias]
+  # log & status    
+  ll = log --graph --pretty=oneline --abbrev-commit --decorate
+  s  = status --short
+
+  # clone; fetch; checkout ...
+  f  = fetch
+  co = checkout
+  c  = clone
+  c1 = clone --depth=1 --single-branch
+
+  # diff
+  d  = diff
+  dt = difftool
+
+  # misc
+  unstage = reset HEAD
+  rhead = reset HEAD --hard
+  rhead-all = "!f() { git rhead && git clean -f -d; }; f"
 
