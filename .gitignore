@@ -16,6 +16,7 @@ java/m2/repository
 java/gradle/caches
 java/gradle/native
 java/gradle/wrapper
+java/gradle/daemon
 
 # emacs ignore
 !emacs/
