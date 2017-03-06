@@ -86,6 +86,7 @@ set _ffmpeg=D:\usr\misc\ffmpeg\ffmpeg-20160828-a37e6dd-win64-static
 set _gpg_root=D:\usr\misc\gpg-win
 set _ledger_root=E:\var\datum\Dropbox\tools\ledger_win\ledger_3.1.1
 set _graphics_magick=D:\usr\misc\gm\GraphicsMagick-1.3.25-Q16
+set _hg_root=D:\usr\app\Mercurial
 
 :: Databases
 set _pg_root=E:\dev\pg\postgresql-9.6.1-1-x64

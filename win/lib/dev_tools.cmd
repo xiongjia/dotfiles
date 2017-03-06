@@ -21,6 +21,7 @@ set _dev_path=%_gnuplot%\bin;%_dev_path%
 set _gnuplot_cli=%_gnuplot%\bin\pgnuplot.exe
 set _dev_path=%_ffmpeg%\bin;%_dev_path%
 set _dev_path=%_graphics_magick%;%_dev_path%
+set _dev_path=%_hg_root%;%_dev_path%
 
 :: gpg
 set _dev_path=%_gpg_root%;%_dev_path%
