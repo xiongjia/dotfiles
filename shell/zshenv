@@ -6,6 +6,9 @@ export _dropbox_root=${HOME}/Dropbox
 export _github_root=${HOME}/datum/github
 export _data_root=${HOME}/datum
 
+export _db_store=${HOME}/datum/db
+export db_store_sqlite=${_db_store}/sqlite
+
 # gpg
 export _gpg_home=${_data_root}/gpg
 export _gpg_program=gpg2
