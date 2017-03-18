@@ -28,6 +28,8 @@
 (defun xj-misc/post-init-chinese-pyim ()
   (message "Updating Chinese pyim dictionary")
   (setq default-input-method "chinese-pyim")
+  (setq pyim-use-tooltip nil)
+  (setq pyim-page-length 12)
   (let ((_default_pyim_dict 
          (expand-file-name "pyim/pyim-bigdict.pyim" 
            (getenv "_emacs_tools"))))
