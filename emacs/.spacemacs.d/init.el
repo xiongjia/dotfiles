@@ -45,6 +45,7 @@
       python
       windows-scripts
       shell-scripts
+      react
       osx
       (go :variables go-tab-width 2)
       common-lisp
@@ -155,6 +156,6 @@
           epa-file-cache-passphrase-for-symmetric-encryption t))
 )
 
-(setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
-(load custom-file 'no-error 'no-message)
+(setq custom-file (file-truename (concat dotspacemacs-directory "custom.el")))
+(load custom-file)
 

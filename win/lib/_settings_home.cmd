@@ -65,6 +65,10 @@ set _gvim_root=D:\usr\misc\vim\vim74
 set _gvim_home=C:\Users\lexj
 set _gvim_wrk_dir=E:\dev
 
+:: atom
+set _atom_root=D:\usr\misc\atom
+set _atom_cli=%_atom_root%\resources\cli
+
 :: emacs
 set _emacs_wrk_dir=E:\dev
 set _emacs_root=D:\usr\misc\emacs\emacs-25.0.91
