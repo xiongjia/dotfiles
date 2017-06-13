@@ -16,6 +16,7 @@ set _mc_root=F:\game\mc
 :: Proxy
 set _proxy_host=localhost
 set _proxy_port=8082
+set _no_proxy=localhost,127.0.0.1,registry.npm.taobao.org
 
 :: dev tools
 set _git_home=D:\usr\misc\git\git-2.8.1

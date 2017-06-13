@@ -9,6 +9,6 @@ if defined _proxy_host (
   set rsync_proxy=http://%_proxy_host%:%_proxy_port%
   set ftp_proxy=http://%_proxy_host%:%_proxy_port%
   set all_proxy=http://%_proxy_host%:%_proxy_port%
-  set no_proxy=localhost,127.0.0.1
+  set no_proxy=%_no_proxy%
 )
 
