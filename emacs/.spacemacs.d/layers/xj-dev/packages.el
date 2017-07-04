@@ -5,6 +5,7 @@
 (defconst xj-dev-packages
   '(
     js2-mode
+    typescript-mode
     avy))
 
 (defun xj-dev/post-init-js2-mode ()
@@ -29,4 +30,9 @@
   (progn
     (global-set-key (kbd "C-s-]") 'avy-goto-char-2)
     (global-set-key (kbd "M-]") 'avy-goto-char-2)))
+
+(defun xj-dev/post-init-typescript-mode ()
+  (progn
+    (setq-default typescript-indent-level 2)
+    (setq-default typescript-basic-offset 2)))
 
