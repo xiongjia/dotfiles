@@ -33,6 +33,9 @@ set _gpg_home=%_gpg_root%\home
 set _dev_path=%_emacs_root%\bin;%_dev_path%
 set _emacs_browser=%_dev_bin%\_chrome.cmd
 
+:: vim
+set _gvim_home=%_github_root%\dotFiles\vim
+
 :: Java / Scala
 set JAVA_HOME=%_jdk_home%
 set M2_HOME=%_m2_home%
