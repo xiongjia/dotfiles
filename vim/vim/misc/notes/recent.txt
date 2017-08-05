@@ -1,1 +1,0 @@
-/Users/lexiongjia/datum/github/dotfiles/vim/vim/notes-dat/dev
