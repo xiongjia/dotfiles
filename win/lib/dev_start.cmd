@@ -13,6 +13,7 @@ if "%_dbg%" == "true" (
     @echo start app:  %_start_app%
     @echo start args: %_start_args%
     @echo wrk dir:    %_start_wrk_dir%
+    @echo home dir:   %HOME%
 )
 
 if "%_start_wrk_dir%" == "" (

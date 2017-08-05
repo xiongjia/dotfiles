@@ -6,10 +6,9 @@ Powerline*.cache
 *.swp
 
 # vim ignore
-vim/vim/sessions
-vim/vim/swap-files
-vim/vim/doc/tags
-vim/vim/notes-dat
+vim/_viminfo
+vim/.vim/bundle/*
+!vim/.vim/bundle/vundle.vim
 
 # Java ignore
 java/m2/repository
