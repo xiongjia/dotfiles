@@ -10,11 +10,13 @@ Plugin 'itchyny/lightline.vim'
 
 " DEV Tools
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'mileszs/ack.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
-filetype plugin indent on
 
 " UI Settings
 colorscheme Tomorrow-Night-Bright
@@ -36,8 +38,8 @@ let g:lightline = {
   \ }
 
 " Editor settings
+filetype plugin indent on
 set clipboard=unnamed
-syntax on
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -49,6 +51,15 @@ set hlsearch
 set gcr=a:block-blinkon0
 set nu
 set rnu
+syntax on
+
+" dev tools
+let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
+nnoremap <leader>n :NERDTreeToggle .<CR>
+
+" dev - js
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 
 " vimwiki
 let g:vimwiki_use_mouse = 1
