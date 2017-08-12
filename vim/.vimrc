@@ -15,6 +15,10 @@ Plugin 'mileszs/ack.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'pangloss/vim-javascript'
+Plugin 'ervandew/eclim'
+
+" syntax
+Plugin 'nickhutchinson/vim-cmake-syntax'
 
 call vundle#end()
 
@@ -57,6 +61,7 @@ syntax on
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 nnoremap <leader>n :NERDTreeToggle .<CR>
+nmap <C-S> :update<CR>
 
 " dev - js
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab

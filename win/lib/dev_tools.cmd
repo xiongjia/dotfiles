@@ -5,7 +5,7 @@ set _dev_bin=%~dp0.\..\bin
 set _dev_path=%_dev_bin%
 
 :: update utf8
-@chcp 65001
+:: @chcp 65001
 
 :: utils
 set _dev_path=%_gnu_w32%\bin;%_dev_path%

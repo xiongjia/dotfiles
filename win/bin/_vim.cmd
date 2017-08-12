@@ -16,4 +16,3 @@ if "%_start_args%" == "" (
 )
 call %_dev_env_libs%\dev_start.cmd
 endlocal
-
