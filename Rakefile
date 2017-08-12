@@ -22,8 +22,8 @@ module DF
       { "src" => "./tmux/tmux.conf", "target" => ".tmux.conf"},
       { "src" => "./tmux/tmuxinator", "target" => ".tmuxinator"}],
     "vim" => [
-      { "src" => "./vim/vim", "target" => ".vim"},
-      { "src" => "./vim/vimrc", "target" => ".vimrc"}],
+      { "src" => "./vim/.vim", "target" => ".vim"},
+      { "src" => "./vim/.vimrc", "target" => ".vimrc"}],
     "node" => [
       { "src" => "./node/npmrc", "target" => ".npmrc"}],
     "ruby" => [
