@@ -16,6 +16,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/eclim'
+Plugin 'kien/ctrlp.vim'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
@@ -56,6 +57,8 @@ set gcr=a:block-blinkon0
 set nu
 set rnu
 syntax on
+set foldmethod=manual
+set foldlevel=99
 
 " dev tools
 let NERDTreeShowBookmarks=1
