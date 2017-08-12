@@ -46,6 +46,7 @@
       windows-scripts
       shell-scripts
       react
+      vimscript
       osx
       (go :variables go-tab-width 2)
       common-lisp
