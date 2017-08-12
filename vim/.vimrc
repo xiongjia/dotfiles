@@ -32,8 +32,10 @@ set guifont=Source_Code_Pro:h11
 set guifontwide=Source_Code_Pro:h11
 if has("gui_running")
   " maximize gvim win
-	set lines=9999 columns=9999
-  au GUIEnter * simalt ~x
+  set lines=9999 columns=9999
+  if has("win32")
+    au GUIEnter * simalt ~x
+  endif
 endif
 
 " status line
@@ -60,11 +62,25 @@ syntax on
 set foldmethod=manual
 set foldlevel=99
 
+if (has("unix"))
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    map <F2> :.w !pbcopy<CR><CR>
+    map <F3> :r !pbpaste<CR>
+  endif
+endif
+
 " dev tools
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 nnoremap <leader>n :NERDTreeToggle .<CR>
 nmap <C-S> :update<CR>
+
+set wildmenu
+set wildmode=list:longest
+set wildignore+=.hg,.git,.svn
+set wildignore+=*.so,*.a,*.dll,*.lib,*.o,*.obj,*.class,*.pyc
+set wildignore+=node_modules
 
 " dev - js
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
