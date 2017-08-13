@@ -56,11 +56,14 @@ set encoding=utf-8
 set autochdir
 set hlsearch
 set gcr=a:block-blinkon0
+set virtualedit=block
 set nu
 set rnu
-syntax on
 set foldmethod=manual
 set foldlevel=99
+set directory=$HOME/.swapfiles//
+set cm=blowfish2
+syntax on
 
 if (has("unix"))
   let s:uname = system("uname")
