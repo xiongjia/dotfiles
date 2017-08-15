@@ -61,6 +61,7 @@ set nu
 set rnu
 set foldmethod=manual
 set foldlevel=99
+set noswapfile
 set directory=$HOME/.swapfiles//
 set cm=blowfish2
 syntax on
