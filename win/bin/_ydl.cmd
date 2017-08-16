@@ -32,7 +32,7 @@ node -pe "`YDL Begin: ${(new Date()).toString()}`"
 
 set /a _tries=0
 :YDL_RETRY
-python -m youtube_dl -o %YDL_DAT%\%YDL_FMT% %YDL_EXT_ARGS%
+python -m youtube_dl --no-mtime -o %YDL_DAT%\%YDL_FMT% %YDL_EXT_ARGS%
 set YDL_EXIT=%errorlevel%
 echo YDL Exit: %YDL_EXIT%; tries: %_tries%
 if %YDL_EXIT%==0 goto YDL_END
