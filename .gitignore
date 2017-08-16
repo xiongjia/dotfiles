@@ -10,7 +10,7 @@ vim/.vim/bundle/*
 !vim/.vim/bundle/vundle.vim
 vim/*
 !vim/.vimrc
-!vim/.swapfiles 
+!vim/.vim/swp/.gitkeep
 
 # Java ignore
 java/m2/repository

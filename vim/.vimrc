@@ -61,8 +61,7 @@ set nu
 set rnu
 set foldmethod=manual
 set foldlevel=99
-set noswapfile
-set directory=$HOME/.swapfiles//
+set directory=$HOME/.vim/swp//
 set cm=blowfish2
 syntax on
 
