@@ -29,7 +29,7 @@
   (message "Updating Chinese pyim dictionary")
   (setq default-input-method "chinese-pyim")
   (setq pyim-use-tooltip nil)
-  (setq pyim-page-length 12)
+  (setq pyim-page-length 9)
   (let ((_default_pyim_dict 
          (expand-file-name "pyim/pyim-bigdict.pyim" 
            (getenv "_emacs_tools"))))
