@@ -21,6 +21,7 @@ set _no_proxy=localhost,127.0.0.1,registry.npm.taobao.org
 :: dev tools
 set _git_home=D:\usr\misc\git\git-2.8.1
 set _gnu_w32=D:\usr\misc\gnu_w32
+set _ms_dev=D:\usr\app\vs2017\community\Common7\IDE\devenv.exe
 
 :: golang
 set _go_root=D:\usr\misc\go\go1.6.2
