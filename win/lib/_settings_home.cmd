@@ -36,7 +36,7 @@ set _npm_prefix=D:\usr\misc\node\npm-packages
 
 :: c/c++
 set _boost_root=E:\dev\third_party\boost\boost_1_61_0
-set _cmake_root=D:\usr\misc\cmake\cmake-3.5.0-rc1-win32-x86
+set _cmake_root=D:\usr\misc\cmake\cmake-3.9.0-rc6-win64-x64
 set _ms_sym_cache=E:\dev\sym.cache\ms
 set _ms_win_dbg_32=D:\usr\misc\windbg\windbg_x86
 set _ms_win_dbg_64=D:\usr\misc\windbg\windbg_x64
