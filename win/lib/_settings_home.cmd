@@ -44,6 +44,7 @@ set _ms_win_dbg_64=D:\usr\misc\windbg\windbg_x64
 set _ms_depends_32=D:\usr\misc\depends22\depends22_x86
 set _ms_depends_64=D:\usr\misc\depends22\depends22_x64
 set _llvm_root=D:\usr\misc\llvm
+set _openssl_root=E:\dev\stuff\dist\openssl-prefix
 
 :: python
 set _py2_home=D:\usr\misc\py\Python27
