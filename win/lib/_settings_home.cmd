@@ -31,7 +31,7 @@ set _go_path=E:\dev\gopath
 set _perl_home=C:\strawberry\perl
 
 :: node.js
-set _node=D:\usr\misc\node\node-v7.0.0
+set _node=D:\usr\misc\node\node-v8.5
 set _npm=D:\usr\misc\node\npm-1.4.9
 set _npm_prefix=D:\usr\misc\node\npm-packages
 
