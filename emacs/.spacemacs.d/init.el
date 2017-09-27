@@ -32,7 +32,7 @@
       github
       version-control
       gtags
-      markdown
+      (markdown :variables markdown-live-preview-engine 'vmd)
       yaml
       org
       deft
