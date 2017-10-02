@@ -51,7 +51,7 @@ set _py2_home=D:\usr\misc\py\Python27
 set _py2_venv=D:\usr\misc\py\venv\py2-dev
 
 :: java
-set _jdk_home=D:\usr\app\Java\jdk1.8.0_60
+set _jdk_home=D:\usr\app\Java\jdk-9
 set _scala_home=E:\dev\java_env\scala\scala-2.12.0
 set _m2_home=E:\dev\apache\apache-maven-3.0.5
 set _gradle_home=D:\usr\misc\gradle\gradle-3.2
