@@ -41,7 +41,7 @@ set JAVA_HOME=%_jdk_home%
 set M2_HOME=%_m2_home%
 set M2=%_m2_home%\bin
 set MAVEN_OPTS=-Xmx1024m -XX:MaxPermSize=128M
-set GRADLE_USER_HOME=%_gradle_home%
+set GRADLE_USER_HOME=%_gradle_usr_home%
 set _dev_path=%_jdk_home%\bin;%_scala_home%\bin;%_dev_path%
 set _dev_path=%_ant_home%\bin;%_m2_home%\bin;%_gradle_home%\bin;%_dev_path%
 set _dev_path=%_sbt_home%\bin;%_dev_path%

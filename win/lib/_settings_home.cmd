@@ -12,6 +12,7 @@ set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
 set _curl_root=D:\usr\misc\curl
 set _rsync_root=D:\usr\misc\DeltaCopyRaw
 set _mc_root=F:\game\mc
+set home=C:\Users\lexj
 
 :: Proxy
 set _proxy_host=localhost
@@ -55,7 +56,7 @@ set _jdk9_home=D:\usr\app\Java\jdk-9
 set _jdk_home=D:\usr\app\Java\jdk1.8.0_60
 set _scala_home=E:\dev\java_env\scala\scala-2.12.0
 set _m2_home=E:\dev\apache\apache-maven-3.0.5
-set _gradle_home=D:\usr\misc\gradle\gradle-3.2
+set _gradle_home=D:\usr\misc\gradle\gradle-4.2.1
 set _gradle_usr_home=E:\dev\gradle_usr_home
 set _sbt_home=E:\dev\java_env\scala\sbt-0.13.9\sbt
 set _ant_home=D:\usr\misc\ap\ant\apache-ant-1.9.3
