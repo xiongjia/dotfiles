@@ -6,7 +6,7 @@ setlocal
 set _dev_env_libs=%~dp0.\..\lib
 call %_dev_env_libs%\dev_tools.cmd
 
-set HOME=%_gvim_home%
+set _start_home=%_gvim_home%
 set _start_app=%_gvim_root%\gvim.exe
 set _start_args=%*
 if "%_start_args%" == "" (

@@ -8,6 +8,12 @@ call %_dev_env_libs%\dev_tmp.cmd
 set path=%_dev_path%;%path%
 call %_dev_env_libs%\dbg_info.cmd
 
+if "%_start_home%" == "" (
+    @echo no _start_home
+) else (
+    set HOME=%_start_home%
+)
+
 set _dbg=true
 if "%_dbg%" == "true" (
     @echo start app:  %_start_app%
@@ -23,4 +29,3 @@ if "%_start_wrk_dir%" == "" (
 ) else (
   start %_start_app% %_start_args%
 )
-
