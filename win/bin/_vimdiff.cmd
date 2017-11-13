@@ -10,5 +10,5 @@ call %_dev_env_libs%\dev_tools.cmd
 set HOME=%_gvim_home%
 :: @echo HOME: %HOME%
 :: @echo diff: %_diff_args%
-start /wait %_gvim_root%\gvim.exe -d %_diff_args%
+start /wait %_gvim_root%\gvim.exe -R -d %_diff_args%
 endlocal
