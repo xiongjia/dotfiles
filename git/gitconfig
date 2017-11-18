@@ -47,4 +47,5 @@
   unstage = reset HEAD
   rhead = reset HEAD --hard
   rhead-all = "!f() { git rhead && git clean -f -d; }; f"
+  xclean = clean -x -d -f
 
