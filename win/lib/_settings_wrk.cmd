@@ -29,9 +29,10 @@ set _go_path=C:\wrk\gopath
 set _perl_home=C:\strawberry\perl
 
 :: node.js
-set _node=C:\wrk\tools\node\node-v4.4.5-64
-set _npm=C:\wrk\tools\node\npm-1.4.12
-set _npm_prefix=C:\wrk\tools\node\npm-prefix
+set _node=C:\wrk\tools\node\node-self\node-v8.9.2
+set _npm=C:\wrk\tools\node\node-self\npm-1.4.12
+set _npm_prefix=C:\wrk\tools\node\node-self\npm-prefix
+set NPM_CONFIG_USERCONFIG=C:\wrk\tools\node\node-self\npmrc
 
 :: c/c++
 set _boost_root=C:\wrk\src\boost\boost_1_61_0
