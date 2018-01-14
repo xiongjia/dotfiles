@@ -23,6 +23,11 @@
     (progn
       (setq-default js-indent-level 2)
       (setq-default js2-basic-offset 2)
+      (setq-default css-indent-offset 2)
+      (setq-default web-mode-markup-indent-offset 2)
+      (setq-default eb-mode-css-indent-offset 2)
+      (setq-default eb-mode-code-indent-offset 2)
+      (setq-default eb-mode-attr-indent-offset 2)
     ))
 )
 
