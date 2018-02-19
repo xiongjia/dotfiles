@@ -6,6 +6,7 @@
 set _tmp_root=F:\dev_tmp
 set _storage_root=F:\arc
 set _dropbox_root=E:\var\datum\Dropbox
+set _onedrv_root=C:\Users\lexj\OneDrive
 set _github_root=E:\dev\github
 set _3rd_src_root=E:\dev\stuff
 set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
