@@ -23,6 +23,7 @@ set _dev_path=%_ffmpeg%\bin;%_dev_path%
 set _dev_path=%_graphics_magick%;%_dev_path%
 set _dev_path=%_hg_root%;%_dev_path%
 set _dev_path=%_atom_cli%;%_dev_path%
+set _dev_path=%_heroku_root%\bin;%_dev_path%
 
 :: gpg
 set _dev_path=%_gpg_root%;%_dev_path%
