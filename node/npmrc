@@ -12,4 +12,4 @@ sass_binary_site=http://cdn.npm.taobao.org/dist/node-sass
 electron_mirror=http://cdn.npm.taobao.org/dist/electron/
 selenium_cdnurl=http://npm.taobao.org/mirrors/selenium
 node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector
-
+puppeteer-download-host=https://npm.taobao.org/mirrors
