@@ -85,8 +85,15 @@ set wildignore+=.hg,.git,.svn
 set wildignore+=*.so,*.a,*.dll,*.lib,*.o,*.obj,*.class,*.pyc
 set wildignore+=node_modules
 
-" dev - js
+" dev settings - javascript 
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
+" enable it if you need debug it: let g:syntastic_debug=3 
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npx eslint'
 
 " vimwiki
 let g:vimwiki_use_mouse = 1
