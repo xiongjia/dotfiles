@@ -87,7 +87,7 @@ set wildignore+=*.so,*.a,*.dll,*.lib,*.o,*.obj,*.class,*.pyc
 set wildignore+=node_modules
 
 if executable('ag')
-  let g:ackprg = 'ag'
+  let g:ackprg = 'pt'
 endif
 
 " dev settings - javascript 
