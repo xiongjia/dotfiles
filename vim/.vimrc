@@ -15,6 +15,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'ervandew/eclim'
 Plugin 'kien/ctrlp.vim'
 
@@ -85,6 +86,10 @@ set wildignore+=.hg,.git,.svn
 set wildignore+=*.so,*.a,*.dll,*.lib,*.o,*.obj,*.class,*.pyc
 set wildignore+=node_modules
 
+if executable('ag')
+  let g:ackprg = 'ag'
+endif
+
 " dev settings - javascript 
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 " enable it if you need debug it: let g:syntastic_debug=3 
@@ -94,6 +99,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npx eslint'
+let g:jsx_ext_required = 1
 
 " vimwiki
 let g:vimwiki_use_mouse = 1
