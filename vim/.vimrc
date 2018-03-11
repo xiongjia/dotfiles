@@ -92,6 +92,7 @@ endif
 
 " dev settings - javascript 
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType json set tabstop=2|set shiftwidth=2|set expandtab
 " enable it if you need debug it: let g:syntastic_debug=3 
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
