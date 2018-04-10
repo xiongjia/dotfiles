@@ -49,6 +49,9 @@ set _llvm_root=C:\wrk\tools\LLVM
 set _py2_home=C:\wrk\tools\py\py27
 set _py2_venv=C:\wrk\tools\py\py2venv
 
+set _py3_home=C:\wrk\tools\py\py36
+set _py3_venv=C:\wrk\tools\py\py3venv
+
 :: java
 set _jdk_home=C:\Program Files\Java\jdk1.8.0_51
 set _scala_home=C:\wrk\tools\scala\scala-2.12.0
