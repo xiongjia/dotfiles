@@ -37,6 +37,7 @@
   f  = fetch
   co = checkout
   c  = clone
+  cr = clone --recurse-submodules -j8
   c1 = clone --depth=1 --single-branch
 
   # diff
