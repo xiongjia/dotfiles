@@ -16,6 +16,9 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=${_data_root}/gopath
 export PATH=${PATH}:${GOPATH}/bin
 
+# node
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
+
 # ruby
 export PATH=${PATH}:${HOME}/.rvm/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
