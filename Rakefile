@@ -36,7 +36,8 @@ module DF
     "misc" => [
       { "src" => "./misc/ackrc", "target" => ".ackrc" }],
     "spacemacs" => [
-      { "src" => "./emacs/.spacemacs.d", "target" => ".spacemacs.d" }],
+      { "src" => "./emacs/.spacemacs.d", "target" => ".spacemacs.d" },
+      { "src" => "./deps/spacemacs", "target" => ".emcas.d" }],
     "shell" => [
       { "src" => "./shell/zshrc", "target" => ".zshrc" },
       { "src" => "./shell/zshenv", "target" => ".zshenv" }]
