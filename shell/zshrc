@@ -1,14 +1,14 @@
 _sys=`uname -s`
 
 # zshell configuration 
-export ZSH=${_3rd_src_root}/oh-my-zsh
+export ZSH=${_dotfiles_root}/deps/oh-my-zsh
 
 ZSH_THEME="candy"
 DISABLE_AUTO_UPDATE="true"
 
 # zshell plugins
 plugins=(git nvm tmux osx golang node bower grunt rvm rake)
-NVM_DIR=${_3rd_src_root}/nvm
+NVM_DIR=${_dotfiles_root}/deps/nvm
 source $ZSH/oh-my-zsh.sh
 
 # golang

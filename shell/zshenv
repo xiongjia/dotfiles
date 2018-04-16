@@ -6,6 +6,7 @@ export _dropbox_root=${HOME}/Dropbox
 export _github_root=${HOME}/datum/github
 export _data_root=${HOME}/datum
 export _onedrv_root=${HOME}/OneDrive
+export _dotfiles_root=${_github_root}/dotfiles
 
 export _db_store=${HOME}/datum/db
 export db_store_sqlite=${_db_store}/sqlite
