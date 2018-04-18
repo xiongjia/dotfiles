@@ -3,6 +3,7 @@
 call %~dp0.\settings.cmd
 set _dev_bin=%~dp0.\..\bin
 set _dev_path=%_dev_bin%
+set _deps_root=%~dp0.\..\..\deps
 
 :: update utf8
 :: @chcp 65001
@@ -79,6 +80,7 @@ set _dev_path=%_ruby_home%\bin;%_ruby_devkit%;%_dev_path%
 
 :: git
 set _dev_path=%_git_home%\cmd;%_dev_path%
+set _dev_path=%_deps_root%\depot_tools;%_dev_path%
 set GIT_SSH=%_dev_bin%\_plink_git.cmd
 
 :: python

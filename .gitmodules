@@ -10,3 +10,6 @@
 [submodule "deps/spacemacs"]
 	path = deps/spacemacs
 	url = https://github.com/syl20bnr/spacemacs.git
+[submodule "deps/depot_tools"]
+	path = deps/depot_tools
+	url = https://chromium.googlesource.com/chromium/tools/depot_tools.git
