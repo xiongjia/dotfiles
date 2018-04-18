@@ -12,6 +12,9 @@ plugins=(git nvm tmux osx golang node bower grunt rvm rake)
 NVM_DIR=${_dotfiles_root}/deps/nvm
 source $ZSH/oh-my-zsh.sh
 
+# other tools
+export PATH=${PATH}:${_dotfiles_root}/deps/depot_tools
+
 # golang
 export GOPATH=${_data_root}/gopath
 export PATH=${PATH}:${GOPATH}/bin
