@@ -2,15 +2,15 @@
 ;; This file is loaded by Spacemacs at startup.
 
 ;; updating proxy server
-(when (not (string= (getenv "_emacs_https_proxy") nil)) 
-  (message "Emacs https_proxy=%s;http_proxy=%s"
-    (getenv "_emacs_https_proxy")
-    (getenv "_emacs_http_proxy"))
-  (setq url-proxy-services
-    '(
-      (append ("https") (getenv "_emacs_https_proxy"))
-      (append ("http")  (getenv "_emacs_http_proxy"))
-    )))
+;; (when (not (string= (getenv "_emacs_https_proxy") nil)) 
+;;   (message "Emacs https_proxy=%s;http_proxy=%s"
+;;     (getenv "_emacs_https_proxy")
+;;     (getenv "_emacs_http_proxy"))
+;;   (setq url-proxy-services
+;;     '(
+;;       (append ("https") (getenv "_emacs_https_proxy"))
+;;       (append ("http")  (getenv "_emacs_http_proxy"))
+;;     )))
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -127,10 +127,10 @@
   (message "os exec path: %s" (getenv "PATH"))
 
   ;; China mirror
-  ;; (setq configuration-layer--elpa-archives
-  ;;   '(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
-  ;;     ("org-cn"   . "http://elpa.zilongshanren.com/org/")
-  ;;     ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
+  (setq configuration-layer--elpa-archives
+    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 )
 
 (defun dotspacemacs/user-config ()
