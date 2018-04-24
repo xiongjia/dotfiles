@@ -42,3 +42,8 @@ alias vi="vim"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+if [[ $_sys == "Darwin" && -z "${TMUX}" ]]; then 
+  launchctl setenv JAVA_HOME  ${JAVA_HOME}
+  launchctl setenv PATH ${PATH}
+fi
+
