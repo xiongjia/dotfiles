@@ -7,6 +7,7 @@ call vundle#begin()
 " Misc
 Plugin 'flazz/vim-colorschemes'
 Plugin 'itchyny/lightline.vim'
+Plugin 'mhinz/vim-startify'
 
 " DEV Tools
 Plugin 'scrooloose/nerdtree'
@@ -18,6 +19,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'ervandew/eclim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
@@ -49,8 +51,8 @@ let g:lightline = {
 filetype plugin indent on
 set clipboard=unnamed
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set noeb vb t_vb=
 set encoding=utf-8
@@ -71,6 +73,7 @@ if (has("unix"))
   if s:uname == "Darwin\n"
     map <F2> :.w !pbcopy<CR><CR>
     map <F3> :r !pbpaste<CR>
+    let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
   endif
 endif
 
