@@ -89,8 +89,8 @@ set wildignore+=.hg,.git,.svn
 set wildignore+=*.so,*.a,*.dll,*.lib,*.o,*.obj,*.class,*.pyc
 set wildignore+=node_modules
 
-if executable('ag')
-  let g:ackprg = 'pt'
+if executable('pt')
+  let g:ackprg = 'pt --context=0 --nocolor --nogroup --column'
 endif
 
 " dev settings - javascript 

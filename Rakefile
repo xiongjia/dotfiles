@@ -34,7 +34,8 @@ module DF
       { "src" => "./java/m2", "target" => ".m2" },
       { "src" => "./java/gradle", "target" => ".gradle" }],
     "misc" => [
-      { "src" => "./misc/ackrc", "target" => ".ackrc" }],
+      { "src" => "./misc/ackrc", "target" => ".ackrc" },
+      { "src" => "./misc/ptconfig.toml", "target" => ".ptconfig.toml" }],
     "spacemacs" => [
       { "src" => "./emacs/.spacemacs.d", "target" => ".spacemacs.d" },
       { "src" => "./deps/spacemacs", "target" => ".emacs.d" }],
