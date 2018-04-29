@@ -24,6 +24,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
