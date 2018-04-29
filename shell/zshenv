@@ -16,22 +16,20 @@ export _gpg_home=${_data_root}/gpg
 export _gpg_program=gpg2
 
 # emacs proxy
-export _emacs_https_proxy=192.168.1.32:8082
-export _emacs_http_proxy=192.168.1.32:8082
+# export _emacs_https_proxy=192.168.1.32:8082
+# export _emacs_http_proxy=192.168.1.32:8082
 
 # emacs tools
 export _emacs_tools=${_dropbox_root}/tools/emacs
 export _gnuplot_cli=gnuplot
 
 if [[ $_sys == "Darwin" && -z "${TMUX}" ]]; then 
-  launchctl setenv _dropbox_root       ${_dropbox_root}
-  launchctl setenv _emacs_tools        ${_emacs_tools}
-  launchctl setenv _gpg_home           ${_gpg_home}
-  launchctl setenv _gpg_program        ${_gpg_program}
-  launchctl setenv _github_root        ${_github_root}
-  launchctl setenv _3rd_src_root       ${_3rd_src_root}
-  launchctl setenv _gnuplot_cli        ${_gnuplot_cli}
-  launchctl setenv _emacs_https_proxy  ${_emacs_https_proxy}
-  launchctl setenv _emacs_http_proxy   ${_emacs_http_proxy}
+  launchctl setenv _dropbox_root  ${_dropbox_root}
+  launchctl setenv _emacs_tools   ${_emacs_tools}
+  launchctl setenv _gpg_home      ${_gpg_home}
+  launchctl setenv _gpg_program   ${_gpg_program}
+  launchctl setenv _github_root   ${_github_root}
+  launchctl setenv _3rd_src_root  ${_3rd_src_root}
+  launchctl setenv _gnuplot_cli   ${_gnuplot_cli}
 fi
 
