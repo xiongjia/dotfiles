@@ -22,6 +22,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
@@ -94,6 +96,9 @@ set wildignore+=node_modules
 if executable('pt')
   let g:ackprg = 'pt --context=0 --nocolor --nogroup --column'
 endif
+
+" dev settings - py 
+autocmd FileType python set ts=2|set sw=2|set sts=2|set expandtab
 
 " dev settings - javascript 
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
