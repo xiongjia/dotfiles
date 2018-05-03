@@ -25,6 +25,8 @@ Plugin 'Shougo/vimshell.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
@@ -87,6 +89,10 @@ let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 nnoremap <leader>n :NERDTreeToggle .<CR>
 nmap <C-S> :update<CR>
+let g:gist_get_multiplefile = 1
+let g:gist_post_private = 1
+let g:gist_show_private = 1
+let g:gistvim_namelength = 30
 
 set wildmenu
 set wildmode=list:longest
