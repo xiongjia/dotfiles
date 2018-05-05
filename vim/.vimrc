@@ -29,6 +29,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mtth/scratch.vim'
 Plugin 'elzr/vim-json'
+Plugin 'plasticboy/vim-markdown'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
