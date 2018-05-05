@@ -12,6 +12,7 @@ vim/*
 vim/.vim/bundle/*
 !vim/.vim/bundle/vundle.vim
 vim/.vim/swp/*
+vim/.vim/session/*
 
 # Java ignore
 java/m2/repository
