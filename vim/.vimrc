@@ -27,6 +27,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+Plugin 'mtth/scratch.vim'
+Plugin 'elzr/vim-json'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
