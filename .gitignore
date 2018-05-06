@@ -20,6 +20,7 @@ java/gradle/caches
 java/gradle/native
 java/gradle/wrapper
 java/gradle/daemon
+java/gradle/notifications
 
 # emacs ignore
 !emacs/
