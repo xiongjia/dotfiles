@@ -48,4 +48,7 @@
   rhead = reset HEAD --hard
   rhead-all = "!f() { git rhead && git clean -f -d; }; f"
   xclean = clean -x -d -f
+  rpo = remote prune origin
+  llh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/heads/
+  lrh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/remotes/
 
