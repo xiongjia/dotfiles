@@ -31,6 +31,7 @@ Plugin 'mtth/scratch.vim'
 Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-git'
+Plugin 'junegunn/fzf'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
