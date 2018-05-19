@@ -32,6 +32,10 @@ Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-git'
 Plugin 'junegunn/fzf'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
@@ -98,6 +102,9 @@ let g:gist_get_multiplefile = 1
 let g:gist_post_private = 1
 let g:gist_show_private = 1
 let g:gistvim_namelength = 30
+let g:snipMate = get(g:, 'snipMate', {})
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 
 set wildmenu
 set wildmode=list:longest
