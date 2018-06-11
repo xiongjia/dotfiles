@@ -36,6 +36,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+Plugin 'skywind3000/asyncrun.vim'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
@@ -105,6 +106,7 @@ let g:gistvim_namelength = 30
 let g:snipMate = get(g:, 'snipMate', {})
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
+let g:asyncrun_open = 8
 
 set wildmenu
 set wildmode=list:longest
