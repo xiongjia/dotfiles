@@ -37,6 +37,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'skywind3000/asyncrun.vim'
+Plugin 'MattesGroeger/vim-bookmarks'
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'
