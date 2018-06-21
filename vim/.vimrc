@@ -24,7 +24,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Valloric/YouCompleteMe'
+
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mtth/scratch.vim'
@@ -38,6 +38,10 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'skywind3000/asyncrun.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
+
+if (has("unix"))
+  Plugin 'Valloric/YouCompleteMe'
+endif
 
 " syntax
 Plugin 'nickhutchinson/vim-cmake-syntax'

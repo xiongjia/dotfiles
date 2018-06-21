@@ -71,7 +71,7 @@ set _ruby_home=D:\usr\misc\ruby\Ruby200-x64
 set _ruby_devkit=D:\usr\misc\ruby\DevKit-mingw64-64-4.7.2-20130224-1432-sfx
 
 :: vim
-set _gvim_root=D:\usr\misc\vim\vim74
+set _gvim_root=D:\usr\misc\vim\vim-v8.0.0002
 set _gvim_wrk_dir=E:\dev
 
 :: atom
