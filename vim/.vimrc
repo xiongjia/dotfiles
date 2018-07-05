@@ -38,6 +38,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'skywind3000/asyncrun.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'kien/tabman.vim'
 
 if (has("unix"))
   Plugin 'Valloric/YouCompleteMe'
