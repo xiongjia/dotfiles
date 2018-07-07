@@ -16,6 +16,7 @@ vim/.vim/session/*
 
 # Java ignore
 java/m2/repository
+java/m2/wrapper
 java/gradle/caches
 java/gradle/native
 java/gradle/wrapper

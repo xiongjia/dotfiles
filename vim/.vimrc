@@ -57,6 +57,7 @@ set guioptions-=T
 set guioptions-=m
 set guifont=Source_Code_Pro:h11
 set guifontwide=Source_Code_Pro:h11
+let g:netrw_liststyle=1
 if has("gui_running")
   " maximize gvim win
   set lines=9999 columns=9999
