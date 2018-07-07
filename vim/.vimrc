@@ -39,6 +39,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'skywind3000/asyncrun.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'kien/tabman.vim'
+Plugin 'mbbill/undotree'
 
 if (has("unix"))
   Plugin 'Valloric/YouCompleteMe'
