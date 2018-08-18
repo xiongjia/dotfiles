@@ -3,39 +3,42 @@
 :: All settings (home)
 
 :: misc
-set _tmp_root=F:\dev_tmp
-set _storage_root=F:\arc
-set _dropbox_root=E:\var\datum\Dropbox
-set _onedrv_root=C:\Users\lexj\OneDrive
-set _github_root=E:\dev\github
+set _tmp_root=D:\tmp\dev_tmp
+set _storage_root=D:\dat\arch
+set _dropbox_root=C:\Users\lexj\Dropbox
+set _onedrv_root=D:\var\OneDrive
+set _github_root=D:\var\dev\github
 set _3rd_src_root=E:\dev\stuff
 set _chrome_root="C:\Program Files (x86)\Google\Chrome\Application"
 set _curl_root=D:\usr\misc\curl
 set _rsync_root=D:\usr\misc\DeltaCopyRaw
 set _mc_root=F:\game\mc
-set home=C:\Users\lexj
+set HOME=D:\var\dev\github\dotfiles\vim
+set USERPROFILE=D:\var\dev\github\dotfiles\vim
 
 :: Proxy
 set _proxy_host=localhost
 set _proxy_port=8082
-set _no_proxy=localhost,127.0.0.1,registry.npm.taobao.org,cdn.npm.taobao.org,npm.taobao.org
+set _no_proxy=localhost,127.0.0.1
+set _no_proxy=%_no_proxy%,registry.npm.taobao.org
+set _no_proxy=%_no_proxy%,cdn.npm.taobao.org,npm.taobao.org
 
 :: dev tools
-set _git_home=D:\usr\misc\git\git-2.8.1
+set _git_home=D:\app\git\git-2.18.0
 set _gnu_w32=D:\usr\misc\gnu_w32
 set _ms_dev=D:\usr\app\vs2017\community\Common7\IDE\devenv.exe
 
 :: golang
 set _go_root=D:\usr\misc\go\go1.6.2
-set _go_path=E:\dev\gopath
+set _go_path=D:\var\dev\gopath
 
 :: perl
 set _perl_home=C:\strawberry\perl
 
 :: node.js
-set _node=D:\usr\misc\node\node-v8.5
-set _npm=D:\usr\misc\node\npm-1.4.9
-set _npm_prefix=D:\usr\misc\node\npm-packages
+set _node=D:\app\node\node-v10.9.0
+set _npm=D:\app\node\node-v10.9.0
+set _npm_prefix=D:\var\dev\github\dotfiles\vim\npm-prefix
 
 :: c/c++
 set _boost_root=E:\dev\third_party\boost\boost_1_61_0
@@ -49,18 +52,17 @@ set _llvm_root=D:\usr\misc\llvm
 set _openssl_root=E:\dev\stuff\dist\openssl-prefix
 
 :: python
-set _py2_home=D:\usr\misc\py\Python27
-set _py2_venv=D:\usr\misc\py\venv\py2-dev
+set _py2_home=D:\app\py\Python27
+set _py2_venv=D:\app\py\venv\py2-dev
 
-set _py3_home=D:\usr\misc\py\python36
-set _py3_venv=D:\usr\misc\py\venv\py3-dev
-
+set _py3_home=D:\app\py\python36
+set _py3_venv=D:\app\py\venv\py3-dev
 
 :: java
-set _jdk9_home=D:\usr\app\Java\jdk-9
-set _jdk_home=D:\usr\app\Java\jdk1.8.0_60
+set _jdk10_home=D:\app\java\jdk\jdk10.0.2
+set _jdk_home=D:\app\java\jdk\jdk8.0.172-win_x64
 set _scala_home=E:\dev\java_env\scala\scala-2.12.0
-set _m2_home=E:\dev\apache\apache-maven-3.0.5
+set _m2_home=D:\var\dev\m2
 set _gradle_home=D:\usr\misc\gradle\gradle-4.2.1
 set _gradle_usr_home=E:\dev\gradle_usr_home
 set _sbt_home=E:\dev\java_env\scala\sbt-0.13.9\sbt
@@ -71,8 +73,8 @@ set _ruby_home=D:\usr\misc\ruby\Ruby200-x64
 set _ruby_devkit=D:\usr\misc\ruby\DevKit-mingw64-64-4.7.2-20130224-1432-sfx
 
 :: vim
-set _gvim_root=D:\usr\misc\vim\vim-v8.0.0002
-set _gvim_wrk_dir=E:\dev
+set _gvim_root=D:\app\vim\vim80
+set _gvim_wrk_dir=D:\var\dev
 
 :: atom
 set _atom_root=D:\usr\misc\atom

@@ -1,0 +1,60 @@
+[user]
+  name = xiongjia
+  email = lexiongjia@gmail.com
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+
+[http]
+  proxy = http://localhost:8082
+
+[http]
+  proxy = http://localhost:8082
+
+[push]
+  default = current
+
+[credential]
+  helper = cache
+
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+
+[mergetool]
+  prompt = true
+
+[github]
+  user = xiongjia
+
+[alias]
+  # log & status    
+  ll = log --graph --pretty=oneline --abbrev-commit --decorate
+  s  = status --short
+
+  # clone; fetch; checkout ...
+  f  = fetch
+  co = checkout
+  c  = clone
+  cr = clone --recurse-submodules -j8
+  c1 = clone --depth=1 --single-branch
+
+  # diff
+  d  = diff
+  dt = difftool
+
+  # misc
+  unstage = reset HEAD
+  rhead = reset HEAD --hard
+  rhead-all = "!f() { git rhead && git clean -f -d; }; f"
+  xclean = clean -x -d -f
+  rpo = remote prune origin
+  llh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/heads/
+  lrh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/remotes/
+
