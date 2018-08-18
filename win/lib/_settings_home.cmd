@@ -25,8 +25,8 @@ set _no_proxy=%_no_proxy%,cdn.npm.taobao.org,npm.taobao.org
 
 :: dev tools
 set _git_home=D:\app\git\git-2.18.0
-set _gnu_w32=D:\usr\misc\gnu_w32
-set _ms_dev=D:\usr\app\vs2017\community\Common7\IDE\devenv.exe
+set _gnu_w32=D:\app\gnu_w32
+set _ms_dev=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\IDE\devenv.exe
 
 :: golang
 set _go_root=D:\usr\misc\go\go1.6.2
@@ -69,8 +69,8 @@ set _sbt_home=E:\dev\java_env\scala\sbt-0.13.9\sbt
 set _ant_home=D:\usr\misc\ap\ant\apache-ant-1.9.3
 
 :: ruby
-set _ruby_home=D:\usr\misc\ruby\Ruby200-x64
-set _ruby_devkit=D:\usr\misc\ruby\DevKit-mingw64-64-4.7.2-20130224-1432-sfx
+set _ruby_home=D:\app\rb\ruby25-x64
+set _ruby_devkit=D:\app\rb\ruby25-x64\msys64
 
 :: vim
 set _gvim_root=D:\app\vim\vim80
