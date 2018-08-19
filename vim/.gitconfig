@@ -19,12 +19,12 @@
   helper = cache
 
 [diff]
-  tool = vimdiff
+  tool = _vimdiff
 [difftool]
   prompt = false
 
 [merge]
-  tool = vimdiff
+  tool = _vimdiff
   conflictstyle = diff3
 
 [mergetool]

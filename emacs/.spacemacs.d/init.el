@@ -127,15 +127,18 @@
   (message "os exec path: %s" (getenv "PATH"))
 
   ;; China mirror
-  (setq configuration-layer--elpa-archives
-    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-      ("org-cn"   . "http://orgmode.org/elpa/")
-      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+  ;; (setq configuration-layer--elpa-archives
+  ;;   '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+  ;;     ("org-cn"   . "http://orgmode.org/elpa/")
+  ;;     ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 )
 
 (defun dotspacemacs/user-config ()
   (remove-hook 'prog-mode-hook #'smartparens-mode)
   (spacemacs/toggle-smartparens-globally-off)
+
+  (setq yas-snippet-dirs
+      '("~/.spacemacs.d/snippets"))
 
   (global-company-mode t)
   (setq create-lockfiles nil)

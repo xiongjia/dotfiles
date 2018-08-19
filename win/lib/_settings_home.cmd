@@ -29,7 +29,7 @@ set _gnu_w32=D:\app\gnu_w32
 set _ms_dev=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\IDE\devenv.exe
 
 :: golang
-set _go_root=D:\usr\misc\go\go1.6.2
+set _go_root=D:\app\go\go1.10.3
 set _go_path=D:\var\dev\gopath
 
 :: perl
@@ -42,7 +42,7 @@ set _npm_prefix=D:\var\dev\github\dotfiles\vim\npm-prefix
 
 :: c/c++
 set _boost_root=E:\dev\third_party\boost\boost_1_61_0
-set _cmake_root=D:\usr\misc\cmake\cmake-3.9.0-rc6-win64-x64
+set _cmake_root=D:\app\cmake\cmake-3.12.1
 set _ms_sym_cache=E:\dev\sym.cache\ms
 set _ms_win_dbg_32=D:\usr\misc\windbg\windbg_x86
 set _ms_win_dbg_64=D:\usr\misc\windbg\windbg_x64
@@ -60,13 +60,13 @@ set _py3_venv=D:\app\py\venv\py3-dev
 
 :: java
 set _jdk10_home=D:\app\java\jdk\jdk10.0.2
-set _jdk_home=D:\app\java\jdk\jdk8.0.172-win_x64
+set _jdk_home=D:\app\java\jdk\jdk8.0.172
 set _scala_home=E:\dev\java_env\scala\scala-2.12.0
 set _m2_home=D:\var\dev\m2
-set _gradle_home=D:\usr\misc\gradle\gradle-4.2.1
-set _gradle_usr_home=E:\dev\gradle_usr_home
+set _gradle_home=D:\app\java\gradle\gradle-4.9
+set _gradle_usr_home=D:\var\dev\gradle_home
 set _sbt_home=E:\dev\java_env\scala\sbt-0.13.9\sbt
-set _ant_home=D:\usr\misc\ap\ant\apache-ant-1.9.3
+set _ant_home=D:\app\java\ant\apache-ant-1.10.5
 
 :: ruby
 set _ruby_home=D:\app\rb\ruby25-x64
@@ -82,12 +82,12 @@ set _atom_cli=%_atom_root%\resources\cli
 
 :: emacs
 set _emacs_wrk_dir=E:\dev
-set _emacs_root=D:\usr\misc\emacs\emacs-25.0.91
+set _emacs_root=D:\app\emacs\emacs-w64-25.3
 set _emacs_bin=%_emacs_root%\bin\runemacs.exe
-set _emacs_home=E:\dev\github\dotFiles\emacs
+set _emacs_home=D:\var\dev\github\dotfiles\emacs
 set _emacs_https_proxy=
 set _emacs_http_proxy=
-set _emacs_tools=E:\var\datum\Dropbox\tools\emacs
+set _emacs_tools=C:\Users\lexj\Dropbox\tools\emacs
 
 :: tools
 set _putty_root=D:\usr\misc\putty-0.62
@@ -98,7 +98,7 @@ set _gnu_global=D:\usr\misc\gnu-global\glo653wb
 set _aspell=D:\usr\app\aspell
 set _gnuplot=D:\usr\misc\gnuplot\gp426win32\gnuplot
 set _ffmpeg=D:\usr\misc\ffmpeg\ffmpeg-20160828-a37e6dd-win64-static
-set _gpg_root=D:\usr\misc\gpg-win
+set _gpg_root=D:\app\gpg-win
 set _ledger_root=E:\var\datum\Dropbox\tools\ledger_win\ledger_3.1.1
 set _graphics_magick=D:\usr\misc\gm\GraphicsMagick-1.3.25-Q16
 set _hg_root=D:\usr\app\Mercurial
