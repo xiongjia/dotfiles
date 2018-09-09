@@ -7,10 +7,10 @@
   editor = vim
 
 [http]
-  proxy = http://localhost:8082
+  proxy = http://192.168.1.37:8082
 
 [http]
-  proxy = http://localhost:8082
+  proxy = http://192.168.1.37:8082
 
 [push]
   default = current
