@@ -40,6 +40,8 @@ Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'kien/tabman.vim'
 Plugin 'mbbill/undotree'
 
+Plugin 'posva/vim-vue'
+
 if (has("unix"))
   Plugin 'Valloric/YouCompleteMe'
 endif
@@ -132,6 +134,8 @@ autocmd FileType python set ts=2|set sw=2|set sts=2|set expandtab
 " dev settings - javascript 
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType json set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 " enable it if you need debug it: let g:syntastic_debug=3 
 let g:syntastic_always_populate_loc_list = 0
