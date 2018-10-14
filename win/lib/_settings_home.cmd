@@ -22,6 +22,7 @@ set _proxy_port=8082
 set _no_proxy=localhost,127.0.0.1
 set _no_proxy=%_no_proxy%,registry.npm.taobao.org
 set _no_proxy=%_no_proxy%,cdn.npm.taobao.org,npm.taobao.org
+set _no_proxy=%_no_proxy%,repo.maven.apache.org
 
 :: dev tools
 set _git_home=D:\app\git\git-2.18.0

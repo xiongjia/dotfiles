@@ -58,9 +58,9 @@ set _py3_venv=
 :: java
 set _jdk_home=C:\tools\jdk\jdk8.0.181
 set _scala_home=
-set _m2_home=
-set _gradle_home=
-set _gradle_usr_home=
+set _m2_home=C:\tools\maven\apache-maven-3.5.4
+set _gradle_home=C:\tools\gradle\gradle-4.10.2
+set _gradle_usr_home=D:\dat\cache\gradle
 set _sbt_home=
 set _ant_home=
 
