@@ -39,6 +39,7 @@ Plugin 'skywind3000/asyncrun.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'kien/tabman.vim'
 Plugin 'mbbill/undotree'
+Plugin 'airblade/vim-rooter'
 
 Plugin 'posva/vim-vue'
 
@@ -117,6 +118,9 @@ let g:snipMate = get(g:, 'snipMate', {})
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 let g:asyncrun_open = 8
+
+let g:rooter_silent_chdir = 1
+let g:rooter_use_lcd = 1
 
 set wildmenu
 set wildmode=list:longest

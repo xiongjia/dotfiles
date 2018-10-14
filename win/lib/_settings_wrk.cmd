@@ -17,14 +17,18 @@ set _mc_root=
 :: Proxy
 set _proxy_host=localhost
 set _proxy_port=1095
+set _no_proxy=localhost,127.0.0.1
+set _no_proxy=%_no_proxy%,registry.npm.taobao.org
+set _no_proxy=%_no_proxy%,cdn.npm.taobao.org,npm.taobao.org
+set _no_proxy=%_no_proxy%,github.com
 
 :: dev tools
 set _git_home=C:\tools\git\git-2.19.1
 set _gnu_w32=C:\tools\gnu_w32
 
 :: golang
-set _go_root=
-set _go_path=
+set _go_root=C:\tools\golang\go1.11.1
+set _go_path=D:\dat\go-path
 
 :: perl
 set _perl_home=
