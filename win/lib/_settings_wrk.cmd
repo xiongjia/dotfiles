@@ -10,7 +10,7 @@ set _onedrv_root=C:\Users\xiongjia_le\OneDrive
 set _github_root=D:\wrk\github
 set _3rd_src_root=D:\wrk\stuff
 set _chrome_root="C:\Users\xiongjia_le\AppData\Local\Google\Chrome\Application"
-set _curl_root=
+set _curl_root=C:\tools\curl\curl-7.61.1\bin
 set _rsync_root=
 set _mc_root=
 

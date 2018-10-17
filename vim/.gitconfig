@@ -14,10 +14,6 @@
 
 [push]
   default = current
-
-[credential]
-  helper = cache
-
 [diff]
   tool = _vimdiff
 [difftool]
@@ -32,6 +28,9 @@
 
 [github]
   user = xiongjia
+
+[gui]
+  encoding = utf-8
 
 [alias]
   # log & status    
