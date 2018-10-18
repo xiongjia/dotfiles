@@ -42,17 +42,17 @@ set NPM_CONFIG_USERCONFIG=D:\dat\cache\npm_conf\npmrc
 :: c/c++
 set _boost_root=
 set _cmake_root=
-set _ms_sym_cache=
-set _ms_win_dbg_32=
-set _ms_win_dbg_64=
+set _ms_sym_cache=D:\dat\cache\ms_sym
+set _ms_win_dbg_32=C:\tools\windbg\windbg_x86
+set _ms_win_dbg_64=C:\tools\windbg\windbg_x64
 set _ms_depends_32=
 set _ms_depends_64=
 set _llvm_root=
 
 :: python
-set _py2_home=
+set _py2_home=C:\tools\py\py27
 set _py2_venv=
-set _py3_home=
+set _py3_home=C:\tools\py\py3.7.0
 set _py3_venv=
 
 :: java
