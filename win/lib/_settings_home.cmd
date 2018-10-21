@@ -60,8 +60,10 @@ set _py3_home=D:\app\py\python36
 set _py3_venv=D:\app\py\venv\py3-dev
 
 :: java
+set _jdk8_home=D:\app\java\jdk\jdk8.0.172
 set _jdk10_home=D:\app\java\jdk\jdk10.0.2
-set _jdk_home=D:\app\java\jdk\jdk8.0.172
+set _jdk11_home=D:\app\java\jdk\jdk11.0.1
+set _jdk_home=%_jdk11_home%
 set _scala_home=E:\dev\java_env\scala\scala-2.12.0
 set _m2_home=D:\var\dev\m2
 set _gradle_home=D:\app\java\gradle\gradle-4.9
