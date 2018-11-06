@@ -27,6 +27,9 @@ set _dev_path=%_atom_cli%;%_dev_path%
 set _dev_path=%_heroku_root%\bin;%_dev_path%
 set _dev_path=%_dropbox_root%\tools\dos2unix\bin;%_dev_path%
 
+:: plantuml
+set GRAPHVIZ_DOT=%_graphviz_root%\bin\dot.exe
+
 :: gpg
 set _dev_path=%_gpg_root%;%_dev_path%
 set _gpg_program=gpg2

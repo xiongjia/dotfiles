@@ -28,6 +28,8 @@ set _no_proxy=%_no_proxy%,repo.maven.apache.org
 set _git_home=D:\app\git\git-2.18.0
 set _gnu_w32=D:\app\gnu_w32
 set _ms_dev=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\IDE\devenv.exe
+set _plant_uml=%_onedrv_root%\tools\plantuml\plantuml.jar
+set _graphviz_root=%_onedrv_root%\tools\graphviz\graphviz-2.38
 
 :: golang
 set _go_root=D:\app\go\go1.10.3
@@ -66,7 +68,7 @@ set _jdk11_home=D:\app\java\jdk\jdk11.0.1
 set _jdk_home=%_jdk11_home%
 set _scala_home=E:\dev\java_env\scala\scala-2.12.0
 set _m2_home=D:\var\dev\m2
-set _gradle_home=D:\app\java\gradle\gradle-4.9
+set _gradle_home=D:\app\java\gradle\gradle-4.10.2
 set _gradle_usr_home=D:\var\dev\gradle_home
 set _sbt_home=E:\dev\java_env\scala\sbt-0.13.9\sbt
 set _ant_home=D:\app\java\ant\apache-ant-1.10.5
