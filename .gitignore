@@ -4,6 +4,7 @@
 Powerline*.cache
 *.pyc
 *.swp
+.vscode
 
 # vim ignore
 vim/*
