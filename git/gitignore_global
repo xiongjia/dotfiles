@@ -17,4 +17,4 @@ $RECYLE.BIN/
 *.swp
 tags
 .tern-port
- 
+.vscode 
