@@ -11,6 +11,8 @@
 
 [http]
   proxy-disable = http://localhost:1095
+	sslBackend = openssl
+	sslVerify = false
 
 [push]
   default = current
@@ -57,3 +59,5 @@
   llh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/heads/
   lrh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/remotes/
 
+[remote "origin"]
+	proxy = 

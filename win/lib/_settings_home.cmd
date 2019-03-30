@@ -17,8 +17,8 @@ set HOME=D:\var\dev\github\dotfiles\vim
 set USERPROFILE=D:\var\dev\github\dotfiles\vim
 
 :: Proxy
-set _proxy_host=192.168.1.37
-set _proxy_port=8082
+set _proxy_host=localhost
+set _proxy_port=1095
 set _no_proxy=localhost,127.0.0.1
 set _no_proxy=%_no_proxy%,registry.npm.taobao.org
 set _no_proxy=%_no_proxy%,cdn.npm.taobao.org,npm.taobao.org

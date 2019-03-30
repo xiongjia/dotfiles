@@ -1,7 +1,7 @@
 @echo off
 
 setlocal
-set YDL_PROXY=%https_proxy%
+set YDL_PROXY=http://%_proxy_host%:%_proxy_port%
 
 :: examples:
 ::  get all lang subs
