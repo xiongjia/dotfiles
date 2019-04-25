@@ -7,11 +7,12 @@
   editor = vim
 
 [http]
-  proxy-disable = http://localhost:1095
+  proxy = http://localhost:1095
+  sslVerify = false
 
-[http]
-  proxy-disable = http://localhost:1095
-	sslBackend = openssl
+[https]
+  proxy = http://localhost:1095
+	sslBackend-disable = openssl
 	sslVerify = false
 
 [push]
@@ -58,6 +59,3 @@
   rpo = remote prune origin
   llh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/heads/
   lrh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/remotes/
-
-[remote "origin"]
-	proxy = 

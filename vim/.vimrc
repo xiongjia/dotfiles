@@ -43,6 +43,8 @@ Plugin 'airblade/vim-rooter'
 
 Plugin 'posva/vim-vue'
 
+Plugin 'fatih/vim-go'
+
 if (has("unix"))
   Plugin 'Valloric/YouCompleteMe'
 endif
@@ -180,3 +182,7 @@ let g:vimwiki_list = [
 " functions
 nnoremap <Leader>mt "=strftime("%c")<CR>P
 nnoremap <Leader>md "=strftime("%a %d %b %Y")<CR>P
+
+" vim-go
+let g:go_debug_address = '127.0.0.1:8981'
+let g:go_debug_log = ''

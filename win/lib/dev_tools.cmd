@@ -85,6 +85,7 @@ set _dev_path=%_ruby_home%\bin;%_ruby_devkit%;%_dev_path%
 set _dev_path=%_git_home%\cmd;%_dev_path%
 set _dev_path=%_deps_root%\depot_tools;%_dev_path%
 set GIT_SSH=%_dev_bin%\_plink_git.cmd
+set GIT_SSL_NO_VERIFY=1
 
 :: python
 set _dev_path=%_py2_home%;%_dev_path%

@@ -32,7 +32,7 @@ set _plant_uml=%_onedrv_root%\tools\plantuml\plantuml.jar
 set _graphviz_root=%_onedrv_root%\tools\graphviz\graphviz-2.38
 
 :: golang
-set _go_root=D:\app\go\go1.10.3
+set _go_root=D:\app\go\go1.12.4
 set _go_path=D:\var\dev\gopath
 
 :: perl
