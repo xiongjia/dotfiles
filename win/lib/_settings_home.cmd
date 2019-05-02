@@ -58,7 +58,7 @@ set _openssl_root=E:\dev\stuff\dist\openssl-prefix
 set _py2_home=D:\app\py\Python27
 set _py2_venv=D:\app\py\venv\py2-dev
 
-set _py3_home=D:\app\py\python36
+set _py3_home=D:\app\py\python37
 set _py3_venv=D:\app\py\venv\py3-dev
 
 :: java

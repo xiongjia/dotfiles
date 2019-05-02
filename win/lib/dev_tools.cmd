@@ -88,8 +88,7 @@ set GIT_SSH=%_dev_bin%\_plink_git.cmd
 set GIT_SSL_NO_VERIFY=1
 
 :: python
-set _dev_path=%_py2_home%;%_dev_path%
-set _dev_path=%_py2_home%\Scripts;%_dev_path%
+set _dev_path=%_py3_venv%\Scripts;%_py3_home%;%_dev_path%
 
 :: c/c++
 set BOOSTROOT=%_boost_root%
