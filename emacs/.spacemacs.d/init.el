@@ -142,8 +142,6 @@
 
   (global-company-mode t)
   (setq create-lockfiles nil)
-  (add-hook 'prog-mode-hook 'linum-mode)
-  (with-eval-after-load 'linum (linum-relative-toggle))
 
   (when (not (string= (getenv "_emacs_browser") nil)) 
     (let ((_emacs_browser (getenv "_emacs_browser")))

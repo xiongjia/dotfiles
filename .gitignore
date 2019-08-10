@@ -32,4 +32,5 @@ java/gradle/notifications
 emacs/*
 !emacs/.spacemacs.d/
 emacs/.spacemacs.d/custom.el
+emacs/.spacemacs.d/*.env
 
