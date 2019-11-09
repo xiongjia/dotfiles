@@ -4,7 +4,7 @@
 
 :: misc
 set _tmp_root=D:\tmp\dev_tmp
-set _storage_root=D:\dat\arch
+set _storage_root=z:\tmp
 set _dropbox_root=C:\Users\lexj\Dropbox
 set _onedrv_root=D:\var\OneDrive
 set _github_root=D:\var\dev\github
