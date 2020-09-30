@@ -1,7 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: func init()
-# key: i
-# --
-func init() {
-	$0
-}
