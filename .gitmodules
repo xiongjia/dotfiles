@@ -1,6 +1,9 @@
 [submodule "vim/.vim/bundle/vundle.vim"]
 	path = vim/.vim/bundle/vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "vim/.vim/plug/vim-plug"]
+	path = vim/.vim/plug/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
 [submodule "deps/oh-my-zsh"]
 	path = deps/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
