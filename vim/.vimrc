@@ -44,7 +44,7 @@ call plug#end()
 
 " UI settings
 " ===============================================
-colorscheme Tomorrow-Night-Bright
+colorscheme torte
 set shortmess+=I
 set guioptions-=T
 set guioptions-=m
