@@ -13,6 +13,9 @@ export db_store_sqlite=${_db_store}/sqlite
 
 export FZF_DEFAULT_OPTS="--preview 'strings {} 2> /dev/null | head -n 100'"
 
+# git
+export TK_SILENCE_DEPRECATION=1
+
 # gpg
 export _gpg_home=${_data_root}/gpg
 export _gpg_program=gpg2
