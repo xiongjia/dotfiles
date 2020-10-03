@@ -138,12 +138,20 @@ let g:jsx_ext_required = 1
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_table_auto_fmt = 0
 let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr,div,center,strong,em,img'
+let g:vimwiki_toc_header = 'TOC'
 let g:vimwiki_list = [
    \ { 'path': $_dropbox_root.'/wiki/note',
    \   'path_html': $_dropbox_root.'/wiki/_dist_note',
    \   'template_path': $_dropbox_root.'/wiki/_template',
    \   'template_default': 'vimwiki',
    \   'template_ext': '.tpl',
+   \   'auto_export':0},
+   \ { 'path': $_github_root.'/ashen-one/content',
+   \   'path_html': $_github_root.'/ashen-one/dist',
+   \   'template_path': $_github_root.'/ashen-one/config/',
+   \   'template_default': 'vimwiki',
+   \   'template_ext': '.tpl',
+   \   'auto_toc': 0,
    \   'auto_export':0},
    \ { 'path': $_github_root.'/recycle.bin/_content',
    \   'path_html': $_github_root.'/recycle.bin/output',
