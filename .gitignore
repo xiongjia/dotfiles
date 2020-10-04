@@ -13,6 +13,7 @@ vim/*
 !vim/.gitconfig
 !vim/.gitignore_global
 !vim/.npmrc
+!vim/vimfiles
 vim/.vim/plugged/
 vim/.vim/swp/*
 vim/.vim/session/*
