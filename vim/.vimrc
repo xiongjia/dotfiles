@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-call plug#begin('~/.vim/plugged')
+call plug#begin($HOME.'/.vim/plugged')
 " Misc
 Plug 'flazz/vim-colorschemes'
 Plug 'itchyny/lightline.vim'
