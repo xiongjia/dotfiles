@@ -13,7 +13,7 @@ module DF
   WRK_PATH = File.expand_path(File.dirname(__FILE__))
   HOME_PATH = File.expand_path('~')
   ALL_TYPES = [
-    "git", "tmux", "vim", "ruby", "python", "java", "misc", "spacemacs", "shell"]
+    "git", "tmux", "vim", "ruby", "python", "java", "misc", "shell"]
   DFILES = {
     "git" => [
       { "src" => "./git/gitconfig", "target" => ".gitconfig"},
