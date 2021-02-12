@@ -38,4 +38,3 @@ if [[ $_sys == "Darwin" && -z "${TMUX}" ]]; then
   launchctl setenv _gnuplot_cli      ${_gnuplot_cli}
   launchctl setenv FZF_DEFAULT_OPTS  ${FZF_DEFAULT_OPTS}
 fi
-
