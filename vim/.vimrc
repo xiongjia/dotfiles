@@ -103,6 +103,7 @@ let g:gist_post_private = 1
 let g:gist_show_private = 1
 let g:gistvim_namelength = 30
 let g:snipMate = get(g:, 'snipMate', {})
+let g:snipMate = { 'snippet_version' : 1 }
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 let g:asyncrun_open = 8
