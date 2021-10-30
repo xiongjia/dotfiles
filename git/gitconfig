@@ -5,12 +5,13 @@
 [core]
   excludesfile = ~/.gitignore_global
   editor = vim
+	compression = 0
 
 [push]
   default = current
 
 [credential]
-  helper = cache
+	helper = store
 
 [diff]
   tool = vimdiff
@@ -52,3 +53,9 @@
   llh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/heads/
   lrh = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) - > %(refname:short)' refs/remotes/
 
+[http]
+	proxy = http://127.0.0.1:1087
+	postBuffer = 1048576000
+[https]
+  proxy  = http://127.0.0.1:1087
+	postBuffer = 1048576000
