@@ -2,16 +2,17 @@ set nocompatible
 filetype off
 
 call plug#begin($HOME.'/.vim/plugged')
-" Misc
+
 Plug 'flazz/vim-colorschemes'
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
 
-" DEV Tools
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+
 Plug 'vimwiki/vimwiki'
+
+Plug 'mileszs/ack.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
