@@ -12,6 +12,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
 
 Plug 'vimwiki/vimwiki'
 
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
 Plug 'mileszs/ack.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'pangloss/vim-javascript'
@@ -173,3 +176,15 @@ let g:vimwiki_list = [
 " ===============================================
 nnoremap <Leader>mt "=strftime("%c")<CR>P
 nnoremap <Leader>md "=strftime("%a %d %b %Y")<CR>P
+
+" ctags
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
+let g:gutentags_ctags_tagfile = '.tags'
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+if !isdirectory(s:vim_tags)
+  silent! call mkdir(s:vim_tags, 'p')
+endif
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
