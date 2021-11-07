@@ -9,6 +9,7 @@ Plug 'mhinz/vim-startify'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'vimwiki/vimwiki'
 
@@ -32,7 +33,6 @@ Plug 'mtth/scratch.vim'
 Plug 'elzr/vim-json'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-git'
-Plug 'junegunn/fzf'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
