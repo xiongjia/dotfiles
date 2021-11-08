@@ -59,3 +59,12 @@
 [https]
   proxy  = http://127.0.0.1:1087
 	postBuffer = 1048576000
+
+[pager]
+  diff = delta --show-syntax-themes --dark
+  show = delta --show-syntax-themes --dark
+  log = delta --show-syntax-themes --dark
+  reflog = delta --show-syntax-themes --dark
+
+[interactive]
+  diffFilter = delta --color-only --show-syntax-themes --dark
