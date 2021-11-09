@@ -195,3 +195,8 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " fzf
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+
+" leaderf
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
