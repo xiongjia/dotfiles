@@ -52,7 +52,7 @@ call plug#end()
 
 " UI settings
 " ===============================================
-colorscheme torte
+colorscheme molokai
 set shortmess+=I
 set guioptions-=T
 set guioptions-=m
@@ -197,6 +197,7 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
 " leaderf
-let g:Lf_WindowPosition = 'popup'
+" let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
-let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+let g:Lf_ShortcutF = "<leader>ff"
+
