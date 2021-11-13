@@ -5,6 +5,8 @@ call plug#begin($HOME.'/.vim/plugged')
 
 Plug 'flazz/vim-colorschemes'
 Plug 'itchyny/lightline.vim'
+Plug 'voldikss/vim-floaterm'
+
 Plug 'mhinz/vim-startify'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
