@@ -16,6 +16,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
+Plug 'cdelledonne/vim-cmake'
+
 Plug 'vimwiki/vimwiki'
 
 Plug 'ludovicchabant/vim-gutentags'
@@ -49,7 +51,6 @@ Plug 'mbbill/undotree'
 Plug 'airblade/vim-rooter'
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go'
-Plug 'nickhutchinson/vim-cmake-syntax'
 call plug#end()
 
 " UI settings
@@ -194,6 +195,11 @@ endif
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+
+" floatterm
+let g:floaterm_position = 'bottom'
+let g:floaterm_width = 1.0
+let g:floaterm_height = 0.3
 
 " fzf
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
