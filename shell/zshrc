@@ -55,4 +55,4 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # FZF
-export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-range :500 {}" --bind ctrl-j:preview-down,ctrl-k:preview-up'
+export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-range :500 {}" --bind down:preview-down,up:preview-up'
