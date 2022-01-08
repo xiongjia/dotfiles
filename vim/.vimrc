@@ -51,6 +51,11 @@ Plug 'mbbill/undotree'
 Plug 'airblade/vim-rooter'
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go'
+Plug 'cespare/vim-toml', { 'branch': 'main' }
+
+" rust
+Plug 'rust-lang/rust.vim'
+
 call plug#end()
 
 " UI settings
@@ -209,3 +214,8 @@ let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = "<leader>ff"
 
+" cmake
+let g:cmake_link_compile_commands = 1
+
+" rust
+let g:rust_clip_command = 'pbcopy'
