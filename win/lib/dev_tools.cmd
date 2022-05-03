@@ -108,3 +108,6 @@ set _aria2_conf=%_dropbox_root%\tools\aria2\aria2_home.conf
 :: Database
 set _dev_path=%_dev_path%;%_pg_root%\bin;%_pg_admin_root%\bin
 set db_store_sqlite=%_db_store%\sqlite
+
+:: llvm
+set _dev_path=%_dev_path%;C:\tools\llvm\bin

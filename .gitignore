@@ -17,6 +17,7 @@ vim/*
 vim/.vim/plugged/
 vim/.vim/swp/*
 vim/.vim/session/*
+vim/vimfiles/coc*
 
 # Java ignore
 java/m2/repository
