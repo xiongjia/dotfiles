@@ -5,7 +5,6 @@ call plug#begin($HOME.'/.vim/plugged')
 
 Plug 'flazz/vim-colorschemes'
 Plug 'itchyny/lightline.vim'
-Plug 'voldikss/vim-floaterm'
 
 Plug 'mhinz/vim-startify'
 
@@ -15,8 +14,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-
-Plug 'cdelledonne/vim-cmake'
 
 Plug 'vimwiki/vimwiki'
 
@@ -51,10 +48,10 @@ Plug 'mbbill/undotree'
 Plug 'airblade/vim-rooter'
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go'
-Plug 'cespare/vim-toml', { 'branch': 'main' }
-
-" rust
+Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
+Plug 'nickhutchinson/vim-cmake-syntax'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -64,8 +61,7 @@ colorscheme molokai
 set shortmess+=I
 set guioptions-=T
 set guioptions-=m
-set guifont=Source_Code_Pro:h11
-set guifontwide=Source_Code_Pro:h11
+set guifont=Source_Code_Pro:h9
 let g:netrw_liststyle=1
 let g:netrw_sizestyle="h"
 " status line
@@ -201,10 +197,6 @@ let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
-" floatterm
-let g:floaterm_position = 'bottom'
-let g:floaterm_width = 1.0
-let g:floaterm_height = 0.3
 
 " fzf
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
