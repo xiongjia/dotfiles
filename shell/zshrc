@@ -18,6 +18,7 @@ export PATH=${PATH}:${_dotfiles_root}/deps/depot_tools
 # golang
 export GOPATH=${_data_root}/gopath
 export PATH=${PATH}:${GOPATH}/bin
+export GOPROXY=https://goproxy.cn,direct
 
 # node
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist

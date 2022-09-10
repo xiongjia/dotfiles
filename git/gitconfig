@@ -57,7 +57,7 @@
 	proxy = http://127.0.0.1:1087
 	postBuffer = 1048576000
 [https]
-  proxy  = http://127.0.0.1:1087
+  proxy = http://127.0.0.1:1087
 	postBuffer = 1048576000
 
 [pager]
